@@ -1,0 +1,13 @@
+
+
+
+init clock
+init gpio
+init com
+init timer
+
+init power manager
+init thruster
+init manip
+init sensor com
+init status monitor

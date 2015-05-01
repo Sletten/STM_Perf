@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F100ZE -DSTM32F10X_HD_VL -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\..\..\..\Dropbox\Elektronikk\Rov\AUV\Software -I..\..\..\..\..\..\Dropbox\Elektronikk\Rov\AUV\Software\Perf\stm_lib\inc -I..\..\..\..\..\..\Dropbox\Elektronikk\Rov\AUV\Software\Perf\cmsis -I..\..\..\..\..\..\Dropbox\Elektronikk\Rov\AUV\Software\Perf\cmsis_boot -I..\..\..\..\..\..\Dropbox\Elektronikk\Rov\AUV\Software\Perf -I..\..\..\..\..\..\Dropbox\Elektronikk\Rov\AUV\Software\Perf\src -I..\..\..\..\..\..\Dropbox\Elektronikk\Rov\AUV\Software\Perf\stm_lib">
+      <target file="startup_stm32f10x_hd_vl.o" lastModified="14cb968908e">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_hd_vl.c" lastModified="14ca7c99778"/>
+      </target>
+      <target file="stm32f10x_tim.o" lastModified="14cb9688da3">
+         <source file="..\..\..\stm_lib\src\stm32f10x_tim.c" lastModified="14ca7c9a8e8"/>
+      </target>
+      <target file="core_cm3.o" lastModified="14cb9688de6">
+         <source file="..\..\..\cmsis\core_cm3.c" lastModified="14ca7cf838b"/>
+      </target>
+      <target file="thruster.o" lastModified="14cb9689102">
+         <source file="..\..\..\src\thruster.c" lastModified="14c0a772250"/>
+      </target>
+      <target file="system_stm32f10x.o" lastModified="14cb9688e93">
+         <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="14ca7d87bcd"/>
+      </target>
+      <target file="main.o" lastModified="14cbe728b56">
+         <source file="..\..\..\src\main.c" lastModified="14cbe728628"/>
+      </target>
+      <target file="GPIO_Blink.o" lastModified="14cb9688fef">
+         <source file="..\..\..\example\GPIO_Blink.c" lastModified="14ca7d222f4"/>
+      </target>
+      <target file="stm32f10x_gpio.o" lastModified="14cb9688ef1">
+         <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="14ca7c9bc54"/>
+      </target>
+      <target file="stm32f10x_usart.o" lastModified="14cb968905a">
+         <source file="..\..\..\stm_lib\src\stm32f10x_usart.c" lastModified="14ca7ca2dec"/>
+      </target>
+      <target file="usart_rxtx.o" lastModified="14cb9688e40">
+         <source file="..\..\..\example\usart_rxtx.c" lastModified="14ca9d74bb0"/>
+      </target>
+      <target file="stm32f10x_rcc.o" lastModified="14cb9688fae">
+         <source file="..\..\..\stm_lib\src\stm32f10x_rcc.c" lastModified="14ca7c99767"/>
+      </target>
+      <target file="misc.o" lastModified="14cb968914a">
+         <source file="..\..\..\stm_lib\src\misc.c" lastModified="14ca9dacf4e"/>
+      </target>
+   </processor>
+</history>
