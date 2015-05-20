@@ -1,0 +1,66 @@
+Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = 17.05.2015 20:55:24
+
+BeginCmp
+TimeStamp = /555B65C4;
+Reference = P1;
+ValeurCmp = CONN_02X20;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x20;
+EndCmp
+
+BeginCmp
+TimeStamp = /555B68EF;
+Reference = P2;
+ValeurCmp = CONN_02X20;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x20;
+EndCmp
+
+BeginCmp
+TimeStamp = /555908B2;
+Reference = P3;
+ValeurCmp = CONN_02X16;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x16;
+EndCmp
+
+BeginCmp
+TimeStamp = /55590A1A;
+Reference = P4;
+ValeurCmp = CONN_02X16;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x16;
+EndCmp
+
+BeginCmp
+TimeStamp = /55590C08;
+Reference = P5;
+ValeurCmp = CONN_02X16;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x16;
+EndCmp
+
+BeginCmp
+TimeStamp = /55590C0E;
+Reference = P6;
+ValeurCmp = CONN_02X16;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x16;
+EndCmp
+
+BeginCmp
+TimeStamp = /55590E72;
+Reference = P7;
+ValeurCmp = CONN_02X16;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x16;
+EndCmp
+
+BeginCmp
+TimeStamp = /55590E78;
+Reference = P8;
+ValeurCmp = CONN_02X16;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x16;
+EndCmp
+
+BeginCmp
+TimeStamp = /55590AA6;
+Reference = P9;
+ValeurCmp = CONN_02X16;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x16;
+EndCmp
+
+EndListe

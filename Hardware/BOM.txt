@@ -1,0 +1,48 @@
+List of components used in the perf module, divided into each pcb.
+
+
+
+Motherboard:
+STM32F100ZE
+
+-EEPROM
+24LC256-I/SN 256Kb
+http://no.farnell.com/microchip/24lc256-i-sn/serial-eeprom-256kbit-400khz-soic/dp/9757996
+
+
+-3.3V regulator
+TEXAS INSTRUMENTS  LM2937IMP-3.3/NOPB  LDO REGULATOR, 3.3V, 0.5A, 3SOT223
+http://no.farnell.com/texas-instruments/lm2937imp-3-3-nopb/ldo-regulator-3-3v-0-5a-3sot223/dp/2296021
+
+LD1117DT33CTR  LDO, 1.1VDO, 0.8A, 3.3V, 3DPAK
+http://no.farnell.com/stmicroelectronics/ld1117dt33ctr/ldo-1-1vdo-0-8a-3-3v-3dpak/dp/2296040
+
+
+-thruster levelshift
+SN74LVCC4245APWR
+http://no.farnell.com/texas-instruments/sn74lvcc4245apwr/ic-8bit-bus-transceiver-tssop/dp/2342538
+
+
+
+Backplane:
+
+
+
+Power:
+
+
+Com:
+
+
+manip:
+
+
+light:
+
+
+aux1:
+
+
+aux2:
+
+
