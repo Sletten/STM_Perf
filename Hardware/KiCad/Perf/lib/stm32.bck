@@ -1,4 +1,4 @@
-EESchema-DOCLIB  Version 2.0  Date: 01.02.2015 11:52:42
+EESchema-DOCLIB  Version 2.0
 #
 $CMP STM32F050C4
 D STM32F050C4, 32-bit ARM Cortex-M0 Microcontroller, 48MHz, 16KB Flash, 4KB RAM, RTC, VQFP48
