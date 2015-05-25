@@ -1,0 +1,19 @@
+PERF - Peripheral Extendable Robotic Framework
+
+
+
+Motherboard
+
+
+Backplane
+
+
+Expansion slots
+
+Power
+Light
+Manip
+Com
+Aux1
+Aux2
+Aux3

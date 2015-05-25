@@ -1,4 +1,4 @@
-update=16.05.2015 15:50:09
+update=25.05.2015 19:07:52
 version=1
 last_client=eeschema
 [general]
@@ -63,3 +63,16 @@ LibName29=contrib
 LibName30=valves
 LibName31=stm32
 LibName32=perfLib
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60

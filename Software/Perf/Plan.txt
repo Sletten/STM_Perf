@@ -6,6 +6,10 @@ init gpio
 init com
 init timer
 
+init standard values
+load setup from eeprom
+
+
 init power manager
 init thruster
 init manip

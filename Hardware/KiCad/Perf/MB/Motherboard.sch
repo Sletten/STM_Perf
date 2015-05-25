@@ -985,13 +985,13 @@ Text GLabel 10400 13900 0    47   Input ~ 0
 JTMS-SWDIO
 Text GLabel 10400 13700 0    47   Input ~ 0
 JTCK-SWCLK
-Text GLabel 21500 12500 2    47   Input ~ 0
+Text GLabel 19100 12100 2    47   Input ~ 0
 TIM 2 CH 4
-Text GLabel 21500 12200 2    47   Input ~ 0
+Text GLabel 19100 11800 2    47   Input ~ 0
 TIM 2 CH 1
-Text GLabel 21500 12300 2    47   Input ~ 0
+Text GLabel 19100 11900 2    47   Input ~ 0
 TIM 2 CH 2
-Text GLabel 21500 12400 2    47   Input ~ 0
+Text GLabel 19100 12000 2    47   Input ~ 0
 TIM 2 CH 3
 Text GLabel 16200 3700 0    47   Input ~ 0
 TIM 3 CH 1
@@ -1032,9 +1032,9 @@ Text GLabel 19100 7100 0    47   Input ~ 0
 TIM 16
 Text GLabel 19100 7200 0    47   Input ~ 0
 TIM 17
-Text GLabel 19100 11200 2    47   Input ~ 0
+Text GLabel 19100 11000 2    47   Input ~ 0
 I2C 2 SCL
-Text GLabel 19100 11300 2    47   Input ~ 0
+Text GLabel 19100 11100 2    47   Input ~ 0
 I2C 2 SDA
 Text GLabel 19100 12400 2    47   Input ~ 0
 TIM 12 CH 1
@@ -1044,35 +1044,35 @@ Text GLabel 19100 12600 2    47   Input ~ 0
 TIM 15 CH 1
 Text GLabel 19100 12700 2    47   Input ~ 0
 TIM 15 CH 2
-Text GLabel 20400 12400 0    47   Input ~ 0
-ADC 10
-Text GLabel 20400 12500 0    47   Input ~ 0
-ADC 11
-Text GLabel 20400 12600 0    47   Input ~ 0
-ADC 12
-Text GLabel 20400 12700 0    47   Input ~ 0
-ADC 13
-Text GLabel 19100 11800 2    47   Input ~ 0
-UART 4 TX
-Text GLabel 19100 11900 2    47   Input ~ 0
-UART 4 RX
-Text GLabel 19100 12000 2    47   Input ~ 0
-UART 5 TX
-Text GLabel 19100 12100 2    47   Input ~ 0
-UART 5 RX
-Text GLabel 18000 11400 0    47   Input ~ 0
-USART 2 TX
-Text GLabel 18000 11500 0    47   Input ~ 0
-USART 2 RX
-Text GLabel 18000 11700 0    47   Input ~ 0
-USART 3 TX
-Text GLabel 18000 11800 0    47   Input ~ 0
-USART 3 RX
-Text GLabel 18000 11600 0    47   Input ~ 0
-USART 2 CK
 Text GLabel 18000 11900 0    47   Input ~ 0
-USART 3 CK
+ADC 10
 Text GLabel 18000 12000 0    47   Input ~ 0
+ADC 11
+Text GLabel 18000 12100 0    47   Input ~ 0
+ADC 12
+Text GLabel 18000 12200 0    47   Input ~ 0
+ADC 13
+Text GLabel 20400 12300 0    47   Input ~ 0
+UART 4 TX
+Text GLabel 20400 12200 0    47   Input ~ 0
+UART 4 RX
+Text GLabel 20400 12100 0    47   Input ~ 0
+UART 5 TX
+Text GLabel 20400 12000 0    47   Input ~ 0
+UART 5 RX
+Text GLabel 20400 11900 0    47   Input ~ 0
+USART 2 TX
+Text GLabel 20400 11800 0    47   Input ~ 0
+USART 2 RX
+Text GLabel 18000 11500 0    47   Input ~ 0
+USART 3 TX
+Text GLabel 18000 11600 0    47   Input ~ 0
+USART 3 RX
+Text GLabel 20400 11700 0    47   Input ~ 0
+USART 2 CK
+Text GLabel 18000 11700 0    47   Input ~ 0
+USART 3 CK
+Text GLabel 18000 11800 0    47   Input ~ 0
 USART 3 CTS
 Text GLabel 19100 7300 0    47   Input ~ 0
 I2C 2 SCL
@@ -1669,12 +1669,12 @@ Wire Wire Line
 Wire Wire Line
 	16600 4200 16800 4200
 Wire Wire Line
-	18000 4600 16600 4600
+	16600 4600 18000 4600
 Wire Wire Line
 	17300 4600 17300 4750
 Connection ~ 16600 4300
 Wire Wire Line
-	18000 3400 18000 4600
+	18000 4600 18000 3400
 Wire Wire Line
 	18000 4300 17800 4300
 Connection ~ 17300 4600
@@ -1687,9 +1687,9 @@ Connection ~ 18000 4300
 Wire Wire Line
 	2900 7600 3000 7600
 Wire Wire Line
-	3000 8000 3000 7600
+	3000 7600 3000 8000
 Wire Wire Line
-	2000 8000 3000 8000
+	3000 8000 2000 8000
 Wire Wire Line
 	2000 8000 2000 7800
 Wire Wire Line
@@ -1945,69 +1945,69 @@ Text GLabel 21500 12600 2    47   Input ~ 0
 I2C 2 SCL
 Text GLabel 21500 12700 2    47   Input ~ 0
 I2C 2 SDA
-Text GLabel 18000 12200 0    47   Input ~ 0
+Text GLabel 21500 12000 2    47   Input ~ 0
 GPIO_1
-Text GLabel 18000 12300 0    47   Input ~ 0
+Text GLabel 21500 12100 2    47   Input ~ 0
 GPIO_2
-Text GLabel 18000 12400 0    47   Input ~ 0
+Text GLabel 21500 12200 2    47   Input ~ 0
 GPIO_3
-Text GLabel 18000 12500 0    47   Input ~ 0
+Text GLabel 21500 12300 2    47   Input ~ 0
 GPIO_4
-Text GLabel 18000 12600 0    47   Input ~ 0
+Text GLabel 21500 12400 2    47   Input ~ 0
 GPIO_5
-Text GLabel 18000 12700 0    47   Input ~ 0
+Text GLabel 21500 12500 2    47   Input ~ 0
 GPIO_6
-Text GLabel 20400 12100 0    47   Input ~ 0
+Text GLabel 20400 12400 0    47   Input ~ 0
 GPIO_7
-Text GLabel 20400 12200 0    47   Input ~ 0
+Text GLabel 20400 12500 0    47   Input ~ 0
 GPIO_8
-Text GLabel 20400 12300 0    47   Input ~ 0
+Text GLabel 20400 12600 0    47   Input ~ 0
 GPIO_9
-Text GLabel 19100 11000 2    47   Input ~ 0
+Text GLabel 20400 12700 0    47   Input ~ 0
 GPIO_10
-Text GLabel 19100 11100 2    47   Input ~ 0
-GPIO_11
 Text GLabel 18000 11000 0    47   Input ~ 0
-GPIO_12
+GPIO_11
 Text GLabel 18000 11100 0    47   Input ~ 0
-GPIO_13
+GPIO_12
 Text GLabel 18000 11200 0    47   Input ~ 0
-GPIO_14
+GPIO_13
 Text GLabel 18000 11300 0    47   Input ~ 0
+GPIO_14
+Text GLabel 18000 11400 0    47   Input ~ 0
 GPIO_15
-Text GLabel 18000 12100 0    47   Input ~ 0
+Text GLabel 21500 11900 2    47   Input ~ 0
 GPIO_0
-Text GLabel 21500 11400 2    47   Input ~ 0
-GPIO_17
-Text GLabel 21500 11500 2    47   Input ~ 0
-GPIO_18
-Text GLabel 21500 11600 2    47   Input ~ 0
-GPIO_19
 Text GLabel 21500 11700 2    47   Input ~ 0
+GPIO_17
+Text GLabel 21500 11600 2    47   Input ~ 0
+GPIO_18
+Text GLabel 21500 11500 2    47   Input ~ 0
+GPIO_19
+Text GLabel 21500 11400 2    47   Input ~ 0
 GPIO_20
-Text GLabel 20400 11000 0    47   Input ~ 0
+Text GLabel 21500 11000 2    47   Input ~ 0
 GPIO_21
-Text GLabel 20400 11100 0    47   Input ~ 0
+Text GLabel 21500 11100 2    47   Input ~ 0
 GPIO_22
-Text GLabel 20400 11200 0    47   Input ~ 0
+Text GLabel 21500 11200 2    47   Input ~ 0
 GPIO_23
-Text GLabel 20400 11300 0    47   Input ~ 0
+Text GLabel 21500 11300 2    47   Input ~ 0
 GPIO_24
-Text GLabel 20400 11400 0    47   Input ~ 0
+Text GLabel 20400 11600 0    47   Input ~ 0
 GPIO_25
 Text GLabel 20400 11500 0    47   Input ~ 0
 GPIO_26
-Text GLabel 20400 11600 0    47   Input ~ 0
+Text GLabel 20400 11400 0    47   Input ~ 0
 GPIO_27
-Text GLabel 20400 11700 0    47   Input ~ 0
+Text GLabel 20400 11300 0    47   Input ~ 0
 GPIO_28
-Text GLabel 20400 11800 0    47   Input ~ 0
+Text GLabel 20400 11200 0    47   Input ~ 0
 GPIO_29
-Text GLabel 20400 11900 0    47   Input ~ 0
+Text GLabel 20400 11100 0    47   Input ~ 0
 GPIO_30
-Text GLabel 20400 12000 0    47   Input ~ 0
+Text GLabel 20400 11000 0    47   Input ~ 0
 GPIO_31
-Text GLabel 21500 11300 2    47   Input ~ 0
+Text GLabel 21500 11800 2    47   Input ~ 0
 GPIO_16
 $Comp
 L R R2

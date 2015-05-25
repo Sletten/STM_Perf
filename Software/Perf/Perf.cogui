@@ -23,8 +23,6 @@
 <part id="6"/>
 <part id="7"/>
 <part id="8"/>
-<part id="9"/>
-<part id="10"/>
 </presentation>
 </folder>
 </info>
@@ -218,6 +216,9 @@
 <editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor">
 <org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="0" verticalPosition="219"/>
 </editor>
+<editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor">
+<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="0" verticalPosition="219"/>
+</editor>
 </editors>
 <item historyLabel="stm32f10x_rcc.c" index="2">
 <position info="not_deleted" x="37192" y="19"/>
@@ -356,7 +357,8 @@
 <item historyLabel="main.c" index="15">
 <position info="not_deleted" x="146" y="0"/>
 </item>
-<item active="true" historyLabel="Configuration" index="18"/>
+<item historyLabel="Configuration" index="18"/>
+<item active="true" historyLabel="Configuration" index="19"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -364,11 +366,6 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor" name="" tooltip="">
-<persistable>
-<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="0" verticalPosition="219"/>
-</persistable>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_gpio.h" tooltip="Perf/stm_lib/inc/stm32f10x_gpio.h">
 <persistable path="/Perf/stm_lib/inc/stm32f10x_gpio.h"/>
 </file>
@@ -404,6 +401,12 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_usart.h" tooltip="Perf/stm_lib/inc/stm32f10x_usart.h">
 <persistable path="/Perf/stm_lib/inc/stm32f10x_usart.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="servo_Control.h" tooltip="CCU-system/Source/servo_Control.h">
+<persistable path="/CCU-system/Source/servo_Control.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_gpio.h" tooltip="Perf/stm_lib/inc/stm32f10x_gpio.h">
+<persistable path="/Perf/stm_lib/inc/stm32f10x_gpio.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="servo_Control.h" tooltip="CCU-system/Source/servo_Control.h">
 <persistable path="/CCU-system/Source/servo_Control.h"/>
