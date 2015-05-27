@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = 21.05.2015 19:49:01
+Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = 27.05.2015 20:07:32
 
 BeginCmp
 TimeStamp = /55574B38;
@@ -221,28 +221,28 @@ BeginCmp
 TimeStamp = /55573DAB;
 Reference = P1;
 ValeurCmp = Power input;
-IdModule  = Pin_Headers:Pin_Header_Straight_1x02;
+IdModule  = perfFoot:ph_2p_ang;
 EndCmp
 
 BeginCmp
-TimeStamp = /55578F1D;
+TimeStamp = /5565FADF;
 Reference = P2;
-ValeurCmp = CONN_01X09;
-IdModule  = Pin_Headers:Pin_Header_Straight_1x09;
+ValeurCmp = CONN_01X10;
+IdModule  = perfFoot:ph_10p_ang;
 EndCmp
 
 BeginCmp
 TimeStamp = /5557B244;
 Reference = P3;
 ValeurCmp = CONN_01X05;
-IdModule  = Pin_Headers:Pin_Header_Straight_1x05;
+IdModule  = perfFoot:ph_5p_ang;
 EndCmp
 
 BeginCmp
-TimeStamp = /555F62F3;
+TimeStamp = /5566EDB3;
 Reference = P4;
-ValeurCmp = CONN_01X08;
-IdModule  = Pin_Headers:Pin_Header_Straight_1x08;
+ValeurCmp = CONN_01X05;
+IdModule  = perfFoot:ph_5p_ang;
 EndCmp
 
 BeginCmp
@@ -270,7 +270,7 @@ BeginCmp
 TimeStamp = /55588AFE;
 Reference = P8;
 ValeurCmp = CONN_01X04;
-IdModule  = Pin_Headers:Pin_Header_Straight_1x04;
+IdModule  = Pin_Headers:Pin_Header_Angled_1x04;
 EndCmp
 
 BeginCmp

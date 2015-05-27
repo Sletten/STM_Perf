@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name perfFoot)(type KiCad)(uri D:\GitHub\STM_Perf\Hardware\KiCad\Perf\lib\perfFoot.pretty)(options "")(descr ""))
+)
