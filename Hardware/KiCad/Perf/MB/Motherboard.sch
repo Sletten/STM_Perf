@@ -1049,15 +1049,15 @@ Text GLabel 20400 12100 0    47   Input ~ 0
 UART 5 TX
 Text GLabel 20400 12000 0    47   Input ~ 0
 UART 5 RX
-Text GLabel 20400 11900 0    47   Input ~ 0
+Text GLabel 20400 11700 0    47   Input ~ 0
 USART 2 TX
-Text GLabel 20400 11800 0    47   Input ~ 0
+Text GLabel 20400 11600 0    47   Input ~ 0
 USART 2 RX
 Text GLabel 18000 11500 0    47   Input ~ 0
 USART 3 TX
 Text GLabel 18000 11600 0    47   Input ~ 0
 USART 3 RX
-Text GLabel 20400 11700 0    47   Input ~ 0
+Text GLabel 20400 11500 0    47   Input ~ 0
 USART 2 CK
 Text GLabel 18000 11700 0    47   Input ~ 0
 USART 3 CK
@@ -1978,20 +1978,16 @@ Text GLabel 21500 11200 2    47   Input ~ 0
 GPIO_23
 Text GLabel 21500 11300 2    47   Input ~ 0
 GPIO_24
-Text GLabel 20400 11600 0    47   Input ~ 0
-GPIO_25
-Text GLabel 20400 11500 0    47   Input ~ 0
-GPIO_26
 Text GLabel 20400 11400 0    47   Input ~ 0
-GPIO_27
+GPIO_25
 Text GLabel 20400 11300 0    47   Input ~ 0
-GPIO_28
+GPIO_26
 Text GLabel 20400 11200 0    47   Input ~ 0
-GPIO_29
+GPIO_27
 Text GLabel 20400 11100 0    47   Input ~ 0
-GPIO_30
+GPIO_28
 Text GLabel 20400 11000 0    47   Input ~ 0
-GPIO_31
+GPIO_29
 Text GLabel 21500 11800 2    47   Input ~ 0
 GPIO_16
 $Comp
@@ -2451,4 +2447,16 @@ F 3 "" H 19800 7300 60  0000 C CNN
 	1    19800 7300
 	1    0    0    -1  
 $EndComp
+Text GLabel 12200 9200 2    47   Input ~ 0
+USART 2 RTS
+Text GLabel 12200 9100 2    47   Input ~ 0
+USART 2 CTS
+Wire Wire Line
+	11800 9100 12200 9100
+Wire Wire Line
+	12200 9200 11800 9200
+Text GLabel 20400 11800 0    47   Input ~ 0
+USART 2 RTS
+Text GLabel 20400 11900 0    47   Input ~ 0
+USART 2 CTS
 $EndSCHEMATC

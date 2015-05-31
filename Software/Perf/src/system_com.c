@@ -5,3 +5,11 @@
  *
  *
  */
+
+
+void sysComInit(void);
+
+
+void sysComInit(){
+
+}
