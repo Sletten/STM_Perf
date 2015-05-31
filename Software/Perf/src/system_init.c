@@ -16,11 +16,10 @@ void sysInit(void)
 {
 	sysGpioInit();
 	sysComInit();
-	//initdma
+	sysTimInit();
 
 
 	sysIrqInit();
-
 }
 
 

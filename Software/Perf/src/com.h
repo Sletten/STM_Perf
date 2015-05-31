@@ -14,3 +14,5 @@
 
 #pragma once
 
+
+int getData(int inGet);
