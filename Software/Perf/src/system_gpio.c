@@ -4,6 +4,7 @@
  *
  *
  */
+#include "system_init.h"
 
 #include "stm32f10x_gpio.h"
 #include "stm32f10x_rcc.h"
@@ -95,38 +96,85 @@ void sysGpioInit(void)
 	GPIO_Init(GPIOA, &gpioItd);
 
 	// USART 2
-	gpioItd.GPIO_Pin =  GPIO_Pin_8 | // CK
-						GPIO_Pin_9 | // TX
-						GPIO_Pin_12; // RTS
+	gpioItd.GPIO_Pin =  GPIO_Pin_7 | // CK
+						GPIO_Pin_5 | // TX
+						GPIO_Pin_4;  // RTS
 	gpioItd.GPIO_Mode = GPIO_Mode_AF_PP;
 	gpioItd.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOA, &gpioItd);
-	gpioItd.GPIO_Pin =  GPIO_Pin_10 | // RX
+	GPIO_Init(GPIOD, &gpioItd);
+	gpioItd.GPIO_Pin =  GPIO_Pin_6 | // RX
+						GPIO_Pin_3;  // CTS
+	gpioItd.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+	gpioItd.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOD, &gpioItd);
+
+
+
+	// USART 3
+	gpioItd.GPIO_Pin =  GPIO_Pin_10 | // CK
+						GPIO_Pin_8;   // TX
+						// GPIO_Pin_12;  // RTS conflicts with TIM 4 CH1
+	gpioItd.GPIO_Mode = GPIO_Mode_AF_PP;
+	gpioItd.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOD, &gpioItd);
+	gpioItd.GPIO_Pin =  GPIO_Pin_9 | // RX
 						GPIO_Pin_11;  // CTS
 	gpioItd.GPIO_Mode = GPIO_Mode_IN_FLOATING;
 	gpioItd.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOD, &gpioItd);
+
+
+	// USART 4
+	gpioItd.GPIO_Pin =  GPIO_Pin_10; // TX
+	gpioItd.GPIO_Mode = GPIO_Mode_AF_PP;
+	gpioItd.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOC, &gpioItd);
+
+	gpioItd.GPIO_Pin =  GPIO_Pin_11; // RX
+	gpioItd.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+	gpioItd.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOC, &gpioItd);
+
+
+	// USART 5
+	gpioItd.GPIO_Pin =  GPIO_Pin_12; // TX
+	gpioItd.GPIO_Mode = GPIO_Mode_AF_PP;
+	gpioItd.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOC, &gpioItd);
+
+	gpioItd.GPIO_Pin =  GPIO_Pin_2; // RX			// possible TIM3_ETR confilct
+	gpioItd.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+	gpioItd.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOD, &gpioItd);
+
+
+
+	// SPI 1 // preliminary set up, due to change depending in SPI usage.
+	gpioItd.GPIO_Pin =  //GPIO_Pin_4 | // NSS not set up for use
+						GPIO_Pin_5 |	// SCK, set as master (PP)
+						GPIO_Pin_6 |	// MOSI set as master
+						GPIO_Pin_7;		// MISO
+	gpioItd.GPIO_Mode = GPIO_Mode_AF_PP;
+	gpioItd.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOA, &gpioItd);
 
-
-
-
-	// SPI
-
-	gpioItd.GPIO_Pin = GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7;
-	//configuring pins for SPI 1
-	GPIO_Init(GPIOA, &gpioItd);
 
 
 	// I2C
 
+	// I2C 1
+	gpioItd.GPIO_Pin =  //GPIO_Pin_5 | // SMBA - not used
+						GPIO_Pin_6 | // SCL
+						GPIO_Pin_7;  // SDA
+	gpioItd.GPIO_Mode = GPIO_Mode_AF_OD;
+	gpioItd.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOB, &gpioItd);
 
-
-
-
-
-
-
-
-
+	// I2C 2
+	gpioItd.GPIO_Pin =  GPIO_Pin_10 | // SCL
+						GPIO_Pin_11;  // SDA
+	gpioItd.GPIO_Mode = GPIO_Mode_AF_OD;
+	gpioItd.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOB, &gpioItd);
 
 }

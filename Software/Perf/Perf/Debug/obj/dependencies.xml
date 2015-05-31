@@ -1,39 +1,38 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dependencies>
    <includePath signature="/I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf\cmsis_boot /I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf\src /I..\..\..\..\..\..\GitHub\STM_Perf\Software /I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf\stm_lib /I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf\cmsis /I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf\stm_lib\inc /I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf">
+      <source file="..\..\..\cmsis\core_cm3.h" lastModified="14ca7c95042">
+      </source>
       <source file="..\..\..\stm_lib\src\stm32f10x_i2c.c" lastModified="14cecf5a84c">
          <include file="..\..\..\stm_lib\inc\stm32f10x_i2c.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-      </source>
-      <source file="..\..\..\cmsis\core_cm3.h" lastModified="14ca7c95042">
       </source>
       <source file="..\..\..\stm_lib\src\stm32f10x_spi.c" lastModified="14cecf5b055">
          <include file="..\..\..\stm_lib\inc\stm32f10x_spi.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
       </source>
-      <source file="..\..\..\src\system_init.h" lastModified="14da610d719">
+      <source file="..\..\..\src\system_init.h" lastModified="14daa2f5428">
       </source>
       <source file="..\..\..\cmsis\core_cm3.c" lastModified="14ca7cf8773">
-      </source>
-      <source file="..\..\..\stm_lib\inc\stm32f10x_wwdg.h" lastModified="14cecf5e35e">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
       <source file="..\..\..\src\thruster.h" lastModified="14b929a59a0">
       </source>
       <source file="..\..\..\stm_lib\inc\stm32f10x_rcc.h" lastModified="14ca7c99755">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_wwdg.h" lastModified="14cecf5e35e">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
       <source file="..\..\..\stm_lib\src\stm32f10x_iwdg.c" lastModified="14cecf6481d">
          <include file="..\..\..\stm_lib\inc\stm32f10x_iwdg.h"/>
       </source>
-      <source file="..\..\..\src\system_init.c" lastModified="14da62501bb">
+      <source file="..\..\..\src\system_init.c" lastModified="14daa2d8047">
          <include file="..\..\..\src\system_init.h"/>
+         <include file="..\..\..\stm_lib\inc\misc.h"/>
       </source>
       <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="14ca7c9bc54">
          <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-      </source>
-      <source file="..\..\..\src\system_gpio.c" lastModified="14da5ecc56e">
       </source>
       <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_hd_vl.c" lastModified="14ca7c99778">
       </source>
@@ -77,12 +76,12 @@
       </source>
       <source file="..\..\..\src\system.h" lastModified="14da60eaac0">
       </source>
-      <source file="..\..\..\stm_lib\inc\stm32f10x_i2c.h" lastModified="14cecf5a84a">
-         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-      </source>
       <source file="..\..\..\stm_lib\src\stm32f10x_usart.c" lastModified="14ca7ca2dec">
          <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+      </source>
+      <source file="..\..\..\stm_lib\inc\stm32f10x_i2c.h" lastModified="14cecf5a84a">
+         <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
       <source file="..\..\..\stm_lib\inc\stm32f10x_spi.h" lastModified="14cecf5b055">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
@@ -122,8 +121,6 @@
       </source>
       <source file="..\..\..\stm_lib\inc\stm32f10x_tim.h" lastModified="14ca7c9a8de">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
-      </source>
-      <source file="..\..\..\src\system_com.c" lastModified="14da5ed6521">
       </source>
    </includePath>
    <includePath signature="/I..\..\..\..\..\..\Dropbox\Elektronikk\Rov\AUV\Software /I..\..\..\..\..\..\Dropbox\Elektronikk\Rov\AUV\Software\Perf\stm_lib\inc /I..\..\..\..\..\..\Dropbox\Elektronikk\Rov\AUV\Software\Perf\cmsis /I..\..\..\..\..\..\Dropbox\Elektronikk\Rov\AUV\Software\Perf\cmsis_boot /I..\..\..\..\..\..\Dropbox\Elektronikk\Rov\AUV\Software\Perf /I..\..\..\..\..\..\Dropbox\Elektronikk\Rov\AUV\Software\Perf\src /I..\..\..\..\..\..\Dropbox\Elektronikk\Rov\AUV\Software\Perf\stm_lib">

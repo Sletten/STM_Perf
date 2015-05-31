@@ -6,10 +6,9 @@
  *
  */
 
+#include "system_init.h"
 
-void sysComInit(void);
-
-
-void sysComInit(){
+void sysComInit()
+{
 
 }
