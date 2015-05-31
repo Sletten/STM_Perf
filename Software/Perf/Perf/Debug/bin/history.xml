@@ -1,19 +1,29 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
    <processor signature="arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -g -nostartfiles -Map=Perf.map -O0 --gc-sections -LD:\Prog\CooCox\CoIDE_1.7.5\configuration\ProgramData\Perf -TD:\Prog\CooCox\CoIDE_1.7.5\configuration\ProgramData\Perf/arm-gcc-link.ld -g">
-      <target file="Perf.elf" lastModified="14cbe728d42">
-         <source file="..\obj\stm32f10x_tim.o" lastModified="14cb9688da3"/>
-         <source file="..\obj\core_cm3.o" lastModified="14cb9688de6"/>
-         <source file="..\obj\usart_rxtx.o" lastModified="14cb9688e40"/>
-         <source file="..\obj\system_stm32f10x.o" lastModified="14cb9688e93"/>
-         <source file="..\obj\stm32f10x_gpio.o" lastModified="14cb9688ef1"/>
-         <source file="..\obj\main.o" lastModified="14cbe728b56"/>
-         <source file="..\obj\stm32f10x_rcc.o" lastModified="14cb9688fae"/>
-         <source file="..\obj\GPIO_Blink.o" lastModified="14cb9688fef"/>
-         <source file="..\obj\stm32f10x_usart.o" lastModified="14cb968905a"/>
-         <source file="..\obj\startup_stm32f10x_hd_vl.o" lastModified="14cb968908e"/>
-         <source file="..\obj\thruster.o" lastModified="14cb9689102"/>
-         <source file="..\obj\misc.o" lastModified="14cb968914a"/>
+      <target file="Perf.elf" lastModified="14da641f357">
+         <source file="..\obj\stm32f10x_tim.o" lastModified="14da6417681"/>
+         <source file="..\obj\core_cm3.o" lastModified="14da64176be"/>
+         <source file="..\obj\system_stm32f10x.o" lastModified="14da6417749"/>
+         <source file="..\obj\stm32f10x_gpio.o" lastModified="14da64177a0"/>
+         <source file="..\obj\com.o" lastModified="14da64177c8"/>
+         <source file="..\obj\system_init.o" lastModified="14da64177f1"/>
+         <source file="..\obj\main.o" lastModified="14da641781a"/>
+         <source file="..\obj\system_gpio.o" lastModified="14da6417848"/>
+         <source file="..\obj\system.o" lastModified="14da6417874"/>
+         <source file="..\obj\stm32f10x_rcc.o" lastModified="14da64178d8"/>
+         <source file="..\obj\stm32f10x_adc.o" lastModified="14da6417982"/>
+         <source file="..\obj\stm32f10x_usart.o" lastModified="14da64179e6"/>
+         <source file="..\obj\startup_stm32f10x_hd_vl.o" lastModified="14da6417a17"/>
+         <source file="..\obj\thruster.o" lastModified="14da6417a4f"/>
+         <source file="..\obj\system_tim.o" lastModified="14da6417ae2"/>
+         <source file="..\obj\stm32f10x_dma.o" lastModified="14da6417b34"/>
+         <source file="..\obj\misc.o" lastModified="14da6417b79"/>
+         <source file="..\obj\system_com.o" lastModified="14da6417ba0"/>
+         <source file="..\obj\stm32f10x_wwdg.o" lastModified="14da6417bdf"/>
+         <source file="..\obj\stm32f10x_spi.o" lastModified="14da6417c3c"/>
+         <source file="..\obj\stm32f10x_i2c.o" lastModified="14da6417ca3"/>
+         <source file="..\obj\stm32f10x_iwdg.o" lastModified="14da6417ce2"/>
       </target>
    </processor>
 </history>
