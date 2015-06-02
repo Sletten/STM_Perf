@@ -934,10 +934,6 @@ Wire Wire Line
 	7100 2400 7000 2400
 Wire Wire Line
 	7000 2400 7000 2500
-NoConn ~ 4500 6900
-NoConn ~ 4000 6900
-NoConn ~ 2400 6900
-NoConn ~ 1900 6900
 NoConn ~ 6100 6900
 NoConn ~ 6600 6900
 NoConn ~ 8200 6900
@@ -948,17 +944,17 @@ NoConn ~ 12400 6900
 NoConn ~ 12900 6900
 NoConn ~ 14500 6900
 NoConn ~ 15000 6900
-Text GLabel 3300 2500 2    47   Input ~ 0
+Text GLabel 3400 2500 2    47   Input ~ 0
 I2C_2_SCL
-Text GLabel 3300 2600 2    47   Input ~ 0
+Text GLabel 3400 2600 2    47   Input ~ 0
 I2C_2_SDA
 Text GLabel 5700 3800 2    47   Input ~ 0
 I2C_2_SCL
 Text GLabel 5700 3900 2    47   Input ~ 0
 I2C_2_SDA
-Text GLabel 2600 5700 2    47   Input ~ 0
+Text GLabel 2600 6800 2    47   Input ~ 0
 I2C_2_SCL
-Text GLabel 2600 5800 2    47   Input ~ 0
+Text GLabel 2600 6700 2    47   Input ~ 0
 I2C_2_SDA
 Text Notes 2000 5200 0    60   ~ 0
 Power
@@ -975,57 +971,57 @@ AUX2
 Text Notes 14650 5250 0    60   ~ 0
 AUX3
 Wire Wire Line
-	2400 5700 2600 5700
+	2400 6800 2600 6800
 Wire Wire Line
-	2600 5800 2400 5800
-Text GLabel 4700 5700 2    47   Input ~ 0
+	2600 6700 2400 6700
+Text GLabel 4700 6800 2    47   Input ~ 0
 I2C_2_SCL
-Text GLabel 4700 5800 2    47   Input ~ 0
+Text GLabel 4700 6700 2    47   Input ~ 0
 I2C_2_SDA
 Wire Wire Line
-	4500 5700 4700 5700
+	4500 6800 4700 6800
 Wire Wire Line
-	4700 5800 4500 5800
-Text GLabel 6800 5700 2    47   Input ~ 0
+	4700 6700 4500 6700
+Text GLabel 6800 6800 2    47   Input ~ 0
 I2C_2_SCL
-Text GLabel 6800 5800 2    47   Input ~ 0
+Text GLabel 6800 6700 2    47   Input ~ 0
 I2C_2_SDA
 Wire Wire Line
-	6600 5700 6800 5700
+	6600 6800 6800 6800
 Wire Wire Line
-	6800 5800 6600 5800
-Text GLabel 8900 5700 2    47   Input ~ 0
+	6800 6700 6600 6700
+Text GLabel 8900 6800 2    47   Input ~ 0
 I2C_2_SCL
-Text GLabel 8900 5800 2    47   Input ~ 0
+Text GLabel 8900 6700 2    47   Input ~ 0
 I2C_2_SDA
 Wire Wire Line
-	8700 5700 8900 5700
+	8700 6800 8900 6800
 Wire Wire Line
-	8900 5800 8700 5800
-Text GLabel 11000 5700 2    47   Input ~ 0
+	8900 6700 8700 6700
+Text GLabel 11000 6800 2    47   Input ~ 0
 I2C_2_SCL
-Text GLabel 11000 5800 2    47   Input ~ 0
+Text GLabel 11000 6700 2    47   Input ~ 0
 I2C_2_SDA
 Wire Wire Line
-	10800 5700 11000 5700
+	10800 6800 11000 6800
 Wire Wire Line
-	11000 5800 10800 5800
-Text GLabel 13100 5700 2    47   Input ~ 0
+	11000 6700 10800 6700
+Text GLabel 13100 6800 2    47   Input ~ 0
 I2C_2_SCL
-Text GLabel 13100 5800 2    47   Input ~ 0
+Text GLabel 13100 6700 2    47   Input ~ 0
 I2C_2_SDA
 Wire Wire Line
-	12900 5700 13100 5700
+	12900 6800 13100 6800
 Wire Wire Line
-	13100 5800 12900 5800
-Text GLabel 15200 5700 2    47   Input ~ 0
+	13100 6700 12900 6700
+Text GLabel 15200 6800 2    47   Input ~ 0
 I2C_2_SCL
-Text GLabel 15200 5800 2    47   Input ~ 0
+Text GLabel 15200 6700 2    47   Input ~ 0
 I2C_2_SDA
 Wire Wire Line
-	15000 5700 15200 5700
+	15000 6800 15200 6800
 Wire Wire Line
-	15200 5800 15000 5800
+	15200 6700 15000 6700
 Wire Wire Line
 	3000 2500 3300 2500
 Wire Wire Line
@@ -1270,172 +1266,180 @@ Wire Wire Line
 	3300 3900 3000 3900
 Wire Wire Line
 	3000 4000 3300 4000
-Text GLabel 12400 6400 0    47   Input ~ 0
+Text GLabel 12400 6100 0    47   Input ~ 0
 GPIO_11
-Text GLabel 12400 6500 0    47   Input ~ 0
-GPIO_12
-Text GLabel 12400 6600 0    47   Input ~ 0
-GPIO_13
-Text GLabel 12400 6700 0    47   Input ~ 0
-GPIO_14
-Text GLabel 12400 6800 0    47   Input ~ 0
-GPIO_15
-Text GLabel 12900 6100 2    47   Input ~ 0
-GPIO_21
-Text GLabel 12900 6200 2    47   Input ~ 0
-GPIO_22
-Text GLabel 12900 6300 2    47   Input ~ 0
-GPIO_23
-Text GLabel 12900 6400 2    47   Input ~ 0
-GPIO_24
-Text GLabel 12400 5900 0    47   Input ~ 0
-GPIO_29
 Text GLabel 12400 6000 0    47   Input ~ 0
-GPIO_28
-Text GLabel 8200 6100 0    47   Input ~ 0
-USART_3_TX
-Text GLabel 8200 6200 0    47   Input ~ 0
-USART_3_RX
-Text GLabel 8200 6300 0    47   Input ~ 0
-USART_3_CK
-Text GLabel 8200 6400 0    47   Input ~ 0
-USART_3_CTS
-Text GLabel 8200 6500 0    47   Input ~ 0
-SPI_1_NSS
-Text GLabel 8200 6600 0    47   Input ~ 0
-SPI_1_SCK
-Text GLabel 8200 6700 0    47   Input ~ 0
-SPI_1_MSIO
-Text GLabel 8200 6800 0    47   Input ~ 0
-SPI_1_MOSI
-Text GLabel 6600 6500 2    47   Input ~ 0
-TIM_2_CH_1
-Text GLabel 6600 6600 2    47   Input ~ 0
-TIM_2_CH_2
-Text GLabel 6600 6700 2    47   Input ~ 0
-TIM_2_CH_3
-Text GLabel 6600 6800 2    47   Input ~ 0
-TIM_2_CH_4
-Text GLabel 4500 6300 2    47   Input ~ 0
-TIM_13
-Text GLabel 4500 6400 2    47   Input ~ 0
-TIM_14
-Text GLabel 4500 6500 2    47   Input ~ 0
-TIM_12_CH_1
-Text GLabel 4500 6600 2    47   Input ~ 0
-TIM_12_CH_2
-Text GLabel 4500 6700 2    47   Input ~ 0
-TIM_15_CH_1
-Text GLabel 4500 6800 2    47   Input ~ 0
-TIM_15_CH_2
-Text GLabel 1900 5900 0    47   Input ~ 0
-GPIO_7
-Text GLabel 1900 6000 0    47   Input ~ 0
-GPIO_8
-Text GLabel 1900 6100 0    47   Input ~ 0
-GPIO_9
-Text GLabel 1900 6200 0    47   Input ~ 0
-GPIO_10
-Text GLabel 4000 5700 0    47   Input ~ 0
-GPIO_0
-Text GLabel 4000 5800 0    47   Input ~ 0
-GPIO_1
-Text GLabel 4000 5900 0    47   Input ~ 0
-GPIO_2
-Text GLabel 4000 6000 0    47   Input ~ 0
-GPIO_3
-Text GLabel 4000 6100 0    47   Input ~ 0
-GPIO_4
-Text GLabel 4000 6200 0    47   Input ~ 0
-GPIO_5
-Text GLabel 6600 6000 2    47   Input ~ 0
-GPIO_20
-Text GLabel 6600 6100 2    47   Input ~ 0
-GPIO_19
-Text GLabel 6600 6200 2    47   Input ~ 0
-GPIO_18
-Text GLabel 6600 6300 2    47   Input ~ 0
-GPIO_17
-Text GLabel 6600 6400 2    47   Input ~ 0
-GPIO_16
-Text GLabel 8200 5700 0    47   Input ~ 0
-GPIO_27
-Text GLabel 8200 5800 0    47   Input ~ 0
-GPIO_26
-Text GLabel 8200 5900 0    47   Input ~ 0
-GPIO_25
-Text GLabel 1900 6500 0    47   Input ~ 0
-ADC_10
-Text GLabel 1900 6600 0    47   Input ~ 0
-ADC_11
-Text GLabel 1900 6700 0    47   Input ~ 0
-ADC_12
-Text GLabel 1900 6800 0    47   Input ~ 0
-ADC_13
-Text GLabel 8700 5900 2    47   Input ~ 0
-USART_2_CK
-Text GLabel 8700 6000 2    47   Input ~ 0
-USART_2_RX
-Text GLabel 8700 6100 2    47   Input ~ 0
-USART_2_TX
-Text GLabel 8700 6400 2    47   Input ~ 0
-UART_5_RX
-Text GLabel 8700 6500 2    47   Input ~ 0
-UART_5_TX
-Text GLabel 8700 6600 2    47   Input ~ 0
-UART_4_RX
-Text GLabel 8700 6700 2    47   Input ~ 0
-UART_4_TX
-Text GLabel 10300 6400 0    47   Input ~ 0
-GPIO_11
-Text GLabel 10300 6500 0    47   Input ~ 0
 GPIO_12
-Text GLabel 10300 6600 0    47   Input ~ 0
+Text GLabel 12400 5900 0    47   Input ~ 0
 GPIO_13
-Text GLabel 10300 6700 0    47   Input ~ 0
+Text GLabel 12400 5800 0    47   Input ~ 0
 GPIO_14
-Text GLabel 10300 6800 0    47   Input ~ 0
+Text GLabel 12400 5700 0    47   Input ~ 0
 GPIO_15
-Text GLabel 10300 5900 0    47   Input ~ 0
-GPIO_29
-Text GLabel 10300 6000 0    47   Input ~ 0
-GPIO_28
-Text GLabel 10800 6100 2    47   Input ~ 0
+Text GLabel 12900 6400 2    47   Input ~ 0
 GPIO_21
-Text GLabel 10800 6200 2    47   Input ~ 0
+Text GLabel 12900 6300 2    47   Input ~ 0
 GPIO_22
-Text GLabel 10800 6300 2    47   Input ~ 0
+Text GLabel 12900 6200 2    47   Input ~ 0
 GPIO_23
-Text GLabel 10800 6400 2    47   Input ~ 0
+Text GLabel 12900 6100 2    47   Input ~ 0
 GPIO_24
-Text GLabel 14500 6400 0    47   Input ~ 0
-GPIO_11
-Text GLabel 14500 6500 0    47   Input ~ 0
-GPIO_12
-Text GLabel 14500 6600 0    47   Input ~ 0
-GPIO_13
-Text GLabel 14500 6700 0    47   Input ~ 0
-GPIO_14
-Text GLabel 14500 6800 0    47   Input ~ 0
-GPIO_15
-Text GLabel 14500 5900 0    47   Input ~ 0
+Text GLabel 12400 6600 0    47   Input ~ 0
 GPIO_29
-Text GLabel 14500 6000 0    47   Input ~ 0
+Text GLabel 12400 6500 0    47   Input ~ 0
 GPIO_28
-Text GLabel 15000 6100 2    47   Input ~ 0
+Text GLabel 8200 6400 0    47   Input ~ 0
+USART_3_TX
+Text GLabel 8200 6300 0    47   Input ~ 0
+USART_3_RX
+Text GLabel 8200 6200 0    47   Input ~ 0
+USART_3_CK
+Text GLabel 8200 6100 0    47   Input ~ 0
+USART_3_CTS
+Text GLabel 8200 6000 0    47   Input ~ 0
+SPI_1_NSS
+Text GLabel 8200 5900 0    47   Input ~ 0
+SPI_1_SCK
+Text GLabel 8200 5800 0    47   Input ~ 0
+SPI_1_MSIO
+Text GLabel 8200 5700 0    47   Input ~ 0
+SPI_1_MOSI
+Text GLabel 6600 6000 2    47   Input ~ 0
+TIM_2_CH_1
+Text GLabel 6600 5900 2    47   Input ~ 0
+TIM_2_CH_2
+Text GLabel 6600 5800 2    47   Input ~ 0
+TIM_2_CH_3
+Text GLabel 6600 5700 2    47   Input ~ 0
+TIM_2_CH_4
+Text GLabel 4500 6200 2    47   Input ~ 0
+TIM_13
+Text GLabel 4500 6100 2    47   Input ~ 0
+TIM_14
+Text GLabel 4500 6000 2    47   Input ~ 0
+TIM_12_CH_1
+Text GLabel 4500 5900 2    47   Input ~ 0
+TIM_12_CH_2
+Text GLabel 4500 5800 2    47   Input ~ 0
+TIM_15_CH_1
+Text GLabel 4500 5700 2    47   Input ~ 0
+TIM_15_CH_2
+Text GLabel 1900 6300 0    47   Input ~ 0
+GPIO_7
+Text GLabel 1900 6400 0    47   Input ~ 0
+GPIO_8
+Text GLabel 1900 6500 0    47   Input ~ 0
+GPIO_9
+Text GLabel 1900 6600 0    47   Input ~ 0
+GPIO_10
+Text GLabel 4000 6300 0    47   Input ~ 0
+GPIO_0
+Text GLabel 4000 6400 0    47   Input ~ 0
+GPIO_1
+Text GLabel 4000 6500 0    47   Input ~ 0
+GPIO_2
+Text GLabel 4000 6600 0    47   Input ~ 0
+GPIO_3
+Text GLabel 4000 6700 0    47   Input ~ 0
+GPIO_4
+Text GLabel 4000 6800 0    47   Input ~ 0
+GPIO_5
+Text GLabel 6100 6100 0    47   Input ~ 0
+GPIO_20
+Text GLabel 6100 6200 0    47   Input ~ 0
+GPIO_19
+Text GLabel 6100 6300 0    47   Input ~ 0
+GPIO_18
+Text GLabel 6100 6400 0    47   Input ~ 0
+GPIO_17
+Text GLabel 6100 6500 0    47   Input ~ 0
+GPIO_16
+Text GLabel 8200 6600 0    47   Input ~ 0
+GPIO_27
+Text GLabel 8200 6700 0    47   Input ~ 0
+GPIO_26
+Text GLabel 8200 6800 0    47   Input ~ 0
+GPIO_25
+Text GLabel 1900 6000 0    47   Input ~ 0
+ADC_10
+Text GLabel 1900 5900 0    47   Input ~ 0
+ADC_11
+Text GLabel 1900 5800 0    47   Input ~ 0
+ADC_12
+Text GLabel 1900 5700 0    47   Input ~ 0
+ADC_13
+Text GLabel 8700 6600 2    47   Input ~ 0
+USART_2_CK
+Text GLabel 8700 6500 2    47   Input ~ 0
+USART_2_RX
+Text GLabel 8700 6400 2    47   Input ~ 0
+USART_2_TX
+Text GLabel 8700 6100 2    47   Input ~ 0
+UART_5_RX
+Text GLabel 8700 6000 2    47   Input ~ 0
+UART_5_TX
+Text GLabel 8700 5900 2    47   Input ~ 0
+UART_4_RX
+Text GLabel 8700 5800 2    47   Input ~ 0
+UART_4_TX
+Text GLabel 10300 6100 0    47   Input ~ 0
+GPIO_11
+Text GLabel 10300 6000 0    47   Input ~ 0
+GPIO_12
+Text GLabel 10300 5900 0    47   Input ~ 0
+GPIO_13
+Text GLabel 10300 5800 0    47   Input ~ 0
+GPIO_14
+Text GLabel 10300 5700 0    47   Input ~ 0
+GPIO_15
+Text GLabel 10300 6600 0    47   Input ~ 0
+GPIO_29
+Text GLabel 10300 6500 0    47   Input ~ 0
+GPIO_28
+Text GLabel 10800 6400 2    47   Input ~ 0
 GPIO_21
-Text GLabel 15000 6200 2    47   Input ~ 0
+Text GLabel 10800 6300 2    47   Input ~ 0
 GPIO_22
-Text GLabel 15000 6300 2    47   Input ~ 0
+Text GLabel 10800 6200 2    47   Input ~ 0
 GPIO_23
+Text GLabel 10800 6100 2    47   Input ~ 0
+GPIO_24
+Text GLabel 14500 6100 0    47   Input ~ 0
+GPIO_11
+Text GLabel 14500 6000 0    47   Input ~ 0
+GPIO_12
+Text GLabel 14500 5900 0    47   Input ~ 0
+GPIO_13
+Text GLabel 14500 5800 0    47   Input ~ 0
+GPIO_14
+Text GLabel 14500 5700 0    47   Input ~ 0
+GPIO_15
+Text GLabel 14500 6600 0    47   Input ~ 0
+GPIO_29
+Text GLabel 14500 6500 0    47   Input ~ 0
+GPIO_28
 Text GLabel 15000 6400 2    47   Input ~ 0
+GPIO_21
+Text GLabel 15000 6300 2    47   Input ~ 0
+GPIO_22
+Text GLabel 15000 6200 2    47   Input ~ 0
+GPIO_23
+Text GLabel 15000 6100 2    47   Input ~ 0
 GPIO_24
 Text GLabel 4600 3100 0    47   Input ~ 0
 USART_2_RTS
 Text GLabel 4600 2800 0    47   Input ~ 0
 USART_2_CK
-Text GLabel 8700 6300 2    47   Input ~ 0
-USART_2_CTS
 Text GLabel 8700 6200 2    47   Input ~ 0
+USART_2_CTS
+Text GLabel 8700 6300 2    47   Input ~ 0
 USART_2_RTS
+NoConn ~ 4500 6900
+NoConn ~ 4000 6900
+NoConn ~ 2400 6900
+NoConn ~ 1900 6900
+NoConn ~ 3400 2600
+NoConn ~ 3400 2500
+NoConn ~ 3300 2500
+NoConn ~ 3300 2600
 $EndSCHEMATC
