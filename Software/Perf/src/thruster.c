@@ -24,7 +24,12 @@
 #define LINEAR			0
 
 
-#define THRUSTER_COUNT 8
+#define THRUSTER_COUNT 	8
+
+
+#define INPUT_MIN_VALUE 0
+#define INPUT_MID_VALUE 125
+#define INPUT_MAX_VALUE 250
 
 
 
@@ -42,14 +47,18 @@
 
 
 // Function declaration
+void initThrusters(void);
+void setThrusterValue(int thruster,short x, short y, short z, short yaw, short roll, short pitch);
 
 void vectorizeInput(void);
+void calculateThrust(void);
 void scaleSpeed(void);
 
 void setThrustValue(short inVal, short inThruster);
 
 void setPwmOutput(short inSpeed, short inThruster);
 
+void scaleThrust(float scale, short x, short y, short z, short yaw, short roll, short pitch);
 
 
 
@@ -63,8 +72,12 @@ char thrustCurve = QUADRATIC;
 short axisInput[6];					// values set inn, 6 axes.
 short axisValue[6];
 
+short inputValue[6];
+short inputVector[6];
 
-short thrustValue[THRUSTER_COUNT];		// thruster speed value
+short thrustValue[THRUSTER_COUNT];
+float thrustVector[THRUSTER_COUNT][6];// thruster speed value
+short thrustValueScaled[THRUSTER_COUNT];		// thruster speed value
 
 short thrustLimit[THRUSTER_COUNT];		// limitations set to thruster in percentage
 
@@ -77,6 +90,27 @@ short pwmFwdStart[THRUSTER_COUNT];		// pwm value for forward start
 short pwmRevStart[THRUSTER_COUNT];		// pwm value for reverse start
 
 
+
+void initThrusters(void)
+{
+	setThrusterValue(1,  1,  1, 0,  1, 0, 0);
+	setThrusterValue(2,  1, -1, 0, -1, 0, 0);
+	setThrusterValue(3, -1,  1, 0, -1, 0, 0);
+	setThrusterValue(4, -1, -1, 0,  1, 0, 0);
+	setThrusterValue(5,  0,  0, 1,  0, 0, 0);
+	setThrusterValue(6,  0,  0, 1,  0, 0, 0);
+	setThrusterValue(7,  0,  0, 1,  0, 0, 0);
+	setThrusterValue(8,  0,  0, 1,  0, 0, 0);
+}
+void setThrusterValue(int thruster,short x, short y, short z, short yaw, short roll, short pitch)
+{
+	thrustVector[thruster][1] = x;
+	thrustVector[thruster][2] = y;
+	thrustVector[thruster][3] = z;
+	thrustVector[thruster][4] = yaw;
+	thrustVector[thruster][5] = roll;
+	thrustVector[thruster][6] = pitch;
+}
 
 
 void setInput(short inX, short inY, short inZ)
@@ -133,41 +167,45 @@ void vectorizeInput(void)
 		thrustValue[i] = 0;
 	}
 
-	for(i = 0; i< 6; i++)
+	for(i = 0; i < 6; i++)
 	{
-		short temp = axisInput[i] - 125;
+		short temp = inputValue[i] - INPUT_MID_VALUE;
 
 		switch(thrustCurve)
 		{
 		case QUADRATIC:
 			temp = temp*temp;
+			if(inputValue[i] < 0)			// scale to fit varable
+											// number range
+				inputVector[i] = -temp/10;
+			else
+				inputVector[i] = temp/10;
 			break;
 
 		case LINEAR:
-			temp = temp*LINEAR_MULTIPLIER;
+			inputVector[i] = temp*LINEAR_MULTIPLIER;
 			break;
 		}
-
-		if(axisInput[i] < 0)
-			axisValue[i] = -temp/10;
-		else
-			axisValue[i] = temp/10;
 	}
 
 
-
-	thrustValue[0] =  axisValue[1] + axisValue[2] + axisValue[3];
-	thrustValue[1] =  axisValue[1] - axisValue[2] - axisValue[3];
-	thrustValue[2] = -axisValue[1] + axisValue[2] - axisValue[3];
-	thrustValue[3] = -axisValue[1] - axisValue[2] + axisValue[3];
-
-	thrustValue[4] = axisValue[4];
-	thrustValue[5] = axisValue[4];
-	thrustValue[6] = axisValue[4];
-	thrustValue[7] = axisValue[4];
-
+	calculateThrust();
 
 	scaleSpeed();
+}
+
+void calculateThrust(void)
+{
+	int i = 0; 	// thrusterp
+	int j = 0;	// axis
+
+	for (i = 0 ; i < THRUSTER_COUNT; i++)
+	{
+		thrustValue[i] = 0;
+
+		for(j = 0; j<6; j++ )
+			thrustValue[i] += thrustVector[i][j]*inputVector[j];
+	}
 }
 
 void scaleSpeed(void)
@@ -176,7 +214,7 @@ void scaleSpeed(void)
 
 	short minScale;
 
-	for(i = 0; i < 4; i++)
+	for(i = 0; i < THRUSTER_COUNT; i++)
 	{
 		short temp = thrustLimit[i] > 0 ? thrustLimit[i] : -thrustLimit[i];
 
@@ -186,6 +224,21 @@ void scaleSpeed(void)
 		{
 
 		}
+	}
+}
+
+void scaleThrust(float scale, short x, short y, short z, short yaw, short roll, short pitch)
+{
+	int i = 0;	//thruster
+
+	for (i = 0 ; i < THRUSTER_COUNT; i++)
+	{
+		thrustValue[i] -= thrustValue[i] * thrustVector[i][1]*scale*x;
+		thrustValue[i] -= thrustValue[i] * thrustVector[i][2]*scale*y;
+		thrustValue[i] -= thrustValue[i] * thrustVector[i][3]*scale*z;
+		thrustValue[i] -= thrustValue[i] * thrustVector[i][4]*scale*yaw;
+		thrustValue[i] -= thrustValue[i] * thrustVector[i][5]*scale*roll;
+		thrustValue[i] -= thrustValue[i] * thrustVector[i][6]*scale*pitch;
 	}
 }
 

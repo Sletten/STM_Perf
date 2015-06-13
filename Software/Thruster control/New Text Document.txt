@@ -1,0 +1,35 @@
+
+
+
+
+Thruster
+Vector X Y Z Roll Pitch Yaw
+
+input -> vecotize -> set thruster -> scale
+
+
+inputValue
+inputVector
+ThrusterValue
+ThrusterValueScaled
+
+
+
+
+thrust scaling
+
+
+
+
+---1
+|
+|
+1  1,3
+
+
+
+scale 0,7
+
+100 -> 70
+
+100 = 100 * 0,7 * 1

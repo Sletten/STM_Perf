@@ -1,83 +1,74 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
-   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F100ZE -DSTM32F10X_HD_VL -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf\cmsis_boot -I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf\src -I..\..\..\..\..\..\GitHub\STM_Perf\Software -I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf\stm_lib -I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf\cmsis -I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf\stm_lib\inc -I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf">
-      <target file="system_gpio.o" lastModified="14daabf0a67">
-         <source file="..\..\..\src\system_gpio.c" lastModified="14daa2fd467"/>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m3 -mthumb -Wall -ffunction-sections -g -O0 -c -DSTM32F100ZE -DSTM32F10X_HD_VL -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -I..\..\..\..\..\..\Users\Sletten\Documents\GitHub\STM_Perf\Software\Perf\stm_lib\inc -I..\..\..\..\..\..\Users\Sletten\Documents\GitHub\STM_Perf\Software\Perf\stm_lib -I..\..\..\..\..\..\Users\Sletten\Documents\GitHub\STM_Perf\Software -I..\..\..\..\..\..\Users\Sletten\Documents\GitHub\STM_Perf\Software\Perf\cmsis -I..\..\..\..\..\..\Users\Sletten\Documents\GitHub\STM_Perf\Software\Perf\src -I..\..\..\..\..\..\Users\Sletten\Documents\GitHub\STM_Perf\Software\Perf -I..\..\..\..\..\..\Users\Sletten\Documents\GitHub\STM_Perf\Software\Perf\cmsis_boot">
+      <target file="system_gpio.o" lastModified="14dec143541">
+         <source file="..\..\..\src\system_gpio.c" lastModified="14deb9cb3cb"/>
       </target>
-      <target file="stm32f10x_spi.o" lastModified="14da6417c3c">
-         <source file="..\..\..\stm_lib\src\stm32f10x_spi.c" lastModified="14cecf5b055"/>
+      <target file="stm32f10x_spi.o" lastModified="14dec143dd9">
+         <source file="..\..\..\stm_lib\src\stm32f10x_spi.c" lastModified="14deb9cb3e1"/>
       </target>
-      <target file="stm32f10x_iwdg.o" lastModified="14da6417ce2">
-         <source file="..\..\..\stm_lib\src\stm32f10x_iwdg.c" lastModified="14cecf6481d"/>
+      <target file="stm32f10x_iwdg.o" lastModified="14dec143f21">
+         <source file="..\..\..\stm_lib\src\stm32f10x_iwdg.c" lastModified="14deb9cb3df"/>
       </target>
-      <target file="stm32f10x_rcc.o" lastModified="14da64178d8">
-         <source file="..\..\..\stm_lib\src\stm32f10x_rcc.c" lastModified="14ca7c99767"/>
+      <target file="stm32f10x_rcc.o" lastModified="14dec143713">
+         <source file="..\..\..\stm_lib\src\stm32f10x_rcc.c" lastModified="14deb9cb3e0"/>
       </target>
-      <target file="core_cm3.o" lastModified="14da64176be">
-         <source file="..\..\..\cmsis\core_cm3.c" lastModified="14ca7cf838b"/>
+      <target file="core_cm3.o" lastModified="14dec1431c3">
+         <source file="..\..\..\cmsis\core_cm3.c" lastModified="14deb9cb3b1"/>
       </target>
-      <target file="com.o" lastModified="14dab6cbc6b">
-         <source file="..\..\..\src\com.c" lastModified="14dab6cacd9"/>
+      <target file="com.o" lastModified="14dec14339d">
+         <source file="..\..\..\src\com.c" lastModified="14deb9cb3c6"/>
       </target>
-      <target file="stm32f10x_i2c.o" lastModified="14da6417ca3">
-         <source file="..\..\..\stm_lib\src\stm32f10x_i2c.c" lastModified="14cecf5a84c"/>
+      <target file="stm32f10x_i2c.o" lastModified="14dec143e81">
+         <source file="..\..\..\stm_lib\src\stm32f10x_i2c.c" lastModified="14deb9cb3de"/>
       </target>
-      <target file="misc.o" lastModified="14da6417b79">
-         <source file="..\..\..\stm_lib\src\misc.c" lastModified="14ca9dacf4e"/>
+      <target file="misc.o" lastModified="14dec143bfc">
+         <source file="..\..\..\stm_lib\src\misc.c" lastModified="14deb9cb3d9"/>
       </target>
-      <target file="system_com.o" lastModified="14dab4abb42">
-         <source file="..\..\..\src\system_com.c" lastModified="14dab4192e1"/>
+      <target file="system_com.o" lastModified="14dec143c97">
+         <source file="..\..\..\src\system_com.c" lastModified="14deb9cb3cb"/>
       </target>
-      <target file="system_interrupt.o" lastModified="14dab5231e3">
-         <source file="..\..\..\src\system_interrupt.c" lastModified="14dab522352"/>
+      <target file="system_interrupt.o" lastModified="14dec143664">
+         <source file="..\..\..\src\system_interrupt.c" lastModified="14deb9cb3cd"/>
       </target>
-      <target file="thruster.o" lastModified="14da6417a4f">
-         <source file="..\..\..\src\thruster.c" lastModified="14c0a772250"/>
+      <target file="thruster.o" lastModified="14dec363924">
+         <source file="..\..\..\src\thruster.c" lastModified="14dec3633db"/>
       </target>
-      <target file="stm32f10x_gpio.o" lastModified="14da64177a0">
-         <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="14ca7c9bc54"/>
+      <target file="stm32f10x_gpio.o" lastModified="14dec1432f8">
+         <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="14deb9cb3dd"/>
       </target>
-      <target file="system_stm32f10x.o" lastModified="14dab8f1c0e">
-         <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="14dab8ebf30"/>
+      <target file="system_stm32f10x.o" lastModified="14dec143251">
+         <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="14deb9cb3c1"/>
       </target>
-      <target file="system_init.o" lastModified="14dab4aba92">
-         <source file="..\..\..\src\system_init.c" lastModified="14dab434df5"/>
+      <target file="system_init.o" lastModified="14dec143412">
+         <source file="..\..\..\src\system_init.c" lastModified="14deb9cb3cc"/>
       </target>
-      <target file="stm32f10x_tim.o" lastModified="14da6417681">
-         <source file="..\..\..\stm_lib\src\stm32f10x_tim.c" lastModified="14ca7c9a8e8"/>
+      <target file="stm32f10x_tim.o" lastModified="14dec14312f">
+         <source file="..\..\..\stm_lib\src\stm32f10x_tim.c" lastModified="14deb9cb3e3"/>
       </target>
-      <target file="startup_stm32f10x_hd_vl.o" lastModified="14da6417a17">
-         <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_hd_vl.c" lastModified="14ca7c99778"/>
+      <target file="startup_stm32f10x_hd_vl.o" lastModified="14dec14396a">
+         <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_hd_vl.c" lastModified="14deb9cb3b7"/>
       </target>
-      <target file="stm32f10x_adc.o" lastModified="14da6417982">
-         <source file="..\..\..\stm_lib\src\stm32f10x_adc.c" lastModified="14cecf5c2b5"/>
+      <target file="stm32f10x_adc.o" lastModified="14dec14382c">
+         <source file="..\..\..\stm_lib\src\stm32f10x_adc.c" lastModified="14deb9cb3db"/>
       </target>
-      <target file="I2C_EEPROM.o" lastModified="14da6417ab8">
-         <source file="..\..\..\example\I2C_EEPROM.c" lastModified="14da603c944"/>
+      <target file="stm32f10x_wwdg.o" lastModified="14dec143d31">
+         <source file="..\..\..\stm_lib\src\stm32f10x_wwdg.c" lastModified="14deb9cb3e4"/>
       </target>
-      <target file="stm32f10x_wwdg.o" lastModified="14da6417bdf">
-         <source file="..\..\..\stm_lib\src\stm32f10x_wwdg.c" lastModified="14cecf5e35f"/>
+      <target file="stm32f10x_dma.o" lastModified="14dec143b6b">
+         <source file="..\..\..\stm_lib\src\stm32f10x_dma.c" lastModified="14deb9cb3db"/>
       </target>
-      <target file="usart_rxtx.o" lastModified="14da6417708">
-         <source file="..\..\..\example\usart_rxtx.c" lastModified="14ca9d74bb0"/>
+      <target file="system.o" lastModified="14dec1435ca">
+         <source file="..\..\..\src\system.c" lastModified="14deb9cb3ca"/>
       </target>
-      <target file="GPIO_Blink.o" lastModified="14da6417916">
-         <source file="..\..\..\example\GPIO_Blink.c" lastModified="14ca7d222f4"/>
+      <target file="system_tim.o" lastModified="14dec143ac0">
+         <source file="..\..\..\src\system_tim.c" lastModified="14deb9cb3cd"/>
       </target>
-      <target file="stm32f10x_dma.o" lastModified="14da6417b34">
-         <source file="..\..\..\stm_lib\src\stm32f10x_dma.c" lastModified="14cecf5fa1d"/>
+      <target file="main.o" lastModified="14dec143485">
+         <source file="..\..\..\src\main.c" lastModified="14deb9cb3c7"/>
       </target>
-      <target file="system.o" lastModified="14dab90a61a">
-         <source file="..\..\..\src\system.c" lastModified="14dab909aa2"/>
-      </target>
-      <target file="system_tim.o" lastModified="14dab69fffa">
-         <source file="..\..\..\src\system_tim.c" lastModified="14dab69c2de"/>
-      </target>
-      <target file="stm32f10x_usart.o" lastModified="14da64179e6">
-         <source file="..\..\..\stm_lib\src\stm32f10x_usart.c" lastModified="14ca7ca2dec"/>
-      </target>
-      <target file="main.o" lastModified="14da641781a">
-         <source file="..\..\..\src\main.c" lastModified="14da60e0e7c"/>
+      <target file="stm32f10x_usart.o" lastModified="14dec1438ef">
+         <source file="..\..\..\stm_lib\src\stm32f10x_usart.c" lastModified="14deb9cb3e4"/>
       </target>
    </processor>
 </history>
