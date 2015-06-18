@@ -40,6 +40,24 @@ Table of data types:
 
 commands
 
+-Control
+	thruster
+	manip
+	light
+	camera
+	other
+
+
+-sensor
+	request data
+	
+
+
+-system parameters
+
+
+
+
 
 
 
