@@ -216,12 +216,17 @@ void scaleSpeed(void)
 
 	for(i = 0; i < THRUSTER_COUNT; i++)
 	{
-		short temp = thrustLimit[i] > 0 ? thrustLimit[i] : -thrustLimit[i];
+		int temp = thrustValue[i] - thrustLimit[i];
 
-		temp -= LINEAR_MULTIPLIER*LINEAR_MULTIPLIER/10;
-
-		if(temp >= 0)
+		if (temp > 0) // check thrust value for out of range value
 		{
+			int scale = temp/thrustLimit[i];
+			scaleThrust(scale, 	thrustVector[i][1]*scale,
+								thrustVector[i][2]*scale,
+								thrustVector[i][3]*scale,
+								thrustVector[i][4]*scale,
+								thrustVector[i][5]*scale,
+								thrustVector[i][6]*scale);
 
 		}
 	}
