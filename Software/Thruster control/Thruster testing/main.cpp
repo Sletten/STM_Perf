@@ -49,7 +49,7 @@ void setInputRot(short inYaw, short inPitch, short inRoll);
 
 void vectorizeInput(void);
 void calculateThrust(void);
-void scaleSpeed(void);
+void scaleInput(void);
 
 void setThrustValue(short inVal, short inThruster);
 
@@ -57,7 +57,7 @@ void setPwmOutput(short inSpeed, short inThruster);
 
 void scaleThrust(int scale1, int scale2, short x, short y, short z, short yaw, short roll, short pitch);
 
-
+int abs(int in);
 
 
 
@@ -98,7 +98,7 @@ int main()
     initThrusters();
 
     setInput(100,160, 180);
-    setInputRot(50, 100, 100);
+    setInputRot(-50, 100, 100);
 
     vectorizeInput();
 
@@ -111,19 +111,26 @@ int main()
 
 
 
+int abs(int in)
+{
+    if(in < 0 )
+        return -in;
 
+    return in;
+
+}
 
 
 void initThrusters(void)
 {
-	setThrusterValue(1,  1,  1, 0,  1, 0, 0);
-	setThrusterValue(2,  1, -1, 0, -1, 0, 0);
-	setThrusterValue(3, -1,  1, 0, -1, 0, 0);
-	setThrusterValue(4, -1, -1, 0,  1, 0, 0);
+	setThrusterValue(0,  1,  1, 0,  1, 0, 0);
+	setThrusterValue(1,  1, -1, 0, -1, 0, 0);
+	setThrusterValue(2, -1,  1, 0, -1, 0, 0);
+	setThrusterValue(3, -1, -1, 0,  1, 0, 0);
+	setThrusterValue(4,  0,  0, 1,  0, 0, 0);
 	setThrusterValue(5,  0,  0, 1,  0, 0, 0);
 	setThrusterValue(6,  0,  0, 1,  0, 0, 0);
 	setThrusterValue(7,  0,  0, 1,  0, 0, 0);
-	setThrusterValue(8,  0,  0, 1,  0, 0, 0);
 
 	thrustLimit[0] = 500;
 	thrustLimit[1] = 500;
@@ -230,7 +237,7 @@ void vectorizeInput(void)
 
 	calculateThrust();
 
-	scaleSpeed();
+	scaleInput();
 
 	std::cout << thrustValue[0] << std::endl;
 	std::cout << thrustValue[1] << std::endl;
@@ -238,6 +245,8 @@ void vectorizeInput(void)
 	std::cout << thrustValue[3] << std::endl;
 	std::cout << thrustValue[4] << std::endl;
 	std::cout << thrustValue[5] << std::endl;
+	std::cout << thrustValue[6] << std::endl;
+	std::cout << thrustValue[7] << std::endl;
 }
 
 void calculateThrust(void)
@@ -260,9 +269,11 @@ void calculateThrust(void)
 	std::cout << thrustValue[3] << std::endl;
 	std::cout << thrustValue[4] << std::endl;
 	std::cout << thrustValue[5] << std::endl;
+	std::cout << thrustValue[6] << std::endl;
+	std::cout << thrustValue[7] << std::endl;
 }
 
-void scaleSpeed(void)
+void scaleInput(void)
 {
     std::cout << "scale speed" << std::endl;
 	int i = 0;
@@ -271,8 +282,8 @@ void scaleSpeed(void)
 
 	for(i = 0; i < THRUSTER_COUNT; i++)
 	{
-	    std::cout << "scale speed loop" << std::endl;
-		int temp = thrustValue[i] - thrustLimit[i];
+	    std::cout << "scale speed loop "  << i << std::endl;
+		int temp = abs(thrustValue[i]) - thrustLimit[i];
 		std::cout << thrustValue[i]  << std::endl;
 
 		if (temp > 0) // check thrust value for out of range value
@@ -281,7 +292,7 @@ void scaleSpeed(void)
 		    std::cout << temp << std::endl;
 		    std::cout << thrustLimit[i] << std::endl;
 
-			scaleThrust(thrustLimit[i],thrustValue[i],
+			scaleThrust(thrustLimit[i],abs(thrustValue[i]),
                                 thrustVector[i][0],
 								thrustVector[i][1],
 								thrustVector[i][2],
@@ -289,6 +300,8 @@ void scaleSpeed(void)
 								thrustVector[i][4],
 								thrustVector[i][5]);
 
+            calculateThrust();  //recalculate thrust
+            i = 0;              //check every thruster again //TODO: should be obsolete if working
 		}
 	}
 }
@@ -296,7 +309,36 @@ void scaleSpeed(void)
 void scaleThrust(int scale1, int scale2, short x, short y, short z, short yaw, short roll, short pitch)
 {
     std::cout << "scale thrust" << std::endl;
-	int i = 0;	//thruster
+
+
+    std::cout << inputVector[0] << std::endl;
+    std::cout << inputVector[1] << std::endl;
+    std::cout << inputVector[2] << std::endl;
+    std::cout << inputVector[3] << std::endl;
+    std::cout << inputVector[4] << std::endl;
+    std::cout << inputVector[5] << std::endl;
+    std::cout << std::endl;
+
+
+    inputVector[0] -= inputVector[0]*abs(x)*scale1/scale2;
+    inputVector[1] -= inputVector[1]*abs(y)*scale1/scale2;
+    inputVector[2] -= inputVector[2]*abs(z)*scale1/scale2;
+    inputVector[3] -= inputVector[3]*abs(yaw)*scale1/scale2;
+    inputVector[4] -= inputVector[4]*abs(roll)*scale1/scale2;
+    inputVector[5] -= inputVector[5]*abs(pitch)*scale1/scale2;
+
+    std::cout << inputVector[0] << std::endl;
+    std::cout << inputVector[1] << std::endl;
+    std::cout << inputVector[2] << std::endl;
+    std::cout << inputVector[3] << std::endl;
+    std::cout << inputVector[4] << std::endl;
+    std::cout << inputVector[5] << std::endl;
+
+    std::cout << std::endl;
+
+    /*
+
+    int i = 0;	//thruster
 
 	for (i = 0 ; i < THRUSTER_COUNT; i++)
 	{
@@ -315,6 +357,7 @@ void scaleThrust(int scale1, int scale2, short x, short y, short z, short yaw, s
 		std::cout << thrustValue[i] << std::endl;
 		std::cout << std::endl;
 	}
+    */
 }
 
 
