@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = 27.05.2015 20:07:32
+Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = 24.06.2015 20:42:26
 
 BeginCmp
 TimeStamp = /55574B38;
@@ -410,7 +410,7 @@ BeginCmp
 TimeStamp = /55576CD5;
 Reference = U3;
 ValeurCmp = SN74LVCC4245A;
-IdModule  = Housings_SOIC:SOIC-24_7.5x15.4mm_Pitch1.27mm;
+IdModule  = Housings_SSOP:TSSOP-24_4.4x7.8mm_Pitch0.65mm;
 EndCmp
 
 BeginCmp
