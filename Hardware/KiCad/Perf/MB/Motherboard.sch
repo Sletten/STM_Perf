@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:Motherboard-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -1676,7 +1677,7 @@ Wire Wire Line
 Wire Wire Line
 	3000 8000 2000 8000
 Wire Wire Line
-	2000 8000 2000 7800
+	2000 8000 2000 7500
 Wire Wire Line
 	2000 7800 2100 7800
 Wire Wire Line
@@ -2459,4 +2460,13 @@ Text GLabel 20400 11800 0    47   Input ~ 0
 USART 2 RTS
 Text GLabel 20400 11900 0    47   Input ~ 0
 USART 2 CTS
+Wire Wire Line
+	2000 7500 2100 7500
+Connection ~ 2000 7800
+Wire Wire Line
+	2100 7600 2000 7600
+Connection ~ 2000 7600
+Wire Wire Line
+	2100 7700 2000 7700
+Connection ~ 2000 7700
 $EndSCHEMATC

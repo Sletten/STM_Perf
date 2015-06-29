@@ -18,10 +18,11 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.internal.EditorStack@11ae9e7" ratio="0.50895613" ratioLeft="824" ratioRight="795" relationship="2" relative="DefaultEditorWorkbook">
+<info part="org.eclipse.ui.internal.EditorStack@11ae9e7" ratio="0.5766234" ratioLeft="666" ratioRight="489" relationship="2" relative="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="3"/>
@@ -44,7 +45,7 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/system_tim.c"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="779" selectionTopPixel="301"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="thruster.c" partName="thruster.c" path="D:/GitHub/STM_Perf/Software/Perf/src/thruster.c" title="thruster.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/thruster.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="thruster.c" partName="thruster.c" path="C:/Users/Sletten/Documents/GitHub/STM_Perf/Software/Perf/src/thruster.c" title="thruster.c" tooltip="C:/Users/Sletten/Documents/GitHub/STM_Perf/Software/Perf/src/thruster.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/thruster.c"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4223" selectionTopPixel="3136"/>
 </editor>
@@ -60,7 +61,7 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/system_init.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="114" selectionTopPixel="0"/>
 </editor>
-<editor focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="thruster.h" partName="thruster.h" path="D:/GitHub/STM_Perf/Software/Perf/src/thruster.h" title="thruster.h" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/thruster.h" workbook="org.eclipse.ui.internal.EditorStack@11ae9e7">
+<editor focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="thruster.h" partName="thruster.h" path="C:/Users/Sletten/Documents/GitHub/STM_Perf/Software/Perf/src/thruster.h" title="thruster.h" tooltip="C:/Users/Sletten/Documents/GitHub/STM_Perf/Software/Perf/src/thruster.h" workbook="org.eclipse.ui.internal.EditorStack@11ae9e7">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/thruster.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="178" selectionTopPixel="0"/>
 </editor>
@@ -70,7 +71,7 @@
 <viewState/>
 </view>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="10">
 <expanded>
 <element path="/Perf"/>
 <element path="/Perf/cmsis"/>
@@ -89,7 +90,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.coocox.builder.perspective.CoBuilder">
+<perspectives activePart="org.coocox.component.ui.ComponentView" activePerspective="org.coocox.builder.perspective.CoBuilder">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.coocox.builder.ui.PerspectiveCoBuilder" id="org.coocox.builder.perspective.CoBuilder" label="CooCox CoBuilder"/>
 <alwaysOnActionSet id="org.coocox.component.ui.actionSet"/>
@@ -126,7 +127,7 @@
 <layout>
 <mainWindow>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@116d461">
-<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
+<folder activePageID="org.coocox.component.ui.ComponentView" appearance="2" expanded="2">
 <page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
 <page content="org.coocox.component.ui.ComponentView" label="Components"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -141,7 +142,7 @@
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1284047" ratio="0.71884984" ratioLeft="675" ratioRight="264" relationship="4" relative="org.eclipse.ui.internal.ViewStack@116d461">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1284047" ratio="0.8580542" ratioLeft="538" ratioRight="89" relationship="4" relative="org.eclipse.ui.internal.ViewStack@116d461">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -149,7 +150,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1aff300" ratio="0.1503405" ratioLeft="287" ratioRight="1622" relationship="2" relative="org.eclipse.ui.internal.ViewStack@116d461">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1aff300" ratio="0.14538746" ratioLeft="197" ratioRight="1158" relationship="2" relative="org.eclipse.ui.internal.ViewStack@116d461">
 <folder appearance="2" expanded="2">
 <page content="org.coocox.builder.ui.exampleView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
@@ -165,192 +166,37 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.39275363" ratioLeft="271" ratioRight="419" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1aff300"/>
+<info part="org.eclipse.ui.editorss" ratio="0.3249027" ratioLeft="167" ratioRight="347" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1aff300"/>
 </mainWindow>
 </layout>
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system_init.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/com.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/com.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/cmsis_boot/system_stm32f10x.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system_tim.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system_interrupt.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system_gpio.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/com.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system_init.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system_interrupt.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/thruster.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/thruster.h"/>
-</editors>
-<item historyLabel="system_init.c" index="0">
-<position info="not_deleted" x="167" y="0"/>
-</item>
-<item historyLabel="com.h" index="2">
-<position info="not_deleted" x="133" y="0"/>
-</item>
-<item historyLabel="system.c" index="3">
-<position info="not_deleted" x="430" y="0"/>
-</item>
-<item historyLabel="system.c" index="3">
-<position info="not_deleted" x="495" y="0"/>
-</item>
-<item historyLabel="com.h" index="2">
-<position info="not_deleted" x="133" y="0"/>
-</item>
-<item historyLabel="system.c" index="3">
-<position info="not_deleted" x="515" y="0"/>
-</item>
-<item historyLabel="com.c" index="1">
-<position info="not_deleted" x="258" y="0"/>
-</item>
-<item historyLabel="system.c" index="3">
-<position info="not_deleted" x="515" y="0"/>
-</item>
-<item historyLabel="com.c" index="1">
-<position info="not_deleted" x="449" y="0"/>
-</item>
-<item historyLabel="system.c" index="3">
-<position info="not_deleted" x="519" y="0"/>
-</item>
-<item historyLabel="system.c" index="3">
-<position info="not_deleted" x="512" y="0"/>
-</item>
-<item historyLabel="system.c" index="3">
-<position info="not_deleted" x="478" y="0"/>
-</item>
-<item historyLabel="com.c" index="1">
-<position info="not_deleted" x="260" y="0"/>
-</item>
-<item historyLabel="system_stm32f10x.c" index="4">
-<position info="not_deleted" x="4483" y="0"/>
-</item>
-<item historyLabel="system.c" index="3">
-<position info="not_deleted" x="1049" y="0"/>
-</item>
-<item historyLabel="system_stm32f10x.c" index="4">
-<position info="not_deleted" x="7630" y="0"/>
-</item>
-<item historyLabel="system.c" index="5">
-<position info="not_deleted" x="1051" y="0"/>
-</item>
-<item historyLabel="system_stm32f10x.c" index="4">
-<position info="not_deleted" x="7900" y="0"/>
-</item>
-<item historyLabel="system.c" index="5">
-<position info="not_deleted" x="1134" y="0"/>
-</item>
-<item historyLabel="main.c" index="6">
-<position info="not_deleted" x="82" y="0"/>
-</item>
-<item historyLabel="system_tim.c" index="7">
-<position info="not_deleted" x="779" y="0"/>
-</item>
-<item historyLabel="system_interrupt.c" index="8">
-<position info="not_deleted" x="473" y="0"/>
-</item>
-<item historyLabel="system_gpio.c" index="9">
-<position info="not_deleted" x="2127" y="0"/>
-</item>
-<item historyLabel="system_stm32f10x.c" index="4">
-<position info="not_deleted" x="7900" y="0"/>
-</item>
-<item historyLabel="main.c" index="6">
-<position info="not_deleted" x="82" y="0"/>
-</item>
-<item historyLabel="system_tim.c" index="7">
-<position info="not_deleted" x="779" y="0"/>
-</item>
-<item historyLabel="main.c" index="6">
-<position info="not_deleted" x="82" y="0"/>
-</item>
-<item historyLabel="system_tim.c" index="7">
-<position info="not_deleted" x="779" y="0"/>
-</item>
-<item historyLabel="com.c" index="10">
-<position info="not_deleted" x="260" y="0"/>
-</item>
-<item historyLabel="system_interrupt.c" index="8">
-<position info="not_deleted" x="473" y="0"/>
-</item>
-<item historyLabel="system_gpio.c" index="9">
-<position info="not_deleted" x="2127" y="0"/>
-</item>
-<item historyLabel="system_interrupt.c" index="8">
-<position info="not_deleted" x="473" y="0"/>
-</item>
-<item historyLabel="system_init.c" index="11">
-<position info="not_deleted" x="167" y="0"/>
-</item>
-<item historyLabel="system_interrupt.c" index="8">
-<position info="not_deleted" x="473" y="0"/>
-</item>
-<item historyLabel="system_tim.c" index="7">
-<position info="not_deleted" x="779" y="0"/>
-</item>
-<item historyLabel="system_stm32f10x.c" index="4">
-<position info="not_deleted" x="4448" y="0"/>
-</item>
-<item historyLabel="system.c" index="5">
-<position info="not_deleted" x="475" y="0"/>
-</item>
-<item historyLabel="system_stm32f10x.c" index="4">
-<position info="not_deleted" x="4518" y="0"/>
-</item>
-<item historyLabel="system.c" index="5">
-<position info="not_deleted" x="487" y="0"/>
-</item>
-<item historyLabel="system_stm32f10x.c" index="4">
-<position info="not_deleted" x="4613" y="0"/>
-</item>
-<item historyLabel="system_interrupt.c" index="12">
-<position info="not_deleted" x="473" y="0"/>
-</item>
-<item historyLabel="thruster.c" index="13">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="thruster.h" index="14">
-<position info="not_deleted" x="178" y="0"/>
-</item>
-<item historyLabel="thruster.c" index="13">
-<position info="not_deleted" x="207" y="0"/>
-</item>
-<item historyLabel="thruster.c" index="13">
-<position info="not_deleted" x="4450" y="0"/>
-</item>
-<item historyLabel="thruster.c" index="13">
-<position info="not_deleted" x="4129" y="0"/>
-</item>
-<item historyLabel="thruster.c" index="13">
-<position info="not_deleted" x="4129" y="0"/>
-</item>
-<item historyLabel="thruster.c" index="13">
-<position/>
-</item>
-<item historyLabel="thruster.c" index="13">
-<position info="not_deleted" x="4208" y="0"/>
-</item>
-<item active="true" historyLabel="thruster.c" index="13">
-<position info="not_deleted" x="4215" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 </window>
 <mruList>
+<file factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory" id="org.coocox.builder.ui.editors.repository.RepositoryBrowser" name="Repository" tooltip="Repository">
+<persistable>
+<subPage/>
+</persistable>
+</file>
+<file factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory" id="org.coocox.builder.ui.editors.repository.RepositoryBrowser" name="Repository" tooltip="Repository">
+<persistable>
+<subPage/>
+</persistable>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="thruster.h" tooltip="Perf/src/thruster.h">
 <persistable path="/Perf/src/thruster.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="thruster.c" tooltip="Perf/src/thruster.c">
 <persistable path="/Perf/src/thruster.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system_interrupt.c" tooltip="Perf/src/system_interrupt.c">
+<persistable path="/Perf/src/system_interrupt.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="misc.h" tooltip="Perf/stm_lib/inc/misc.h">
 <persistable path="/Perf/stm_lib/inc/misc.h"/>
@@ -360,9 +206,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system_stm32f10x.h" tooltip="Perf/cmsis_boot/system_stm32f10x.h">
 <persistable path="/Perf/cmsis_boot/system_stm32f10x.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system_interrupt.c" tooltip="Perf/src/system_interrupt.c">
-<persistable path="/Perf/src/system_interrupt.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="servo_Control.h" tooltip="CCU-system/Source/servo_Control.h">
 <persistable path="/CCU-system/Source/servo_Control.h"/>
@@ -376,17 +219,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system_stm32f10x.h" tooltip="Perf/cmsis_boot/system_stm32f10x.h">
 <persistable path="/Perf/cmsis_boot/system_stm32f10x.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system_stm32f10x.c" tooltip="Perf/cmsis_boot/system_stm32f10x.c">
-<persistable path="/Perf/cmsis_boot/system_stm32f10x.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x.h" tooltip="Perf/cmsis_boot/stm32f10x.h">
-<persistable path="/Perf/cmsis_boot/stm32f10x.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_conf.h" tooltip="Perf/cmsis_boot/stm32f10x_conf.h">
-<persistable path="/Perf/cmsis_boot/stm32f10x_conf.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="core_cm3.h" tooltip="Perf/cmsis/core_cm3.h">
-<persistable path="/Perf/cmsis/core_cm3.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="thruster.h" tooltip="Perf/src/thruster.h">
+<persistable path="/Perf/src/thruster.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system_interrupt.c" tooltip="Perf/src/system_interrupt.c">
 <persistable path="/Perf/src/system_interrupt.c"/>

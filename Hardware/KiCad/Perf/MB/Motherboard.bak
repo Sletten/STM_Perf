@@ -1988,10 +1988,6 @@ Text GLabel 20400 11100 0    47   Input ~ 0
 GPIO_28
 Text GLabel 20400 11000 0    47   Input ~ 0
 GPIO_29
-Text GLabel 19100 11100 2    47   Input ~ 0
-GPIO_30
-Text GLabel 19100 11000 2    47   Input ~ 0
-GPIO_31
 Text GLabel 21500 11800 2    47   Input ~ 0
 GPIO_16
 $Comp
