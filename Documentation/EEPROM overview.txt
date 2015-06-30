@@ -1,0 +1,52 @@
+address		data type				description
+
+
+// to be converted to excel document
+
+
+//			System Paramenters/info
+			runtime
+			
+			
+
+
+//			Thruster parameters  //one for each channel 1-8
+			max thrust
+			min thrust
+			mid thrust
+			min deadzone
+			max deadzone
+			max total thrust		// might be covered by min and max thrust
+			
+			
+//			Manip Parameters
+			max movement
+			min movement
+			midpoint
+			min deadzone
+			max deadzone
+			direction
+			max power				// maximum power consumption for a motor before shutoff
+			
+			
+//			camera Paramenters
+			max movement
+			min movement
+			midpoint
+			min deadzone
+			max deadzone
+			direction
+			// same for zoom, focus, other camera function if applicable
+			
+//			Sensor Parameters / com Parameters			
+			UART:
+				baudrate and such
+			I2C:
+				slave addresses
+				
+			
+			
+			
+			
+			
+			

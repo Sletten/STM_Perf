@@ -21,7 +21,7 @@ One byte which value indicates how many bytes is contained in the Payload.
 	Payload
 
 -Payload header
-applicable id data type indicates several types of data is sendt.
+applicable if data type indicates several types of data is sendt.
 Data type byte, same as above.
 Data length, the length of this payload chunk
 
@@ -37,24 +37,60 @@ one or two bytes for checksum, might use 16-bit fletch checksum as described in 
 
 Table of data types:
 
+ 
+commands		0x01
+	Get system info
+	get version
+	get status
 
-commands
+-Control		0x08
+	thruster	0x01
+		x y z axis
+		yaw pitch roll rotation
+	manip		0x03
+		channel number, 1 byte - 8 possible active, (eg: 00101101, ch 1, 3, 4, 6 active)
+		movement, speed/ set position/ force - givven by previous setup
+	light		0x05
+		channel number, 1 byte - 8 possible active, (eg: 00101101, ch 1, 3, 4, 6 active)
+		set dim, two channels in one byte, 4bits per light channel.
+	camera		0x07
+		channel number, 1 byte - 8 possible active, (eg: 00101101, ch 1, 3, 4, 6 active)
+		set position/ speed givven by setup.
+		focus / zoom / other
+	other		0x0F
 
--Control
-	thruster
-	manip
-	light
-	camera
-	other
 
-
--sensor
-	request data
+-sensor				0x0F
+	request data - one value for each type of equipment.
+		-sonar
+		-altimeter
+		-imu
 	
 
 
--system parameters
+-system parameters	0x10 - set for now, 0x11 for save to eeprom
+	thruster		0x01
+		channel number, 1 byte - 8 possible active, (eg: 00101101, ch 1, 3, 4, 6 active)
+		set midpoint
+		set endpoint
+		set deadzone
+		set max power/thrust/
+		set thrust vectoring
+		set 
+	manip			0x03
+		channel number, 1 byte - 8 possible active, (eg: 00101101, ch 1, 3, 4, 6 active)
+		set actuator type (motor/servo/stepper) // is this usefull? PERF firmware controls manip fuctionalyty anyways.
+		set enpoints
+		set max speed/power/
+		set midpoint
+		set 
+	light			0x05
+	camera			0x07
+	other			0x0F
 
+
+
+Thruster
 
 
 
