@@ -1,5 +1,5 @@
 M48
-;DRILL file {pcbnew (after 2015-mar-04 BZR unknown)-product} date 24.06.2015 23:23:47
+;DRILL file {pcbnew (after 2015-mar-04 BZR unknown)-product} date 04.07.2015 19:27:02
 ;FORMAT={-:-/ absolute / inch / decimal}
 FMAT,2
 INCH,TZ
@@ -168,8 +168,10 @@ X7.01Y-3.51
 X7.02Y-3.56
 X7.02Y-3.97
 X7.05Y-2.66
+X7.05Y-3.46
 X7.08Y-2.96
 X7.08Y-3.
+X7.09Y-3.19
 X7.12Y-3.12
 X7.12Y-3.49
 X7.12Y-3.97
