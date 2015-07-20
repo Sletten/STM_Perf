@@ -97,7 +97,7 @@ int main()
 
     initThrusters();
 
-    setInput(100,160, 180);
+    setInput(100, 160, 180);
     setInputRot(-50, 100, 100);
 
     vectorizeInput();
@@ -273,6 +273,11 @@ void calculateThrust(void)
 	std::cout << thrustValue[7] << std::endl;
 }
 
+// scale function
+// scales each thruster one by one.
+// not optimalization.
+
+
 void scaleInput(void)
 {
     std::cout << "scale speed" << std::endl;
@@ -305,6 +310,54 @@ void scaleInput(void)
 		}
 	}
 }
+
+
+
+// second scale function
+// scales thrust based on largest error ratio
+
+void scaleInput2(void)
+{
+    std::cout << "scale speed" << std::endl;
+	int i = 0;
+
+	short minScale = 0;
+
+    for(i = 0; i < THRUSTER_COUNT; i++)
+	{
+	    int temp = abs(thrustValue[i]) - thrustLimit[i];
+	}
+
+    // old:
+    /*
+	for(i = 0; i < THRUSTER_COUNT; i++)
+	{
+	    std::cout << "scale speed loop "  << i << std::endl;
+		int temp = abs(thrustValue[i]) - thrustLimit[i];
+		std::cout << thrustValue[i]  << std::endl;
+
+		if (temp > 0) // check thrust value for out of range value
+		{
+		    std::cout << "scale speed loop if" << std::endl;
+		    std::cout << temp << std::endl;
+		    std::cout << thrustLimit[i] << std::endl;
+
+			scaleThrust(thrustLimit[i],abs(thrustValue[i]),
+                                thrustVector[i][0],
+								thrustVector[i][1],
+								thrustVector[i][2],
+								thrustVector[i][3],
+								thrustVector[i][4],
+								thrustVector[i][5]);
+
+            calculateThrust();  //recalculate thrust
+            i = 0;              //check every thruster again //TODO: should be obsolete if working
+		}
+	}
+	*/
+}
+
+
 
 void scaleThrust(int scale1, int scale2, short x, short y, short z, short yaw, short roll, short pitch)
 {
