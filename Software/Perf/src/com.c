@@ -84,3 +84,13 @@ void USART1_IRQHandler(void)
 }
 
 
+// test function for data communication
+void handleData(char inData[], int length)
+{
+	//read datatype header -> check if payload contains one or several data packs
+	//find payload length
+	//read out data, send to respective PERF modules.
+	//repeat if applicable
+}
+
+
