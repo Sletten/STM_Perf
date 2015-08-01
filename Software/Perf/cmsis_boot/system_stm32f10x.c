@@ -105,8 +105,8 @@
     
 #if defined (STM32F10X_LD_VL) || (defined STM32F10X_MD_VL) || (defined STM32F10X_HD_VL)
 /* #define SYSCLK_FREQ_HSE    HSE_VALUE */
- //#define SYSCLK_FREQ_24MHz  24000000
- #define SYSCLK_FREQ_HSE	24000000
+ //#define SYSCLK_FREQ_24MHz  24000000	// 8MHz crystal
+ #define SYSCLK_FREQ_HSE	24000000	// 24MHz crystal
 #else
 /* #define SYSCLK_FREQ_HSE    HSE_VALUE */
 /* #define SYSCLK_FREQ_24MHz  24000000 */ 

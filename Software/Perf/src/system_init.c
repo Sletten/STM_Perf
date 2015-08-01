@@ -14,8 +14,9 @@ void systickInit(int inDelay);
 
 void sysInit(void)
 {
-	sysGpioInit();
+
 	sysComInit();
+	sysGpioInit();
 	sysTimInit();
 
 

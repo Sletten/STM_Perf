@@ -25,10 +25,11 @@ void sysStart(void)
 // handler for the systick interrupt, performing periodical operations
 void SysTick_Handler(void)
 {
-	int val = getData(1);
+	int val = getData(4);
 	TIM4->CCR2 = 3000 + (val*16);
 
 	GPIOC->ODR ^= GPIO_Pin_6;
+
 
 
 }
@@ -53,16 +54,13 @@ void run(void)
 
 	while(1)
     {
-
-
-
-
         /* delay */
         int i = 0;
         for(i=0;i<0x100000;i++);
-
-
-        GPIOC->ODR ^= GPIO_Pin_9;
+        {
+        	GPIOC->ODR ^= GPIO_Pin_9;
+        	//USART_SendData(USART1, 140);
+        }
 
         /* delay */
         //for(i=0;i<0x100000;i++);
