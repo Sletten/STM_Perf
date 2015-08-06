@@ -28,13 +28,13 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/com.c"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1717" selectionTopPixel="1070"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="system.c" partName="system.c" path="D:/GitHub/STM_Perf/Software/Perf/src/system.c" title="system.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/system.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="system.c" partName="system.c" path="D:/GitHub/STM_Perf/Software/Perf/src/system.c" title="system.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/system.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/system.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="491" selectionTopPixel="180"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1020" selectionTopPixel="180"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="system_stm32f10x.c" partName="system_stm32f10x.c" path="D:/GitHub/STM_Perf/Software/Perf/cmsis_boot/system_stm32f10x.c" title="system_stm32f10x.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/cmsis_boot/system_stm32f10x.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="system_stm32f10x.c" partName="system_stm32f10x.c" path="D:/GitHub/STM_Perf/Software/Perf/cmsis_boot/system_stm32f10x.c" title="system_stm32f10x.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/cmsis_boot/system_stm32f10x.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/cmsis_boot/system_stm32f10x.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4304" selectionTopPixel="1320"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5178" selectionTopPixel="360"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="system_init.c" partName="system_init.c" path="D:/GitHub/STM_Perf/Software/Perf/src/system_init.c" title="system_init.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/system_init.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/system_init.c"/>
@@ -164,10 +164,8 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/thruster.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/stm_lib/src/stm32f10x_rcc.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/thruster.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system.c"/>
 </editors>
-<item historyLabel="system_stm32f10x.c" index="3">
-<position info="not_deleted" x="3918" y="0"/>
-</item>
 <item historyLabel="stm32f10x.h" index="2">
 <position info="not_deleted" x="6258" y="0"/>
 </item>
@@ -312,8 +310,11 @@
 <item historyLabel="com.c" index="4">
 <position info="not_deleted" x="1717" y="0"/>
 </item>
-<item active="true" historyLabel="system_stm32f10x.c" index="3">
+<item historyLabel="system_stm32f10x.c" index="3">
 <position info="not_deleted" x="4551" y="0"/>
+</item>
+<item active="true" historyLabel="system.c" index="10">
+<position info="not_deleted" x="491" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

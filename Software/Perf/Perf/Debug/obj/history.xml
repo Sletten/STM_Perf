@@ -58,17 +58,17 @@
       <target file="stm32f10x_dma.o" lastModified="14ee0cb516b">
          <source file="..\..\..\stm_lib\src\stm32f10x_dma.c" lastModified="14cecf5fa1d"/>
       </target>
-      <target file="system.o" lastModified="14ee99cc084">
-         <source file="..\..\..\src\system.c" lastModified="14ee99cb687"/>
+      <target file="system.o" lastModified="14eefd59478">
+         <source file="..\..\..\src\system.c" lastModified="14eefd56e66"/>
       </target>
       <target file="system_tim.o" lastModified="14ee0cb5122">
          <source file="..\..\..\src\system_tim.c" lastModified="14dab69c2de"/>
       </target>
-      <target file="main.o" lastModified="14edba2edef">
-         <source file="..\..\..\src\main.c" lastModified="14da60e0e7c"/>
-      </target>
       <target file="stm32f10x_usart.o" lastModified="14ee0cb50e3">
          <source file="..\..\..\stm_lib\src\stm32f10x_usart.c" lastModified="14ca7ca2dec"/>
+      </target>
+      <target file="main.o" lastModified="14edba2edef">
+         <source file="..\..\..\src\main.c" lastModified="14da60e0e7c"/>
       </target>
    </processor>
 </history>

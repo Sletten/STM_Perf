@@ -6,6 +6,19 @@ Debug console application for testing out thruster software used on PERF module.
 #include <iostream>
 
 
+#define q16m 7
+#define q16f 8
+#define q16One 0x0100
+
+typedef int q16_t;
+
+q16_t intToQ(int inInt);
+int qToInt(q16_t inQ);
+q16_t qAdd(q16_t a, q16_t b);
+q16_t qSub(q16_t a, q16_t b);
+q16_t qMlt(q16_t a, q16_t b);
+q16_t qDiv(q16_t a, q16_t b);
+
 
 
 #define FALSE			0
@@ -100,6 +113,19 @@ int main()
     setInput(100, 160, 180);
     setInputRot(-50, 100, 100);
 
+    /*
+    int temp = 327;
+    int temp2 = 100;
+    std::cout << temp << std::endl;
+    q16_t qtemp = intToQ(temp);
+    q16_t qtemp2 = intToQ(temp2);
+    qtemp = qMlt(qtemp, qtemp2);
+    std::cout << qtemp << std::endl;
+    qtemp = -qtemp;
+    temp = qToInt(qtemp);
+    std::cout << temp << std::endl;
+    */
+
     vectorizeInput();
 
 
@@ -107,6 +133,34 @@ int main()
 }
 
 
+q16_t intToQ(int inInt)
+{
+    return (inInt * q16One);
+}
+int qToInt(q16_t inQ)
+{
+    //return inQ / q16One;
+    return inQ >> 8;
+}
+q16_t qAdd(q16_t a, q16_t b)
+{
+    return a + b;
+}
+q16_t qSub(q16_t a, q16_t b)
+{
+    return a - b;
+}
+q16_t qMlt(q16_t a, q16_t b)
+{
+
+    return (a*b) >> 8;
+
+}
+q16_t qDiv(q16_t a, q16_t b)
+{
+    return (a<<8) / b;
+
+}
 
 
 
@@ -117,7 +171,6 @@ int abs(int in)
         return -in;
 
     return in;
-
 }
 
 
@@ -321,40 +374,26 @@ void scaleInput2(void)
     std::cout << "scale speed" << std::endl;
 	int i = 0;
 
-	short minScale = 0;
+
+	q16_t maxScale = 0;
+
+
+
+    // check for maximum scaling need
+    for(i = 0; i < THRUSTER_COUNT; i++)
+    {
+        q16_t scale = qDiv(intToQ(thrustLimit[i]), intToQ(thrustValue[i]));
+
+        if (scale > maxScale)
+        {
+            maxScale = scale;
+        }
+    }
 
     for(i = 0; i < THRUSTER_COUNT; i++)
-	{
-	    int temp = abs(thrustValue[i]) - thrustLimit[i];
-	}
+    {
 
-    // old:
-    /*
-	for(i = 0; i < THRUSTER_COUNT; i++)
-	{
-	    std::cout << "scale speed loop "  << i << std::endl;
-		int temp = abs(thrustValue[i]) - thrustLimit[i];
-		std::cout << thrustValue[i]  << std::endl;
-
-		if (temp > 0) // check thrust value for out of range value
-		{
-		    std::cout << "scale speed loop if" << std::endl;
-		    std::cout << temp << std::endl;
-		    std::cout << thrustLimit[i] << std::endl;
-
-			scaleThrust(thrustLimit[i],abs(thrustValue[i]),
-                                thrustVector[i][0],
-								thrustVector[i][1],
-								thrustVector[i][2],
-								thrustVector[i][3],
-								thrustVector[i][4],
-								thrustVector[i][5]);
-
-            calculateThrust();  //recalculate thrust
-            i = 0;              //check every thruster again //TODO: should be obsolete if working
-		}
-	}
-	*/
+    }
 }
 
 
