@@ -16,7 +16,8 @@ typedef int16_t q16_t;
 
 #define q32m 23
 #define q32f 8
-#define q32One 0x00000100
+#define q32One  0x00000100
+#define q32Half 0x00000080
 
 // Q23,8
 typedef int32_t q32_t;
@@ -41,11 +42,11 @@ q32_t qDiv(q32_t a, q32_t b);
 #define THRUSTER_COUNT 	8
 
 
-#define INPUT_MIN_VALUE 0
+#define INPUT_MIN_VALUE 1
 #define INPUT_MID_VALUE 128
 #define INPUT_MAX_VALUE 255
 
-#define LINEAR_MULTIPLIER 	INPUT_MID_VALUE - 1
+#define LINEAR_MULTIPLIER 	INPUT_MID_VALUE
 
 //127*127 = 16129
 
@@ -101,9 +102,9 @@ int32_t thrustValue[THRUSTER_COUNT];
 
 //TODO: Change from float to fixed-point
 float thrustVector[THRUSTER_COUNT][6];// thruster speed value
-short thrustValueScaled[THRUSTER_COUNT];		// thruster speed value
+int16_t thrustValueScaled[THRUSTER_COUNT];		// thruster speed value
 
-short thrustLimit[THRUSTER_COUNT];		// limitations set to thruster in percentage
+int16_t thrustLimit[THRUSTER_COUNT];		// limitations set to thruster in percentage
 
 
 short pwmStop[THRUSTER_COUNT];			// pwm value for stop
@@ -123,12 +124,13 @@ int main()
 
     initThrusters();
 
-    setInput(20, 250, 120);
-    setInputRot(-50, 128, 128);
+    setInput(20, 250, 50);
+    setInputRot(128, 128, 128);
+
 
 
     int temp = 16129;
-    int temp2 = -32632;
+    int temp2 = -64;
     std::cout << temp << std::endl;
     q32_t qtemp = intToQ(temp);
     q32_t qtemp2 = intToQ(temp2);
@@ -158,6 +160,9 @@ q32_t intToQ(int inInt)
 int qToInt(q32_t inQ)
 {
     //return inQ / q32One;
+
+    //Rounding
+    inQ += q32Half;
     return inQ >> 8;
 }
 q32_t qAdd(q32_t a, q32_t b)
@@ -177,13 +182,12 @@ q32_t qMlt(q32_t a, q32_t b)
 q32_t qDiv(q32_t a, q32_t b)
 {
     return (a<<8) / b;
-
 }
 
 
 
 
-int abs(int in)
+int32_t abs(int32_t in)
 {
     if(in < 0 )
         return -in;
@@ -224,8 +228,6 @@ void setThrusterValue(int thruster,short x, short y, short z, short yaw, short r
 }
 void setInput(short inX, short inY, short inZ)
 {
-    std::cout << "set input" << std::endl;
-
 	inputValue[0] = inX;
 	inputValue[1] = inY;
 	inputValue[2] = inZ;
@@ -265,6 +267,14 @@ void setInputYaw(short inYaw)
 
 
 
+/*
+Simple thruster calculation
+
+Input 1-255, 128 as a center, 0 as error/undefined
+0
+
+*/
+
 void simpleThrust(void)
 {
     // vectorize input
@@ -272,6 +282,7 @@ void simpleThrust(void)
 
     int i = 0;
 
+    // resetting the thrustValues to 0
 	for(i = 0; i < THRUSTER_COUNT; i++)
 	{
 		thrustValue[i] = 0;
@@ -279,13 +290,16 @@ void simpleThrust(void)
 
 	for(i = 0; i < 6; i++)
 	{
-		short temp = inputValue[i] - INPUT_MID_VALUE;
-        int16_t tempQuad = temp*temp;
+	    // make input value into a signed value
+	    //TODO(Sletten): should be implemented such that inputValue is signed in the first place.
+		int8_t temp = inputValue[i] - INPUT_MID_VALUE;
+
+        int16_t tempQuad = 0;
 
 		switch(thrustCurve)
 		{
 		case QUADRATIC:
-
+            tempQuad = temp*temp;
 			if(temp < 0)			// scale to fit variable
 											// number range
 				inputVector[i] = -tempQuad;
@@ -319,7 +333,9 @@ void simpleThrust(void)
 		thrustValue[i] = 0;
 
 		for(j = 0; j<6; j++ )
+        {
 			thrustValue[i] += thrustVector[i][j]*inputVector[j];
+        }
 	}
 
     std::cout << thrustValue[0] << std::endl;
@@ -338,8 +354,8 @@ void simpleThrust(void)
     std::cout << "scale speed" << std::endl;
 
 
-	q16_t q32_maxScaleHorizontal = 1;
-	q16_t q32_maxScaleVertical = 1;
+	q32_t q32_maxScaleHorizontal = q32One;
+	q32_t q32_maxScaleVertical = q32One;
 
     // check for maximum scaling need
     for(i = 0; i < THRUSTER_COUNT; i++)
@@ -355,7 +371,8 @@ void simpleThrust(void)
         }
         if(thrustVector[i][2] || thrustVector[i][4] || thrustVector[i][5]) // if vertical thruster, z, roll, pitch
         {
-            q16_t q32_scale = qDiv(intToQ(thrustLimit[i]), intToQ(abs(thrustValue[i])));
+            int32_t temp = abs(thrustValue[i]);
+            q32_t q32_scale = qDiv(intToQ(thrustLimit[i]), intToQ(temp));
 
             if (q32_scale < q32_maxScaleVertical) // the smaller scale counts
             {
@@ -366,7 +383,7 @@ void simpleThrust(void)
     std::cout << "max Horizontal scale: ";
     std::cout << qToInt(q32_maxScaleHorizontal) << std::endl;
     std::cout << "max Vertical scale:   ";
-    std::cout << qToInt(q32_maxScaleVertical) << std::endl;
+    std::cout << q32_maxScaleVertical << std::endl;
 
     for(i = 0; i < THRUSTER_COUNT; i++)
     {

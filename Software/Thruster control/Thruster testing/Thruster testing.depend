@@ -1,7 +1,7 @@
 # depslib dependency file v1.0
-1438714624 source:d:\github\stm_perf\software\thruster control\thruster testing\main.cpp
+1440884720 source:d:\github\stm_perf\software\thruster control\thruster testing\main.cpp
 	<iostream>
-	"fpalib.h"
+	<stdint.h>
 
 1435119391 source:c:\users\sletten\documents\github\stm_perf\software\thruster control\thruster testing\main.cpp
 	<iostream>
