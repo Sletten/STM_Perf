@@ -2,7 +2,6 @@
 
 #include "system_init.h"
 #include "com.h"
-#include "thruster.h"
 #include "stm32f10x_tim.h"
 #include "stm32f10x_gpio.h"
 #include "stm32f10x_usart.h"
@@ -28,7 +27,13 @@ void SysTick_Handler(void)
 	int val = getData(4);
 	TIM4->CCR2 = 3000 + (val*16);
 
+	GPIOC->ODR ^= GPIO_Pin_8;
 	GPIOC->ODR ^= GPIO_Pin_6;
+
+
+	TIM3->CCR4 = 3000;
+
+	USART_SendData(USART1, 120);
 
 
 
@@ -37,13 +42,27 @@ void SysTick_Handler(void)
 
 void run(void)
 {
+	GPIO_InitTypeDef  GPIO_InitStructure;
 
-    GPIO_InitTypeDef  GPIO_InitStructure;
+	/*
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6|GPIO_Pin_9;
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6|GPIO_Pin_9 | GPIO_Pin_8;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOC, &GPIO_InitStructure);
+	*/
+
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOF, ENABLE);
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_11;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOC, &GPIO_InitStructure);
+
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOF, ENABLE);
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOE, &GPIO_InitStructure);
 
 
 
@@ -59,6 +78,7 @@ void run(void)
         for(i=0;i<0x100000;i++);
         {
         	GPIOC->ODR ^= GPIO_Pin_9;
+        	GPIOE->ODR ^= GPIO_Pin_1;
         	//USART_SendData(USART1, 140);
         }
 

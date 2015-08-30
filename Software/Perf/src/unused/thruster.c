@@ -158,6 +158,10 @@ void setInputYaw(short inYaw)
 // void setInputRoll(short inRoll);
 
 
+
+
+
+
 void vectorizeInput(void)
 {
 	int i = 0;

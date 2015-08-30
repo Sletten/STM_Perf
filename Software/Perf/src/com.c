@@ -46,6 +46,10 @@ int getData(int inGet)
 
 void USART1_IRQHandler(void)
 {
+	// set com status led
+	//GPIOE->ODR |= GPIO_Pin_0;
+	GPIOE->ODR ^= GPIO_Pin_0;
+
 	static uint8_t receiveState = 0;// Receiving state
 									// 0 - not receiving
 									// 1 - first start byte correct
@@ -126,6 +130,9 @@ void USART1_IRQHandler(void)
 			receiveState = 0;
     	}
 	}
+
+    // reset com status led
+    //GPIOE->ODR ^= GPIO_Pin_0;
 }
 
 

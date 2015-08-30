@@ -124,8 +124,8 @@ int main()
 
     initThrusters();
 
-    setInput(20, 250, 50);
-    setInputRot(128, 128, 128);
+    setInput(80, 150, 50);
+    setInputRot(10, 128, 128);
 
 
 
