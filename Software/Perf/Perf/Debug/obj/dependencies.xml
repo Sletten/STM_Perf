@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dependencies>
    <includePath signature="/I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf\cmsis_boot /I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf\src /I..\..\..\..\..\..\GitHub\STM_Perf\Software /I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf\stm_lib /I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf\cmsis /I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf\stm_lib\inc /I..\..\..\..\..\..\GitHub\STM_Perf\Software\Perf">
+      <source file="..\..\..\cmsis\core_cm3.h" lastModified="14ca7c95042">
+      </source>
       <source file="..\..\..\stm_lib\src\stm32f10x_i2c.c" lastModified="14cecf5a84c">
          <include file="..\..\..\stm_lib\inc\stm32f10x_i2c.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
@@ -70,7 +72,7 @@
       </source>
       <source file="..\..\..\src\com.h" lastModified="14dab3aff7d">
       </source>
-      <source file="..\..\..\src\com.c" lastModified="14f7fdf4ed7">
+      <source file="..\..\..\src\com.c" lastModified="14f801ba40c">
          <include file="..\..\..\src\com.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
          <include file="..\..\..\stm_lib\inc\misc.h"/>
@@ -92,15 +94,6 @@
       <source file="..\..\..\stm_lib\inc\stm32f10x_spi.h" lastModified="14cecf5b055">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
-      <source file="..\..\..\src\system.c" lastModified="14f7fec548c">
-         <include file="..\..\..\src\system.h"/>
-         <include file="..\..\..\src\system_init.h"/>
-         <include file="..\..\..\src\com.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-      </source>
       <source file="..\..\..\stm_lib\inc\misc.h" lastModified="14ca9dacf4d">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
@@ -121,7 +114,7 @@
       <source file="..\..\..\src\fixpointLib.c" lastModified="14f7ed6cffa">
          <include file="..\..\..\src\fixpointLib.h"/>
       </source>
-      <source file="..\..\..\src\system_tim.c" lastModified="14dab69c2de">
+      <source file="..\..\..\src\system_tim.c" lastModified="14f8028f719">
          <include file="..\..\..\src\system_init.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>

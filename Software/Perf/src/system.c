@@ -25,17 +25,10 @@ void sysStart(void)
 void SysTick_Handler(void)
 {
 	int val = getData(4);
-	TIM4->CCR2 = 3000 + (val*16);
+	TIM4->CCR1 = 2400 + (val*16);
 
 	GPIOC->ODR ^= GPIO_Pin_8;
 	GPIOC->ODR ^= GPIO_Pin_6;
-
-
-	TIM3->CCR4 = 3000;
-
-	USART_SendData(USART1, 120);
-
-
 
 }
 
