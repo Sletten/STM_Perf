@@ -24,17 +24,42 @@
 //DEBUG:
 #include "stm32f10x_gpio.h"
 
-static uint16_t data[512];
+
+
+
+
+
+static uint8_t data[512];
 
 int i = 0;
 char done = 0;
 char rec = 0;
 
 
-#define startByte1 155
-#define startByte2 185
+#define STARTOFPACKAGE_1	0
+#define	STARTOFPACKAGE_2	1
+#define DATATYPE			2
+#define PAYLOADLENGTH 		3
 
-#define stopData 255
+#define STARTBYTE_1			155
+#define STARTBYTE_2			185
+#define STOPBYTE			255
+
+
+//Data types
+
+#define COMMAND				0x01
+#define CONTROL				0x08
+#define SYSTEM				0x10
+
+#define GETINFO				0x01
+#define GETVERSION			0x02
+#define GETSTATUS			0x03
+
+#define THRUSTER			0x11
+#define MANIP				0x13
+#define LIGHT				0x15
+#define CAMERA				0x17
 
 
 int getData(int inGet)
@@ -107,8 +132,9 @@ void USART1_IRQHandler(void)
 
     	if(receiveState == 4)
     	{
-    		//perform checksum stuff
+    		//TODO: perform checksum stuff
 
+    		//TODO: Check data type, handle datas acordingly
     		// transfer data.
 
     		while(USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET)
@@ -137,8 +163,15 @@ void USART1_IRQHandler(void)
 
 
 // test function for data communication
-void handleData(char inData[], int length)
+void handleData()
 {
+	uint8_t payLength = data[PAYLOADLENGTH];
+	switch()
+	{
+	case COMMANDS:
+		break;
+
+	}
 	//read datatype header -> check if payload contains one or several data packs
 	//find payload length
 	//read out data, send to respective PERF modules.

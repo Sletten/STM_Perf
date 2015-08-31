@@ -44,20 +44,20 @@ commands		0x01
 	get status
 
 -Control		0x08
-	thruster	0x01
+	thruster	0x11
 		x y z axis
 		yaw pitch roll rotation
-	manip		0x03
+	manip		0x13
 		channel number, 1 byte - 8 possible active, (eg: 00101101, ch 1, 3, 4, 6 active)
 		movement, speed/ set position/ force - givven by previous setup
-	light		0x05
+	light		0x15
 		channel number, 1 byte - 8 possible active, (eg: 00101101, ch 1, 3, 4, 6 active)
 		set dim, two channels in one byte, 4bits per light channel.
-	camera		0x07
+	camera		0x17
 		channel number, 1 byte - 8 possible active, (eg: 00101101, ch 1, 3, 4, 6 active)
 		set position/ speed givven by setup.
 		focus / zoom / other
-	other		0x0F
+	other		0x1F
 
 
 -sensor				0x0F
@@ -69,7 +69,7 @@ commands		0x01
 
 
 -system parameters	0x10 - set for now, 0x11 for save to eeprom
-	thruster		0x01
+	thruster		0x11
 		channel number, 1 byte - 8 possible active, (eg: 00101101, ch 1, 3, 4, 6 active)
 		set midpoint
 		set endpoint
@@ -77,16 +77,16 @@ commands		0x01
 		set max power/thrust/
 		set thrust vectoring
 		set 
-	manip			0x03
+	manip			0x13
 		channel number, 1 byte - 8 possible active, (eg: 00101101, ch 1, 3, 4, 6 active)
 		set actuator type (motor/servo/stepper) // is this usefull? PERF firmware controls manip fuctionalyty anyways.
 		set enpoints
 		set max speed/power/
 		set midpoint
 		set 
-	light			0x05
-	camera			0x07
-	other			0x0F
+	light			0x15
+	camera			0x17
+	other			0x1F
 
 
 
