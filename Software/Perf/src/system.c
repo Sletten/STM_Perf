@@ -2,6 +2,9 @@
 
 #include "system_init.h"
 #include "com.h"
+#include "thrusterSimple.h"
+
+
 #include "stm32f10x_tim.h"
 #include "stm32f10x_gpio.h"
 #include "stm32f10x_usart.h"
@@ -30,6 +33,8 @@ void SysTick_Handler(void)
 	GPIOC->ODR ^= GPIO_Pin_8;
 	GPIOC->ODR ^= GPIO_Pin_6;
 
+
+	updateThrusters();
 }
 
 

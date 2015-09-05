@@ -51,9 +51,6 @@ int32_t thrustVector[THRUSTER_COUNT][6];	// thruster speed value
 
 void setThrusterValue(int thruster,short x, short y, short z, short yaw, short roll, short pitch);
 
-void simpleThrust(void);
-
-
 
 int32_t abs(int32_t in)
 {
@@ -99,7 +96,7 @@ void setThrusterValue(int thruster,short x, short y, short z, short yaw, short r
 }
 
 
-void setInput(int8_t inX, int8_t inY, int8_t inZ, int8_t inYaw, int8_t inPitch, int8_t inRoll)
+void setInput(uint8_t inX, uint8_t inY, uint8_t inZ, uint8_t inYaw, uint8_t inPitch, uint8_t inRoll)
 {
 	inputValue[0] = inX;
 	inputValue[1] = inY;
@@ -107,29 +104,23 @@ void setInput(int8_t inX, int8_t inY, int8_t inZ, int8_t inYaw, int8_t inPitch, 
 	inputValue[3] = inYaw;
 	inputValue[4] = inPitch;
 	inputValue[5] = inRoll;
-
-	simpleThrust();
 }
 
-void setInputDir(int8_t inX, int8_t inY, int8_t inZ)
+void setInputDir(uint8_t inX, uint8_t inY, uint8_t inZ)
 {
 	inputValue[0] = inX;
 	inputValue[1] = inY;
 	inputValue[2] = inZ;
-
-	simpleThrust();
 }
 
-void setInputRot(int8_t inYaw, int8_t inPitch, int8_t inRoll)
+void setInputRot(uint8_t inYaw, uint8_t inPitch, uint8_t inRoll)
 {
 	inputValue[3] = inYaw;
 	inputValue[4] = inPitch;
 	inputValue[5] = inRoll;
-
-	simpleThrust();
 }
 
-void simpleThrust(void)
+void updateThrusters()
 {
 	// vectorize input
 	int8_t i = 0;

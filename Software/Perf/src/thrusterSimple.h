@@ -20,6 +20,8 @@
 void initThrusters(void);
 
 
-void setInput(int8_t inX, int8_t inY, int8_t inZ, int8_t inYaw, int8_t inPitch, int8_t inRoll);
-void setInputDir(int8_t inX, int8_t inY, int8_t inZ);
-void setInputRot(int8_t inYaw, int8_t inPitch, int8_t inRoll);
+void setInput(uint8_t inX, uint8_t inY, uint8_t inZ, uint8_t inYaw, uint8_t inPitch, uint8_t inRoll);
+void setInputDir(uint8_t inX, uint8_t inY, uint8_t inZ);
+void setInputRot(uint8_t inYaw, uint8_t inPitch, uint8_t inRoll);
+
+void updateThrusters();

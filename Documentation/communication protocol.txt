@@ -9,7 +9,8 @@ Packet overciew
 One or two bytes of bit sequence, (characters) to innitiate the start of a packet
 
 -Data type byte
-One byte which value decides what type of data is sendt in the Payload.
+One byte which value decides what type of data is sendt in the Payload
+followed by one byte describes the category of the data type.
 Preset table of available values to be used for pre determined data type.
 one value might indicate that the payload includes several data types.
 

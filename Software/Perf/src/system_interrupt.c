@@ -9,6 +9,7 @@
 #include "system_init.h"
 
 #include "stm32f10x_usart.h"
+#include "stm32f10x_tim.h"
 #include "misc.h"
 
 
@@ -33,7 +34,7 @@ void systickInit(int inDelay)
 
 	nvicItd.NVIC_IRQChannel = SysTick_IRQn;
 	nvicItd.NVIC_IRQChannelPreemptionPriority = 1;
-	nvicItd.NVIC_IRQChannelSubPriority = 0;
+	nvicItd.NVIC_IRQChannelSubPriority = 4;
 	nvicItd.NVIC_IRQChannelCmd = ENABLE;
 
 	NVIC_Init(&nvicItd);
@@ -48,10 +49,25 @@ void usart1IrqInit(void)
 
 	/* Enable the USARTx Interrupt */
 	nvicItd.NVIC_IRQChannel = USART1_IRQn;
-	nvicItd.NVIC_IRQChannelPreemptionPriority = 0;
-	nvicItd.NVIC_IRQChannelSubPriority = 0;
+	nvicItd.NVIC_IRQChannelPreemptionPriority = 1;
+	nvicItd.NVIC_IRQChannelSubPriority = 2;
 	nvicItd.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&nvicItd);
 
 	USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+}
+
+
+void comTim7IrqInit(void)
+{
+	NVIC_InitTypeDef nvicItd;
+
+	/* Enable the USARTx Interrupt */
+	nvicItd.NVIC_IRQChannel = TIM7_IRQn;
+	nvicItd.NVIC_IRQChannelPreemptionPriority = 1;
+	nvicItd.NVIC_IRQChannelSubPriority = 1;
+	nvicItd.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&nvicItd);
+
+	TIM_ITConfig(TIM7, TIM_IT_Update, ENABLE);
 }

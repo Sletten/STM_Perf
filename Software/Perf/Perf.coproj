@@ -99,8 +99,8 @@
     <File name="src/thrusterSimple.c" path="src/thrusterSimple.c" type="1"/>
     <File name="src/fixpointLib.h" path="src/fixpointLib.h" type="1"/>
     <File name="src/thrusterSimple.h" path="src/thrusterSimple.h" type="1"/>
-    <File name="cmsis/core_cm3.c" path="cmsis/core_cm3.c" type="1"/>
     <File name="example" path="" type="2"/>
+    <File name="cmsis/core_cm3.c" path="cmsis/core_cm3.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_spi.h" path="stm_lib/inc/stm32f10x_spi.h" type="1"/>
     <File name="stm_lib/src/stm32f10x_adc.c" path="stm_lib/src/stm32f10x_adc.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_dma.h" path="stm_lib/inc/stm32f10x_dma.h" type="1"/>

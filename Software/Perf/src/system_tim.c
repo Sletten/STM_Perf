@@ -83,4 +83,22 @@ void sysTimInit(void)
 	// tim 13 - manip
 	// tim 14 - manip
 	// tim 15 - manip
+
+	// Timer 6 - communication reviece watchdogy-thingy-matingy
+
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM7, ENABLE);
+
+	timTbItd;
+
+	timTbItd.TIM_Prescaler = (uint16_t) (SystemCoreClock / 100000) - 1; // set each tick to 10nanoseconds
+	timTbItd.TIM_Period = 1000;											// trigger IRQ each
+	timTbItd.TIM_ClockDivision = 0;
+	timTbItd.TIM_CounterMode = TIM_CounterMode_Up;
+
+	TIM_TimeBaseInit(TIM7, &timTbItd);
+
+	//TIM7->PSC = 24000-1;		// set to one tick per millisecond
+	//TIM7->ARR = 65535;		// max reset value for a 16-bit timer
+
+	TIM_Cmd(TIM7, ENABLE);
 }

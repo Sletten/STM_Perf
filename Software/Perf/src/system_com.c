@@ -9,9 +9,12 @@
 #include "system_init.h"
 
 #include "stm32f10x_usart.h"
+#include "stm32f10x_i2c.h"
 #include "stm32f10x_rcc.h"
 
 void usart1Config(void);
+void i2c1Config(void);
+void i2c2Config(void);
 
 void sysComInit()
 {
@@ -56,4 +59,9 @@ void usart1Config(void)
 
 	// enable usart
 	USART_Cmd(USART1, ENABLE);
+}
+
+void i2c2Config(void)
+{
+
 }
