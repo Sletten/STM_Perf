@@ -63,5 +63,21 @@ void usart1Config(void)
 
 void i2c2Config(void)
 {
+	I2C_InitTypeDef i2cItd;
+
+	i2cItd.I2C_ClockSpeed 			= I2C_Mode_I2C;
+	i2cItd.I2C_Mode 				= I2C_Mode_I2C;
+	i2cItd.I2C_DutyCycle			=
+	i2cItd.I2C_OwnAddress1			=
+	i2cItd.I2C_Ack					= I2C_Ack_Enable
+	i2cItd.I2C_AcknowledgedAddress	=
+
+
+    I2C_InitStructure.I2C_Mode = I2C_Mode_I2C;
+    I2C_InitStructure.I2C_DutyCycle = I2C_DutyCycle_2;
+    I2C_InitStructure.I2C_OwnAddress1 = I2C_SLAVE_ADDRESS7;
+    I2C_InitStructure.I2C_Ack = I2C_Ack_Enable;
+    I2C_InitStructure.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
+    I2C_InitStructure.I2C_ClockSpeed = I2C_Speed;
 
 }
