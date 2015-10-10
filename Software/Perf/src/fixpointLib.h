@@ -26,8 +26,9 @@
 
 typedef int32_t q32_t;
 
-q32_t intToQ(int inInt);
-int qToInt(q32_t inQ);
+q32_t intToQ(int32_t inInt);
+int32_t qToInt(q32_t inQ);
+int32_t qToIntNoRound(q32_t inQ);
 q32_t qAdd(q32_t a, q32_t b);
 q32_t qSub(q32_t a, q32_t b);
 q32_t qMlt(q32_t a, q32_t b);

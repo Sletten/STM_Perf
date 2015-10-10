@@ -271,7 +271,6 @@ void setInputYaw(short inYaw)
 Simple thruster calculation
 
 Input 1-255, 128 as a center, 0 as error/undefined
-0
 
 */
 
@@ -397,14 +396,14 @@ void simpleThrust(void)
             thrustValue[i] = qToInt(qMlt(intToQ(thrustValue[i]), q32_maxScaleVertical));
         }
     }
-    std::cout << thrustValue[0] << std::endl;
-	std::cout << thrustValue[1] << std::endl;
-	std::cout << thrustValue[2] << std::endl;
-	std::cout << thrustValue[3] << std::endl;
-	std::cout << thrustValue[4] << std::endl;
-	std::cout << thrustValue[5] << std::endl;
-	std::cout << thrustValue[6] << std::endl;
-	std::cout << thrustValue[7] << std::endl;
+    std::cout << thrustValue[0]/13 + 3600 << std::endl;
+	std::cout << thrustValue[1]/13 + 3600 << std::endl;
+	std::cout << thrustValue[2]/13 + 3600 << std::endl;
+	std::cout << thrustValue[3]/13 + 3600 << std::endl;
+	std::cout << thrustValue[4]/13 + 3600 << std::endl;
+	std::cout << thrustValue[5]/13 + 3600 << std::endl;
+	std::cout << thrustValue[6]/13 + 3600 << std::endl;
+	std::cout << thrustValue[7]/13 + 3600 << std::endl;
 }
 
 

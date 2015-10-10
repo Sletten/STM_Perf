@@ -39,7 +39,7 @@ void sysTimInit(void)
 
 	timOcItd.TIM_OCMode = TIM_OCMode_PWM1;
 	timOcItd.TIM_OutputState = TIM_OutputState_Enable;
-	timOcItd.TIM_Pulse = 3600;
+	timOcItd.TIM_Pulse = 0;
 	timOcItd.TIM_OCPolarity = TIM_OCPolarity_High;
 
 

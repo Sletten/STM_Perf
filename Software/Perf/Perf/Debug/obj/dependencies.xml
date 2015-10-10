@@ -24,14 +24,15 @@
       <source file="..\..\..\stm_lib\src\stm32f10x_iwdg.c" lastModified="14cecf6481d">
          <include file="..\..\..\stm_lib\inc\stm32f10x_iwdg.h"/>
       </source>
-      <source file="..\..\..\src\system_init.c" lastModified="14ee0720571">
+      <source file="..\..\..\src\system_init.c" lastModified="15045de8669">
          <include file="..\..\..\src\system_init.h"/>
+         <include file="..\..\..\src\thrusterSimple.h"/>
       </source>
       <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="14ca7c9bc54">
          <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
       </source>
-      <source file="..\..\..\src\system_gpio.c" lastModified="14daa2fd467">
+      <source file="..\..\..\src\system_gpio.c" lastModified="15045ce19e5">
          <include file="..\..\..\src\system_init.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
@@ -45,8 +46,10 @@
       </source>
       <source file="..\..\..\cmsis_boot\system_stm32f10x.h" lastModified="14ca7c997a5">
       </source>
-      <source file="..\..\..\src\thrusterSimple.c" lastModified="14f9a4d0f19">
+      <source file="..\..\..\src\thrusterSimple.c" lastModified="15051656138">
          <include file="..\..\..\src\thrusterSimple.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
          <include file="..\..\..\src\fixpointLib.h"/>
       </source>
       <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="14f7fff1833">
@@ -72,6 +75,14 @@
       </source>
       <source file="..\..\..\src\com.h" lastModified="14dab3aff7d">
       </source>
+      <source file="..\..\..\src\com.c" lastModified="1504e2bcd5d">
+         <include file="..\..\..\src\com.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
+         <include file="..\..\..\stm_lib\inc\misc.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
+         <include file="..\..\..\src\thrusterSimple.h"/>
+      </source>
       <source file="..\..\..\stm_lib\src\stm32f10x_tim.c" lastModified="14ca7c9a8e8">
          <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
@@ -88,16 +99,6 @@
       <source file="..\..\..\stm_lib\inc\stm32f10x_spi.h" lastModified="14cecf5b055">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
-      <source file="..\..\..\src\system.c" lastModified="14f9a4db95f">
-         <include file="..\..\..\src\system.h"/>
-         <include file="..\..\..\src\system_init.h"/>
-         <include file="..\..\..\src\com.h"/>
-         <include file="..\..\..\src\thrusterSimple.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
-      </source>
       <source file="..\..\..\stm_lib\inc\misc.h" lastModified="14ca9dacf4d">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
@@ -113,12 +114,12 @@
          <include file="..\..\..\stm_lib\inc\stm32f10x_adc.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
       </source>
-      <source file="..\..\..\src\fixpointLib.h" lastModified="14f7ed70772">
+      <source file="..\..\..\src\fixpointLib.h" lastModified="15050d0f089">
       </source>
-      <source file="..\..\..\src\fixpointLib.c" lastModified="14f7ed6cffa">
+      <source file="..\..\..\src\fixpointLib.c" lastModified="15050d38f19">
          <include file="..\..\..\src\fixpointLib.h"/>
       </source>
-      <source file="..\..\..\src\system_tim.c" lastModified="14f9c975193">
+      <source file="..\..\..\src\system_tim.c" lastModified="15045d0fdf8">
          <include file="..\..\..\src\system_init.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
@@ -136,15 +137,16 @@
       <source file="..\..\..\stm_lib\inc\stm32f10x_tim.h" lastModified="14ca7c9a8de">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
       </source>
-      <source file="..\..\..\src\system_interrupt.c" lastModified="14f9c921b47">
+      <source file="..\..\..\src\system_interrupt.c" lastModified="15048cd6b74">
          <include file="..\..\..\src\system_init.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
          <include file="..\..\..\stm_lib\inc\misc.h"/>
       </source>
-      <source file="..\..\..\src\system_com.c" lastModified="14f7ff43056">
+      <source file="..\..\..\src\system_com.c" lastModified="1504311656d">
          <include file="..\..\..\src\system_init.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_i2c.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
       </source>
    </includePath>

@@ -9,8 +9,6 @@
 #include "stm32f10x_gpio.h"
 #include "stm32f10x_rcc.h"
 
-void sysGpioInit(void);
-
 void sysGpioInit(void)
 {
 	//enable clock for all GPIO

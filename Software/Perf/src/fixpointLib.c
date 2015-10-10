@@ -16,16 +16,20 @@
 
 #include "fixpointLib.h"
 
-q32_t intToQ(int inInt)
+q32_t intToQ(int32_t inInt)
 {
     return (inInt * q32One);
 }
-int qToInt(q32_t inQ)
-{
-    //return inQ / q32One;
 
-    //Rounding
+int32_t qToInt(q32_t inQ)
+{
+	//Rounding
     inQ += q32Half;
+    return inQ >> 8;
+}
+
+int32_t qToIntNoRound(q32_t inQ)
+{
     return inQ >> 8;
 }
 q32_t qAdd(q32_t a, q32_t b)

@@ -23,7 +23,7 @@ void sysIrqInit(void)
 
 
 	// configure systick interrupt for 50Hz
-	systickInit(20);
+	systickInit(50);
 }
 
 
