@@ -15,10 +15,11 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
 <part id="2"/>
+<part id="1"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
@@ -26,36 +27,41 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="6"/>
-<part id="5"/>
-<part id="7"/>
+<part id="2"/>
+<part id="4"/>
+<part id="3"/>
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
+<part id="5"/>
+<part id="7"/>
+<part id="8"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="system.c" partName="system.c" path="D:/GitHub/STM_Perf/Software/Perf/src/system.c" title="system.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/system.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/system.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="340" selectionTopPixel="249"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2060" selectionTopPixel="630"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="com.c" partName="com.c" path="D:/GitHub/STM_Perf/Software/Perf/src/com.c" title="com.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/com.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/com.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2845" selectionTopPixel="1944"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2674" selectionTopPixel="1974"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="system_com.c" partName="system_com.c" path="D:/GitHub/STM_Perf/Software/Perf/src/system_com.c" title="system_com.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/system_com.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/system_com.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="991" selectionTopPixel="296"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1681" selectionTopPixel="519"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="thrusterSimple.c" partName="thrusterSimple.c" path="D:/GitHub/STM_Perf/Software/Perf/src/thrusterSimple.c" title="thrusterSimple.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/thrusterSimple.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="thrusterSimple.c" partName="thrusterSimple.c" path="D:/GitHub/STM_Perf/Software/Perf/src/thrusterSimple.c" title="thrusterSimple.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/thrusterSimple.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/thrusterSimple.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="9" selectionOffset="4209" selectionTopPixel="2562"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3888" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="system_interrupt.c" partName="system_interrupt.c" path="D:/GitHub/STM_Perf/Software/Perf/src/system_interrupt.c" title="system_interrupt.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/system_interrupt.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/system_interrupt.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="337" selectionTopPixel="390"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="eeprom.c" partName="eeprom.c" path="D:/GitHub/STM_Perf/Software/Perf/src/eeprom.c" title="eeprom.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/eeprom.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/eeprom.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1153" selectionTopPixel="639"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_i2c.c" partName="stm32f10x_i2c.c" path="D:/GitHub/STM_Perf/Software/Perf/stm_lib/src/stm32f10x_i2c.c" title="stm32f10x_i2c.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/stm_lib/src/stm32f10x_i2c.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/stm_lib/src/stm32f10x_i2c.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="17" selectionOffset="5402" selectionTopPixel="2460"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="fixpointLib.h" partName="fixpointLib.h" path="D:/GitHub/STM_Perf/Software/Perf/src/fixpointLib.h" title="fixpointLib.h" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/fixpointLib.h" workbook="org.eclipse.ui.internal.EditorStack@15aa8f7">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/fixpointLib.h"/>
@@ -63,31 +69,35 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="com.h" partName="com.h" path="D:/GitHub/STM_Perf/Software/Perf/src/com.h" title="com.h" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/com.h" workbook="org.eclipse.ui.internal.EditorStack@15aa8f7">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/com.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="178" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="misc.h" partName="misc.h" path="D:/GitHub/STM_Perf/Software/Perf/stm_lib/inc/misc.h" title="misc.h" tooltip="D:/GitHub/STM_Perf/Software/Perf/stm_lib/inc/misc.h" workbook="org.eclipse.ui.internal.EditorStack@15aa8f7">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/stm_lib/inc/misc.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="15" selectionOffset="1601" selectionTopPixel="1072"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_tim.h" partName="stm32f10x_tim.h" path="D:/GitHub/STM_Perf/Software/Perf/stm_lib/inc/stm32f10x_tim.h" title="stm32f10x_tim.h" tooltip="D:/GitHub/STM_Perf/Software/Perf/stm_lib/inc/stm32f10x_tim.h" workbook="org.eclipse.ui.internal.EditorStack@15aa8f7">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/stm_lib/inc/stm32f10x_tim.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="12" selectionOffset="46825" selectionTopPixel="15774"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_tim.c" partName="stm32f10x_tim.c" path="D:/GitHub/STM_Perf/Software/Perf/stm_lib/src/stm32f10x_tim.c" title="stm32f10x_tim.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/stm_lib/src/stm32f10x_tim.c" workbook="org.eclipse.ui.internal.EditorStack@15aa8f7">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/stm_lib/src/stm32f10x_tim.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="30558" selectionTopPixel="12645"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_i2c.h" partName="stm32f10x_i2c.h" path="D:/GitHub/STM_Perf/Software/Perf/stm_lib/inc/stm32f10x_i2c.h" title="stm32f10x_i2c.h" tooltip="D:/GitHub/STM_Perf/Software/Perf/stm_lib/inc/stm32f10x_i2c.h" workbook="org.eclipse.ui.internal.EditorStack@15aa8f7">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/stm_lib/inc/stm32f10x_i2c.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2750" selectionTopPixel="262"/>
+<editorState selectionHorizontalPixel="0" selectionLength="12" selectionOffset="135" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="thrusterSimple.h" partName="thrusterSimple.h" path="D:/GitHub/STM_Perf/Software/Perf/src/thrusterSimple.h" title="thrusterSimple.h" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/thrusterSimple.h" workbook="org.eclipse.ui.internal.EditorStack@15aa8f7">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/thrusterSimple.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="fixpointLib.c" partName="fixpointLib.c" path="D:/GitHub/STM_Perf/Software/Perf/src/fixpointLib.c" title="fixpointLib.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/fixpointLib.c" workbook="org.eclipse.ui.internal.EditorStack@15aa8f7">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="fixpointLib.c" partName="fixpointLib.c" path="D:/GitHub/STM_Perf/Software/Perf/src/fixpointLib.c" title="fixpointLib.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/fixpointLib.c" workbook="org.eclipse.ui.internal.EditorStack@15aa8f7">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/fixpointLib.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="415" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="70" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="eeprom.h" partName="eeprom.h" path="D:/GitHub/STM_Perf/Software/Perf/src/eeprom.h" title="eeprom.h" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/eeprom.h" workbook="org.eclipse.ui.internal.EditorStack@15aa8f7">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/eeprom.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="220" selectionTopPixel="0"/>
+</editor>
+<editor focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_i2c.h" partName="stm32f10x_i2c.h" path="D:/GitHub/STM_Perf/Software/Perf/stm_lib/inc/stm32f10x_i2c.h" title="stm32f10x_i2c.h" tooltip="D:/GitHub/STM_Perf/Software/Perf/stm_lib/inc/stm32f10x_i2c.h" workbook="org.eclipse.ui.internal.EditorStack@15aa8f7">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/stm_lib/inc/stm32f10x_i2c.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4041" selectionTopPixel="1260"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="system_gpio.c" partName="system_gpio.c" path="D:/GitHub/STM_Perf/Software/Perf/src/system_gpio.c" title="system_gpio.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/src/system_gpio.c" workbook="org.eclipse.ui.internal.EditorStack@15aa8f7">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/src/system_gpio.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="22" selectionOffset="229" selectionTopPixel="180"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_gpio.h" partName="stm32f10x_gpio.h" path="D:/GitHub/STM_Perf/Software/Perf/stm_lib/inc/stm32f10x_gpio.h" title="stm32f10x_gpio.h" tooltip="D:/GitHub/STM_Perf/Software/Perf/stm_lib/inc/stm32f10x_gpio.h" workbook="org.eclipse.ui.internal.EditorStack@15aa8f7">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/stm_lib/inc/stm32f10x_gpio.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2111" selectionTopPixel="660"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_rcc.c" partName="stm32f10x_rcc.c" path="D:/GitHub/STM_Perf/Software/Perf/stm_lib/src/stm32f10x_rcc.c" title="stm32f10x_rcc.c" tooltip="D:/GitHub/STM_Perf/Software/Perf/stm_lib/src/stm32f10x_rcc.c" workbook="org.eclipse.ui.internal.EditorStack@15aa8f7">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Perf/stm_lib/src/stm32f10x_rcc.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="34377" selectionTopPixel="14557"/>
 </editor>
 </editors>
 <views>
@@ -103,7 +113,7 @@
 <element path="/Perf/src"/>
 </expanded>
 <selection>
-<element path="/Perf/src/fixpointLib.c"/>
+<element path="/Perf/src/system_gpio.c"/>
 </selection>
 </viewState>
 </view>
@@ -200,167 +210,166 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/eeprom.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system_com.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/stm_lib/src/stm32f10x_i2c.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/stm_lib/inc/stm32f10x_i2c.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system_gpio.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/stm_lib/src/stm32f10x_gpio.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/stm_lib/src/stm32f10x_rcc.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/com.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/thrusterSimple.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system_com.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/com.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system_interrupt.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/com.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system_interrupt.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system_com.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/system.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/fixpointLib.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Perf/src/fixpointLib.c"/>
 </editors>
-<item historyLabel="thrusterSimple.c" index="0">
-<position/>
+<item historyLabel="stm32f10x_i2c.c" index="2">
+<position info="not_deleted" x="18809" y="0"/>
 </item>
-<item historyLabel="system_com.c" index="1">
-<position info="not_deleted" x="991" y="0"/>
+<item historyLabel="stm32f10x_i2c.h" index="4">
+<position info="not_deleted" x="23804" y="19"/>
 </item>
-<item historyLabel="system.c" index="3">
-<position info="not_deleted" x="340" y="0"/>
-</item>
-<item historyLabel="com.c" index="2">
-<position info="not_deleted" x="4157" y="0"/>
-</item>
-<item historyLabel="system_com.c" index="1">
-<position info="not_deleted" x="991" y="0"/>
-</item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position/>
-</item>
-<item historyLabel="com.c" index="2">
-<position info="not_deleted" x="2845" y="0"/>
-</item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position/>
-</item>
-<item historyLabel="system_interrupt.c" index="4">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position/>
-</item>
-<item historyLabel="system_interrupt.c" index="4">
-<position info="not_deleted" x="335" y="0"/>
+<item historyLabel="eeprom.c" index="0">
+<position info="not_deleted" x="263" y="55"/>
 </item>
 <item historyLabel="system.c" index="3">
-<position info="not_deleted" x="340" y="0"/>
-</item>
-<item historyLabel="system_interrupt.c" index="4">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position info="not_deleted" x="2062" y="8"/>
-</item>
-<item historyLabel="com.c" index="2">
-<position info="not_deleted" x="685" y="0"/>
-</item>
-<item historyLabel="thrusterSimple.c" index="0">
 <position/>
 </item>
-<item historyLabel="system_interrupt.c" index="4">
-<position info="not_deleted" x="334" y="0"/>
+<item historyLabel="stm32f10x_i2c.h" index="4">
+<position info="not_deleted" x="23804" y="19"/>
 </item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position info="not_deleted" x="5062" y="0"/>
+<item historyLabel="stm32f10x_i2c.c" index="2">
+<position info="not_deleted" x="18479" y="13"/>
 </item>
-<item historyLabel="system_interrupt.c" index="4">
-<position info="not_deleted" x="334" y="0"/>
+<item historyLabel="stm32f10x_i2c.h" index="4">
+<position info="not_deleted" x="23804" y="19"/>
 </item>
-<item historyLabel="thrusterSimple.c" index="0">
+<item historyLabel="system.c" index="3">
 <position/>
 </item>
-<item historyLabel="system_interrupt.c" index="4">
-<position info="not_deleted" x="334" y="0"/>
+<item historyLabel="system.c" index="3">
+<position info="not_deleted" x="1462" y="0"/>
 </item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position/>
+<item historyLabel="system.c" index="3">
+<position info="not_deleted" x="1669" y="42"/>
 </item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position info="not_deleted" x="5457" y="0"/>
+<item historyLabel="stm32f10x_i2c.h" index="4">
+<position info="not_deleted" x="13688" y="42"/>
 </item>
-<item historyLabel="system_interrupt.c" index="4">
-<position info="not_deleted" x="334" y="0"/>
+<item historyLabel="system.c" index="3">
+<position info="not_deleted" x="1593" y="13"/>
 </item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position info="not_deleted" x="5396" y="0"/>
+<item historyLabel="system_com.c" index="1">
+<position info="not_deleted" x="1447" y="0"/>
 </item>
-<item historyLabel="system_interrupt.c" index="4">
-<position info="not_deleted" x="337" y="0"/>
+<item historyLabel="system.c" index="3">
+<position info="not_deleted" x="1593" y="13"/>
 </item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position info="not_deleted" x="5396" y="0"/>
+<item historyLabel="system_gpio.c" index="5">
+<position info="not_deleted" x="4964" y="0"/>
 </item>
-<item historyLabel="com.c" index="5">
-<position info="not_deleted" x="2845" y="32"/>
+<item historyLabel="system.c" index="3">
+<position info="not_deleted" x="1561" y="153"/>
 </item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position info="not_deleted" x="4821" y="0"/>
+<item historyLabel="eeprom.c" index="0">
+<position info="not_deleted" x="648" y="0"/>
 </item>
-<item historyLabel="com.c" index="5">
-<position info="not_deleted" x="2845" y="32"/>
+<item historyLabel="system.c" index="3">
+<position info="not_deleted" x="1561" y="153"/>
 </item>
-<item historyLabel="system_interrupt.c" index="6">
-<position info="not_deleted" x="337" y="0"/>
+<item historyLabel="system_gpio.c" index="5">
+<position info="not_deleted" x="965" y="19"/>
 </item>
-<item historyLabel="system_com.c" index="7">
-<position info="not_deleted" x="991" y="0"/>
+<item historyLabel="stm32f10x_gpio.c" index="6">
+<position info="not_deleted" x="15336" y="3"/>
 </item>
-<item historyLabel="system.c" index="8">
-<position info="not_deleted" x="340" y="0"/>
+<item historyLabel="system_gpio.c" index="5">
+<position info="not_deleted" x="229" y="22"/>
 </item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position info="not_deleted" x="4821" y="0"/>
+<item historyLabel="stm32f10x_rcc.c" index="7">
+<position info="not_deleted" x="38844" y="3"/>
 </item>
-<item historyLabel="fixpointLib.h" index="9">
-<position info="not_deleted" x="270" y="0"/>
+<item historyLabel="system.c" index="3">
+<position info="not_deleted" x="1561" y="153"/>
 </item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position info="not_deleted" x="4347" y="0"/>
+<item historyLabel="eeprom.c" index="0">
+<position info="not_deleted" x="648" y="0"/>
 </item>
-<item historyLabel="fixpointLib.h" index="9">
-<position info="not_deleted" x="399" y="6"/>
+<item historyLabel="system_com.c" index="1">
+<position info="not_deleted" x="1478" y="3"/>
 </item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position info="not_deleted" x="4347" y="0"/>
+<item historyLabel="stm32f10x_rcc.c" index="7">
+<position info="not_deleted" x="37802" y="0"/>
 </item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position info="not_deleted" x="4816" y="0"/>
+<item historyLabel="system_com.c" index="1">
+<position info="not_deleted" x="1453" y="0"/>
 </item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position info="not_deleted" x="4224" y="0"/>
+<item historyLabel="system_com.c" index="1">
+<position info="not_deleted" x="1456" y="6"/>
 </item>
-<item historyLabel="fixpointLib.h" index="9">
-<position info="not_deleted" x="441" y="0"/>
+<item historyLabel="system_com.c" index="1">
+<position info="not_deleted" x="1407" y="6"/>
 </item>
-<item historyLabel="fixpointLib.c" index="10">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="stm32f10x_rcc.c" index="7">
+<position info="not_deleted" x="34377" y="0"/>
 </item>
-<item historyLabel="fixpointLib.h" index="9">
-<position info="not_deleted" x="441" y="0"/>
+<item historyLabel="system_com.c" index="1">
+<position info="not_deleted" x="1391" y="15"/>
 </item>
-<item historyLabel="fixpointLib.c" index="10">
-<position info="not_deleted" x="415" y="0"/>
+<item historyLabel="stm32f10x_i2c.h" index="4">
+<position info="not_deleted" x="2670" y="15"/>
 </item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position info="not_deleted" x="4226" y="0"/>
+<item historyLabel="stm32f10x_i2c.h" index="4">
+<position info="not_deleted" x="1579" y="14"/>
 </item>
-<item historyLabel="fixpointLib.c" index="10">
-<position info="not_deleted" x="289" y="0"/>
+<item historyLabel="system_com.c" index="1">
+<position info="not_deleted" x="1681" y="8"/>
 </item>
-<item historyLabel="fixpointLib.h" index="9">
-<position info="not_deleted" x="363" y="0"/>
+<item historyLabel="stm32f10x_i2c.c" index="2">
+<position info="not_deleted" x="5402" y="17"/>
 </item>
-<item historyLabel="thrusterSimple.c" index="0">
-<position info="not_deleted" x="4347" y="0"/>
+<item historyLabel="stm32f10x_i2c.h" index="4">
+<position info="not_deleted" x="3289" y="0"/>
 </item>
-<item historyLabel="fixpointLib.c" index="10">
-<position info="not_deleted" x="415" y="0"/>
+<item historyLabel="eeprom.c" index="0">
+<position info="not_deleted" x="648" y="0"/>
 </item>
-<item active="true" historyLabel="thrusterSimple.c" index="0">
-<position info="not_deleted" x="4203" y="0"/>
+<item historyLabel="system_com.c" index="1">
+<position info="not_deleted" x="1681" y="8"/>
+</item>
+<item historyLabel="stm32f10x_i2c.h" index="4">
+<position info="not_deleted" x="4041" y="0"/>
+</item>
+<item historyLabel="system_com.c" index="1">
+<position info="not_deleted" x="1681" y="0"/>
+</item>
+<item historyLabel="system.c" index="3">
+<position info="not_deleted" x="1497" y="0"/>
+</item>
+<item historyLabel="com.c" index="8">
+<position info="not_deleted" x="2871" y="76"/>
+</item>
+<item historyLabel="system.c" index="3">
+<position info="not_deleted" x="2060" y="0"/>
+</item>
+<item historyLabel="eeprom.c" index="0">
+<position info="not_deleted" x="320" y="0"/>
+</item>
+<item historyLabel="thrusterSimple.c" index="9">
+<position info="not_deleted" x="3888" y="0"/>
+</item>
+<item historyLabel="com.c" index="8">
+<position info="not_deleted" x="2674" y="0"/>
+</item>
+<item historyLabel="thrusterSimple.c" index="9">
+<position info="not_deleted" x="3888" y="0"/>
+</item>
+<item historyLabel="eeprom.c" index="0">
+<position info="not_deleted" x="2170" y="0"/>
+</item>
+<item historyLabel="com.c" index="8">
+<position info="not_deleted" x="2674" y="0"/>
+</item>
+<item active="true" historyLabel="eeprom.c" index="0">
+<position info="not_deleted" x="2170" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -369,6 +378,33 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_i2c.c" tooltip="Perf/stm_lib/src/stm32f10x_i2c.c">
+<persistable path="/Perf/stm_lib/src/stm32f10x_i2c.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_rcc.c" tooltip="Perf/stm_lib/src/stm32f10x_rcc.c">
+<persistable path="/Perf/stm_lib/src/stm32f10x_rcc.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_gpio.c" tooltip="Perf/stm_lib/src/stm32f10x_gpio.c">
+<persistable path="/Perf/stm_lib/src/stm32f10x_gpio.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_gpio.h" tooltip="Perf/stm_lib/inc/stm32f10x_gpio.h">
+<persistable path="/Perf/stm_lib/inc/stm32f10x_gpio.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system_init.c" tooltip="Perf/src/system_init.c">
+<persistable path="/Perf/src/system_init.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system_gpio.c" tooltip="Perf/src/system_gpio.c">
+<persistable path="/Perf/src/system_gpio.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_i2c.h" tooltip="Perf/stm_lib/inc/stm32f10x_i2c.h">
+<persistable path="/Perf/stm_lib/inc/stm32f10x_i2c.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="eeprom.h" tooltip="Perf/src/eeprom.h">
+<persistable path="/Perf/src/eeprom.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="eeprom.c" tooltip="Perf/src/eeprom.c">
+<persistable path="/Perf/src/eeprom.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="fixpointLib.c" tooltip="Perf/src/fixpointLib.c">
 <persistable path="/Perf/src/fixpointLib.c"/>
 </file>
@@ -378,41 +414,14 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="thrusterSimple.h" tooltip="Perf/src/thrusterSimple.h">
 <persistable path="/Perf/src/thrusterSimple.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system_init.c" tooltip="Perf/src/system_init.c">
-<persistable path="/Perf/src/system_init.c"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system_init.h" tooltip="Perf/src/system_init.h">
 <persistable path="/Perf/src/system_init.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system_gpio.c" tooltip="Perf/src/system_gpio.c">
-<persistable path="/Perf/src/system_gpio.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system_tim.c" tooltip="Perf/src/system_tim.c">
 <persistable path="/Perf/src/system_tim.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="thrusterSimple.c" tooltip="Perf/src/thrusterSimple.c">
 <persistable path="/Perf/src/thrusterSimple.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_i2c.h" tooltip="Perf/stm_lib/inc/stm32f10x_i2c.h">
-<persistable path="/Perf/stm_lib/inc/stm32f10x_i2c.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f10x_hd_vl.c" tooltip="Perf/cmsis_boot/startup/startup_stm32f10x_hd_vl.c">
-<persistable path="/Perf/cmsis_boot/startup/startup_stm32f10x_hd_vl.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_tim.c" tooltip="Perf/stm_lib/src/stm32f10x_tim.c">
-<persistable path="/Perf/stm_lib/src/stm32f10x_tim.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_tim.h" tooltip="Perf/stm_lib/inc/stm32f10x_tim.h">
-<persistable path="/Perf/stm_lib/inc/stm32f10x_tim.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_usart.c" tooltip="Perf/stm_lib/src/stm32f10x_usart.c">
-<persistable path="/Perf/stm_lib/src/stm32f10x_usart.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x.h" tooltip="Perf/cmsis_boot/stm32f10x.h">
-<persistable path="/Perf/cmsis_boot/stm32f10x.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="misc.h" tooltip="Perf/stm_lib/inc/misc.h">
-<persistable path="/Perf/stm_lib/inc/misc.h"/>
 </file>
 </mruList>
 </workbench>

@@ -75,13 +75,11 @@
       </source>
       <source file="..\..\..\src\com.h" lastModified="14dab3aff7d">
       </source>
-      <source file="..\..\..\src\com.c" lastModified="1504e2bcd5d">
-         <include file="..\..\..\src\com.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
-         <include file="..\..\..\stm_lib\inc\misc.h"/>
-         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
-         <include file="..\..\..\src\thrusterSimple.h"/>
+      <source file="..\..\..\src\eeprom.h" lastModified="15053f719e3">
+      </source>
+      <source file="..\..\..\src\eeprom.c" lastModified="150560ccf40">
+         <include file="..\..\..\src\eeprom.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_i2c.h"/>
       </source>
       <source file="..\..\..\stm_lib\src\stm32f10x_tim.c" lastModified="14ca7c9a8e8">
          <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
@@ -98,6 +96,17 @@
       </source>
       <source file="..\..\..\stm_lib\inc\stm32f10x_spi.h" lastModified="14cecf5b055">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
+      </source>
+      <source file="..\..\..\src\system.c" lastModified="1505604a6b1">
+         <include file="..\..\..\src\system.h"/>
+         <include file="..\..\..\src\system_init.h"/>
+         <include file="..\..\..\src\com.h"/>
+         <include file="..\..\..\src\thrusterSimple.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_gpio.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_rcc.h"/>
+         <include file="..\..\..\stm_lib\inc\stm32f10x_i2c.h"/>
       </source>
       <source file="..\..\..\stm_lib\inc\misc.h" lastModified="14ca9dacf4d">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>
@@ -143,7 +152,7 @@
          <include file="..\..\..\stm_lib\inc\stm32f10x_tim.h"/>
          <include file="..\..\..\stm_lib\inc\misc.h"/>
       </source>
-      <source file="..\..\..\src\system_com.c" lastModified="1504311656d">
+      <source file="..\..\..\src\system_com.c" lastModified="1505602b077">
          <include file="..\..\..\src\system_init.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_usart.h"/>
          <include file="..\..\..\stm_lib\inc\stm32f10x_i2c.h"/>

@@ -16,8 +16,8 @@
       <target file="core_cm3.o" lastModified="15051227eb5">
          <source file="..\..\..\cmsis\core_cm3.c" lastModified="14ca7cf838b"/>
       </target>
-      <target file="com.o" lastModified="15051227fa1">
-         <source file="..\..\..\src\com.c" lastModified="1504e2bc975"/>
+      <target file="com.o" lastModified="150560d96a9">
+         <source file="..\..\..\src\com.c" lastModified="150560d7b3d"/>
       </target>
       <target file="stm32f10x_i2c.o" lastModified="150512284f1">
          <source file="..\..\..\stm_lib\src\stm32f10x_i2c.c" lastModified="14cecf5a84c"/>
@@ -25,8 +25,8 @@
       <target file="misc.o" lastModified="150512283aa">
          <source file="..\..\..\stm_lib\src\misc.c" lastModified="14ca9dacf4e"/>
       </target>
-      <target file="system_com.o" lastModified="150512283e9">
-         <source file="..\..\..\src\system_com.c" lastModified="1504311656d"/>
+      <target file="system_com.o" lastModified="1505602b83d">
+         <source file="..\..\..\src\system_com.c" lastModified="1505602b077"/>
       </target>
       <target file="system_interrupt.o" lastModified="150512280fa">
          <source file="..\..\..\src\system_interrupt.c" lastModified="15048cd6b74"/>
@@ -34,11 +34,17 @@
       <target file="thrusterSimple.o" lastModified="150516566ce">
          <source file="..\..\..\src\thrusterSimple.c" lastModified="15051656138"/>
       </target>
+      <target file="eeprom.o" lastModified="150560ce66e">
+         <source file="..\..\..\src\eeprom.c" lastModified="150560ccb58"/>
+      </target>
       <target file="stm32f10x_gpio.o" lastModified="15051227f5c">
          <source file="..\..\..\stm_lib\src\stm32f10x_gpio.c" lastModified="14ca7c9bc54"/>
       </target>
       <target file="system_stm32f10x.o" lastModified="15051227f01">
          <source file="..\..\..\cmsis_boot\system_stm32f10x.c" lastModified="14f7fff1833"/>
+      </target>
+      <target file="stm32f10x_adc.o" lastModified="150512281dd">
+         <source file="..\..\..\stm_lib\src\stm32f10x_adc.c" lastModified="14cecf5c2b5"/>
       </target>
       <target file="system_init.o" lastModified="15051227fce">
          <source file="..\..\..\src\system_init.c" lastModified="15045de8669"/>
@@ -49,9 +55,6 @@
       <target file="startup_stm32f10x_hd_vl.o" lastModified="15051228275">
          <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_hd_vl.c" lastModified="14ca7c99778"/>
       </target>
-      <target file="stm32f10x_adc.o" lastModified="150512281dd">
-         <source file="..\..\..\stm_lib\src\stm32f10x_adc.c" lastModified="14cecf5c2b5"/>
-      </target>
       <target file="stm32f10x_wwdg.o" lastModified="1505122842c">
          <source file="..\..\..\stm_lib\src\stm32f10x_wwdg.c" lastModified="14cecf5e35f"/>
       </target>
@@ -61,8 +64,8 @@
       <target file="stm32f10x_dma.o" lastModified="1505122835f">
          <source file="..\..\..\stm_lib\src\stm32f10x_dma.c" lastModified="14cecf5fa1d"/>
       </target>
-      <target file="system.o" lastModified="150516aa103">
-         <source file="..\..\..\src\system.c" lastModified="150516a9c69"/>
+      <target file="system.o" lastModified="1505604dc42">
+         <source file="..\..\..\src\system.c" lastModified="1505604a2c9"/>
       </target>
       <target file="system_tim.o" lastModified="15051228310">
          <source file="..\..\..\src\system_tim.c" lastModified="15045d0fdf8"/>

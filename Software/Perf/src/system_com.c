@@ -20,7 +20,7 @@ void sysComInit()
 {
 	usart1Config();
 
-
+	i2c2Config();
 }
 
 
@@ -28,8 +28,6 @@ void usart1Config(void)
 {
 
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
-
-
 
 	USART_InitTypeDef usart1Itd;
 
@@ -63,22 +61,20 @@ void usart1Config(void)
 
 void i2c2Config(void)
 {
-	/*
 	I2C_InitTypeDef i2cItd;
 
-	i2cItd.I2C_ClockSpeed 			= I2C_Mode_I2C;
+	i2cItd.I2C_ClockSpeed 			= 100000;
 	i2cItd.I2C_Mode 				= I2C_Mode_I2C;
-	i2cItd.I2C_DutyCycle			=
-	i2cItd.I2C_OwnAddress1			=
-	i2cItd.I2C_Ack					= I2C_Ack_Enable
-	i2cItd.I2C_AcknowledgedAddress	=
+	i2cItd.I2C_DutyCycle			= I2C_DutyCycle_2;
+	i2cItd.I2C_OwnAddress1			= 0x00;
+	i2cItd.I2C_Ack					= I2C_Ack_Enable;
+	i2cItd.I2C_AcknowledgedAddress	= I2C_AcknowledgedAddress_7bit;
 
+	//I2C_Init(I2C2, &i2cItd);
 
-    I2C_InitStructure.I2C_Mode = I2C_Mode_I2C;
-    I2C_InitStructure.I2C_DutyCycle = I2C_DutyCycle_2;
-    I2C_InitStructure.I2C_OwnAddress1 = I2C_SLAVE_ADDRESS7;
-    I2C_InitStructure.I2C_Ack = I2C_Ack_Enable;
-    I2C_InitStructure.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
-    I2C_InitStructure.I2C_ClockSpeed = I2C_Speed;
-	*/
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C2, ENABLE);
+
+	I2C_Cmd(I2C2, ENABLE);
+
+	I2C_Init(I2C2, &i2cItd);
 }

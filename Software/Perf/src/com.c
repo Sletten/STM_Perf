@@ -6,8 +6,6 @@
  * @brief
  *
  *
- *
- *
  * @history
  *
  */
@@ -26,8 +24,6 @@
 
 //DEBUG:
 #include "stm32f10x_gpio.h"
-
-
 
 //
 #include "thrusterSimple.h"
@@ -153,6 +149,7 @@ void USART1_IRQHandler(void)
 
     		//TODO: Check data type, handle datas acordingly
     		handleData();
+
 
     		// transfer data.
 
