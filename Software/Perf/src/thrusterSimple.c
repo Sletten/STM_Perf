@@ -226,7 +226,7 @@ void updateThrusters()
 		// Horizontal thrusters
 		if(thrustVector[i][0] || thrustVector[i][1] || thrustVector[i][3]) // if horizontal thruster, x, y, yaw
 		{
-			int16_t temp = abs(thrustValue[i]);
+			int32_t temp = abs(thrustValue[i]);
 
 			q32_t q32_scale = q32One;
 			if (temp != 0) //avoid division by zero
@@ -243,7 +243,7 @@ void updateThrusters()
 		// Vertical thrusters
 		if(thrustVector[i][2] || thrustVector[i][4] || thrustVector[i][5]) // if vertical thruster, z, roll, pitch
 		{
-			int16_t temp = abs(thrustValue[i]);
+			int32_t temp = abs(thrustValue[i]);
 
 			q32_t q32_scale = q32One;
 			if (temp != 0) //avoid division by zero

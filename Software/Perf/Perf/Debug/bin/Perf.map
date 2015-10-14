@@ -760,7 +760,7 @@ Linker script and memory map
 
                 0x20008000                _eram = 0x20008000
 
-.text           0x08000000     0x2370
+.text           0x08000000     0x2364
  *(.isr_vector .isr_vector.*)
  .isr_vector    0x08000000      0x138 ..\obj\startup_stm32f10x_hd_vl.o
                 0x08000000                g_pfnVectors
@@ -964,58 +964,58 @@ Linker script and memory map
                 0x080019c8       0x50 ..\obj\thrusterSimple.o
                 0x080019c8                setInput
  .text.updateThrusters
-                0x08001a18      0x4b8 ..\obj\thrusterSimple.o
+                0x08001a18      0x4ac ..\obj\thrusterSimple.o
                 0x08001a18                updateThrusters
  .text.sysTimInit
-                0x08001ed0      0x170 ..\obj\system_tim.o
-                0x08001ed0                sysTimInit
+                0x08001ec4      0x170 ..\obj\system_tim.o
+                0x08001ec4                sysTimInit
  .text.NVIC_Init
-                0x08002040       0xc4 ..\obj\misc.o
-                0x08002040                NVIC_Init
+                0x08002034       0xc4 ..\obj\misc.o
+                0x08002034                NVIC_Init
  .text.sysComInit
-                0x08002104       0x10 ..\obj\system_com.o
-                0x08002104                sysComInit
+                0x080020f8       0x10 ..\obj\system_com.o
+                0x080020f8                sysComInit
  .text.usart1Config
-                0x08002114       0x48 ..\obj\system_com.o
-                0x08002114                usart1Config
+                0x08002108       0x48 ..\obj\system_com.o
+                0x08002108                usart1Config
  .text.i2c2Config
-                0x0800215c       0x50 ..\obj\system_com.o
-                0x0800215c                i2c2Config
+                0x08002150       0x50 ..\obj\system_com.o
+                0x08002150                i2c2Config
  .text.I2C_Init
-                0x080021ac      0x184 ..\obj\stm32f10x_i2c.o
-                0x080021ac                I2C_Init
- .text.I2C_Cmd  0x08002330       0x40 ..\obj\stm32f10x_i2c.o
-                0x08002330                I2C_Cmd
+                0x080021a0      0x184 ..\obj\stm32f10x_i2c.o
+                0x080021a0                I2C_Init
+ .text.I2C_Cmd  0x08002324       0x40 ..\obj\stm32f10x_i2c.o
+                0x08002324                I2C_Cmd
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
 
-.vfp11_veneer   0x08002370        0x0
+.vfp11_veneer   0x08002364        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x08002370        0x0
+.v4_bx          0x08002364        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x08002370        0x0
+.iplt           0x08002364        0x0
  .iplt          0x00000000        0x0 ..\obj\stm32f10x_tim.o
 
-.rel.dyn        0x08002370        0x0
+.rel.dyn        0x08002364        0x0
  .rel.iplt      0x00000000        0x0 ..\obj\stm32f10x_tim.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08002370                __exidx_start = .
+                0x08002364                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x08002370                __exidx_end = .
-                0x08002370                . = ALIGN (0x4)
-                0x08002370                _etext = .
-                0x08002370                _sidata = .
+                0x08002364                __exidx_end = .
+                0x08002364                . = ALIGN (0x4)
+                0x08002364                _etext = .
+                0x08002364                _sidata = .
 
-.data           0x20000000       0x2c load address 0x08002370
+.data           0x20000000       0x2c load address 0x08002364
                 0x20000000                _sdata = .
  *(.data .data.*)
  .data          0x20000000       0x14 ..\obj\system_stm32f10x.o
@@ -1028,10 +1028,10 @@ Linker script and memory map
  *fill*         0x20000029        0x3 
                 0x2000002c                _edata = .
 
-.igot.plt       0x2000002c        0x0 load address 0x0800239c
+.igot.plt       0x2000002c        0x0 load address 0x08002390
  .igot.plt      0x00000000        0x0 ..\obj\stm32f10x_tim.o
 
-.bss            0x2000002c      0x310 load address 0x0800239c
+.bss            0x2000002c      0x310 load address 0x08002390
                 0x2000002c                _sbss = .
  *(.bss .bss.*)
  .bss           0x2000002c      0x20c ..\obj\com.o
@@ -1048,7 +1048,7 @@ Linker script and memory map
                 0x2000033c                . = ALIGN (0x4)
                 0x2000033c                _ebss = .
 
-.co_stack       0x2000033c      0x404 load address 0x080026ac
+.co_stack       0x2000033c      0x404 load address 0x080026a0
                 0x20000340                . = ALIGN (0x8)
  *fill*         0x2000033c        0x4 
  *(.co_stack .co_stack.*)
