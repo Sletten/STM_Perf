@@ -7,15 +7,29 @@ Packet overciew
 
 -Start of Packet (SOP)
 One or two bytes of bit sequence, (characters) to innitiate the start of a packet
+Startbyte 1: 155
+Startbyte 2: 185
+
 
 -Data type byte
-One byte which value decides what type of data is sendt in the Payload
-followed by one byte describes the category of the data type.
-Preset table of available values to be used for pre determined data type.
-one value might indicate that the payload includes several data types.
+Two bytes describing what type of data is being sendt.
+First one byte describing command type
+- COMMAND		Genreal system commands, retrieving info, performing system test, and such
+- CONTROL		Controlling systems, like thruster, manip, light
+- SENSOR		Retrieving data from sensor
+- SYSTEM PARAMETER	Setting and reading system parameters stored in eeprom
+
+Then one byte to describe what system to connect with.
+
+- Thruster
+- Manipulator
+- Light
+- Camera
+
 
 -Payload Length byte
 One byte which value indicates how many bytes is contained in the Payload.
+Counting onlye the number of data bytes sendt, not to include the start header(startbytes, datatype, and length), or the checksum bytes
 
 
 
@@ -31,7 +45,7 @@ The data sendt as payload, length described by previous byte.
 
 
 	Checksum
-one or two bytes for checksum, might use 16-bit fletch checksum as described in the MIP reference
+Two bytes for checksum, might use 16-bit fletch checksum as described in the MIP reference
 
 
 
@@ -45,7 +59,7 @@ commands		0x01
 	get status
 
 -Control		0x08
-	thruster	0x11
+	thruster	0x11	- 6 bytes
 		x y z axis
 		yaw pitch roll rotation
 	manip		0x13
