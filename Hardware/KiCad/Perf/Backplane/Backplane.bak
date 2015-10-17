@@ -944,9 +944,9 @@ NoConn ~ 12400 6900
 NoConn ~ 12900 6900
 NoConn ~ 14500 6900
 NoConn ~ 15000 6900
-Text GLabel 3300 2500 2    47   Input ~ 0
+Text GLabel 3400 2500 2    47   Input ~ 0
 I2C_2_SCL
-Text GLabel 3300 2600 2    47   Input ~ 0
+Text GLabel 3400 2600 2    47   Input ~ 0
 I2C_2_SDA
 Text GLabel 5700 3800 2    47   Input ~ 0
 I2C_2_SCL
@@ -1438,4 +1438,8 @@ NoConn ~ 4500 6900
 NoConn ~ 4000 6900
 NoConn ~ 2400 6900
 NoConn ~ 1900 6900
+NoConn ~ 3400 2600
+NoConn ~ 3400 2500
+NoConn ~ 3300 2500
+NoConn ~ 3300 2600
 $EndSCHEMATC

@@ -1,6 +1,10 @@
-update=16.10.2015 23:07:50
+update=11/01/2015 18:31:38
 version=1
-last_client=eeschema
+last_client=kicad
+[general]
+version=1
+RootSch=
+BoardNm=
 [eeschema]
 version=1
 LibDir=
@@ -62,18 +66,3 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
-[schematic_editor]
-version=1
-PageLayoutDescrFile=D:/GitHub/STM_Perf/Hardware/KiCad/Uis Subsea schematic default layout.kicad_wks
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-RptD_X=0
-RptD_Y=100
-RptLab=1
-LabSize=60
