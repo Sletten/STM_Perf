@@ -89,9 +89,9 @@
     <File name="stm_lib/src/stm32f10x_tim.c" path="stm_lib/src/stm32f10x_tim.c" type="1"/>
     <File name="cmsis_boot/startup" path="" type="2"/>
     <File name="src/eeprom.h" path="src/eeprom.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_wwdg.c" path="stm_lib/src/stm32f10x_wwdg.c" type="1"/>
     <File name="stm_lib/src/misc.c" path="stm_lib/src/misc.c" type="1"/>
     <File name="src/system_gpio.c" path="src/system_gpio.c" type="1"/>
-    <File name="stm_lib/src/stm32f10x_wwdg.c" path="stm_lib/src/stm32f10x_wwdg.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_spi.c" path="stm_lib/src/stm32f10x_spi.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_iwdg.c" path="stm_lib/src/stm32f10x_iwdg.c" type="1"/>
     <File name="cmsis_boot/stm32f10x.h" path="cmsis_boot/stm32f10x.h" type="1"/>
@@ -103,9 +103,9 @@
     <File name="src/thrusterSimple.h" path="src/thrusterSimple.h" type="1"/>
     <File name="cmsis/core_cm3.c" path="cmsis/core_cm3.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_spi.h" path="stm_lib/inc/stm32f10x_spi.h" type="1"/>
+    <File name="src/system.c" path="src/system.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_dma.h" path="stm_lib/inc/stm32f10x_dma.h" type="1"/>
     <File name="stm_lib/src/stm32f10x_adc.c" path="stm_lib/src/stm32f10x_adc.c" type="1"/>
-    <File name="src/system.c" path="src/system.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_iwdg.h" path="stm_lib/inc/stm32f10x_iwdg.h" type="1"/>
     <File name="src/com.h" path="src/com.h" type="1"/>
     <File name="stm_lib/src/stm32f10x_usart.c" path="stm_lib/src/stm32f10x_usart.c" type="1"/>
@@ -113,8 +113,8 @@
     <File name="stm_lib/src/stm32f10x_gpio.c" path="stm_lib/src/stm32f10x_gpio.c" type="1"/>
     <File name="src/system_init.c" path="src/system_init.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
-    <File name="src/eeprom.c" path="src/eeprom.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_usart.h" path="stm_lib/inc/stm32f10x_usart.h" type="1"/>
+    <File name="src/eeprom.c" path="src/eeprom.c" type="1"/>
     <File name="cmsis_boot/system_stm32f10x.c" path="cmsis_boot/system_stm32f10x.c" type="1"/>
     <File name="stm_lib/inc/misc.h" path="stm_lib/inc/misc.h" type="1"/>
     <File name="cmsis/core_cm3.h" path="cmsis/core_cm3.h" type="1"/>
@@ -126,8 +126,8 @@
     <File name="stm_lib/src" path="" type="2"/>
     <File name="cmsis" path="" type="2"/>
     <File name="stm_lib" path="" type="2"/>
-    <File name="stm_lib/inc/stm32f10x_adc.h" path="stm_lib/inc/stm32f10x_adc.h" type="1"/>
     <File name="cmsis_boot/startup/startup_stm32f10x_hd_vl.c" path="cmsis_boot/startup/startup_stm32f10x_hd_vl.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_adc.h" path="stm_lib/inc/stm32f10x_adc.h" type="1"/>
     <File name="cmsis_boot/system_stm32f10x.h" path="cmsis_boot/system_stm32f10x.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_rcc.h" path="stm_lib/inc/stm32f10x_rcc.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_i2c.h" path="stm_lib/inc/stm32f10x_i2c.h" type="1"/>

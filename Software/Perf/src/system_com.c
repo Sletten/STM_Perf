@@ -70,8 +70,6 @@ void i2c2Config(void)
 	i2cItd.I2C_Ack					= I2C_Ack_Enable;
 	i2cItd.I2C_AcknowledgedAddress	= I2C_AcknowledgedAddress_7bit;
 
-	//I2C_Init(I2C2, &i2cItd);
-
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C2, ENABLE);
 
 	I2C_Cmd(I2C2, ENABLE);

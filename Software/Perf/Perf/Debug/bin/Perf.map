@@ -2,10 +2,8 @@
 Allocating common symbols
 Common symbol       size              file
 
-thrustVector        0xc0              ..\obj\thrusterSimple.o
-thrustValue         0x20              ..\obj\thrusterSimple.o
 inputValue          0x6               ..\obj\thrusterSimple.o
-thrustLimit         0x10              ..\obj\thrusterSimple.o
+thruster            0x180             ..\obj\thrusterSimple.o
 inputVector         0xc               ..\obj\thrusterSimple.o
 
 Discarded input sections
@@ -760,7 +758,7 @@ Linker script and memory map
 
                 0x20008000                _eram = 0x20008000
 
-.text           0x08000000     0x2364
+.text           0x08000000     0x24d8
  *(.isr_vector .isr_vector.*)
  .isr_vector    0x08000000      0x138 ..\obj\startup_stm32f10x_hd_vl.o
                 0x08000000                g_pfnVectors
@@ -952,70 +950,70 @@ Linker script and memory map
                 0x08001764                DMA2_Channel3_IRQHandler
                 0x08001764                TIM1_BRK_TIM15_IRQHandler
  .text.initThrusters
-                0x0800176c      0x11c ..\obj\thrusterSimple.o
+                0x0800176c      0x1e4 ..\obj\thrusterSimple.o
                 0x0800176c                initThrusters
  .text.setThrusterValue
-                0x08001888       0xac ..\obj\thrusterSimple.o
-                0x08001888                setThrusterValue
+                0x08001950       0xac ..\obj\thrusterSimple.o
+                0x08001950                setThrusterValue
  .text.setThrust
-                0x08001934       0x94 ..\obj\thrusterSimple.o
-                0x08001934                setThrust
+                0x080019fc       0x94 ..\obj\thrusterSimple.o
+                0x080019fc                setThrust
  .text.setInput
-                0x080019c8       0x50 ..\obj\thrusterSimple.o
-                0x080019c8                setInput
+                0x08001a90       0x50 ..\obj\thrusterSimple.o
+                0x08001a90                setInput
  .text.updateThrusters
-                0x08001a18      0x4ac ..\obj\thrusterSimple.o
-                0x08001a18                updateThrusters
+                0x08001ae0      0x558 ..\obj\thrusterSimple.o
+                0x08001ae0                updateThrusters
  .text.sysTimInit
-                0x08001ec4      0x170 ..\obj\system_tim.o
-                0x08001ec4                sysTimInit
+                0x08002038      0x170 ..\obj\system_tim.o
+                0x08002038                sysTimInit
  .text.NVIC_Init
-                0x08002034       0xc4 ..\obj\misc.o
-                0x08002034                NVIC_Init
+                0x080021a8       0xc4 ..\obj\misc.o
+                0x080021a8                NVIC_Init
  .text.sysComInit
-                0x080020f8       0x10 ..\obj\system_com.o
-                0x080020f8                sysComInit
+                0x0800226c       0x10 ..\obj\system_com.o
+                0x0800226c                sysComInit
  .text.usart1Config
-                0x08002108       0x48 ..\obj\system_com.o
-                0x08002108                usart1Config
+                0x0800227c       0x48 ..\obj\system_com.o
+                0x0800227c                usart1Config
  .text.i2c2Config
-                0x08002150       0x50 ..\obj\system_com.o
-                0x08002150                i2c2Config
+                0x080022c4       0x50 ..\obj\system_com.o
+                0x080022c4                i2c2Config
  .text.I2C_Init
-                0x080021a0      0x184 ..\obj\stm32f10x_i2c.o
-                0x080021a0                I2C_Init
- .text.I2C_Cmd  0x08002324       0x40 ..\obj\stm32f10x_i2c.o
-                0x08002324                I2C_Cmd
+                0x08002314      0x184 ..\obj\stm32f10x_i2c.o
+                0x08002314                I2C_Init
+ .text.I2C_Cmd  0x08002498       0x40 ..\obj\stm32f10x_i2c.o
+                0x08002498                I2C_Cmd
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
 
-.vfp11_veneer   0x08002364        0x0
+.vfp11_veneer   0x080024d8        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x08002364        0x0
+.v4_bx          0x080024d8        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x08002364        0x0
+.iplt           0x080024d8        0x0
  .iplt          0x00000000        0x0 ..\obj\stm32f10x_tim.o
 
-.rel.dyn        0x08002364        0x0
+.rel.dyn        0x080024d8        0x0
  .rel.iplt      0x00000000        0x0 ..\obj\stm32f10x_tim.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08002364                __exidx_start = .
+                0x080024d8                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x08002364                __exidx_end = .
-                0x08002364                . = ALIGN (0x4)
-                0x08002364                _etext = .
-                0x08002364                _sidata = .
+                0x080024d8                __exidx_end = .
+                0x080024d8                . = ALIGN (0x4)
+                0x080024d8                _etext = .
+                0x080024d8                _sidata = .
 
-.data           0x20000000       0x2c load address 0x08002364
+.data           0x20000000       0x2c load address 0x080024d8
                 0x20000000                _sdata = .
  *(.data .data.*)
  .data          0x20000000       0x14 ..\obj\system_stm32f10x.o
@@ -1028,10 +1026,10 @@ Linker script and memory map
  *fill*         0x20000029        0x3 
                 0x2000002c                _edata = .
 
-.igot.plt       0x2000002c        0x0 load address 0x08002390
+.igot.plt       0x2000002c        0x0 load address 0x08002504
  .igot.plt      0x00000000        0x0 ..\obj\stm32f10x_tim.o
 
-.bss            0x2000002c      0x310 load address 0x08002390
+.bss            0x2000002c      0x3a0 load address 0x08002504
                 0x2000002c                _sbss = .
  *(.bss .bss.*)
  .bss           0x2000002c      0x20c ..\obj\com.o
@@ -1039,23 +1037,21 @@ Linker script and memory map
                 0x20000230                done
                 0x20000231                rec
  *(COMMON)
- COMMON         0x20000238      0x104 ..\obj\thrusterSimple.o
-                0x20000238                thrustVector
-                0x200002f8                thrustValue
-                0x20000318                inputValue
-                0x20000320                thrustLimit
-                0x20000330                inputVector
-                0x2000033c                . = ALIGN (0x4)
-                0x2000033c                _ebss = .
+ COMMON         0x20000238      0x194 ..\obj\thrusterSimple.o
+                0x20000238                inputValue
+                0x20000240                thruster
+                0x200003c0                inputVector
+                0x200003cc                . = ALIGN (0x4)
+                0x200003cc                _ebss = .
 
-.co_stack       0x2000033c      0x404 load address 0x080026a0
-                0x20000340                . = ALIGN (0x8)
- *fill*         0x2000033c        0x4 
+.co_stack       0x200003cc      0x404 load address 0x080028a4
+                0x200003d0                . = ALIGN (0x8)
+ *fill*         0x200003cc        0x4 
  *(.co_stack .co_stack.*)
- .co_stack      0x20000340      0x400 ..\obj\startup_stm32f10x_hd_vl.o
-                0x20000340                pulStack
-                0x20000740                . = ALIGN (0x4)
-                0x20000740                _end = .
+ .co_stack      0x200003d0      0x400 ..\obj\startup_stm32f10x_hd_vl.o
+                0x200003d0                pulStack
+                0x200007d0                . = ALIGN (0x4)
+                0x200007d0                _end = .
 LOAD ..\obj\stm32f10x_tim.o
 LOAD ..\obj\core_cm3.o
 LOAD ..\obj\system_stm32f10x.o
@@ -1088,7 +1084,7 @@ LOAD d:/prog/coocox/coide_1.7.5/toolchain/bin/../lib/gcc/arm-none-eabi/4.9.3/../
 END GROUP
 OUTPUT(Perf.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x6dcf
+.debug_info     0x00000000     0x6e3f
  .debug_info    0x00000000     0x1c42 ..\obj\stm32f10x_tim.o
  .debug_info    0x00001c42      0x3d5 ..\obj\system_stm32f10x.o
  .debug_info    0x00002017      0x6d1 ..\obj\stm32f10x_gpio.o
@@ -1102,13 +1098,13 @@ OUTPUT(Perf.elf elf32-littlearm)
  .debug_info    0x00003c4a      0x8e4 ..\obj\stm32f10x_rcc.o
  .debug_info    0x0000452e      0x9d2 ..\obj\stm32f10x_usart.o
  .debug_info    0x00004f00       0xe9 ..\obj\startup_stm32f10x_hd_vl.o
- .debug_info    0x00004fe9      0x677 ..\obj\thrusterSimple.o
- .debug_info    0x00005660      0x3fb ..\obj\system_tim.o
- .debug_info    0x00005a5b      0x4e9 ..\obj\misc.o
- .debug_info    0x00005f44      0x3a1 ..\obj\system_com.o
- .debug_info    0x000062e5      0xaea ..\obj\stm32f10x_i2c.o
+ .debug_info    0x00004fe9      0x6e7 ..\obj\thrusterSimple.o
+ .debug_info    0x000056d0      0x3fb ..\obj\system_tim.o
+ .debug_info    0x00005acb      0x4e9 ..\obj\misc.o
+ .debug_info    0x00005fb4      0x3a1 ..\obj\system_com.o
+ .debug_info    0x00006355      0xaea ..\obj\stm32f10x_i2c.o
 
-.debug_abbrev   0x00000000     0x14fe
+.debug_abbrev   0x00000000     0x152d
  .debug_abbrev  0x00000000      0x1b0 ..\obj\stm32f10x_tim.o
  .debug_abbrev  0x000001b0      0x177 ..\obj\system_stm32f10x.o
  .debug_abbrev  0x00000327      0x1c8 ..\obj\stm32f10x_gpio.o
@@ -1122,11 +1118,11 @@ OUTPUT(Perf.elf elf32-littlearm)
  .debug_abbrev  0x00000b3c      0x1ba ..\obj\stm32f10x_rcc.o
  .debug_abbrev  0x00000cf6      0x162 ..\obj\stm32f10x_usart.o
  .debug_abbrev  0x00000e58       0xa7 ..\obj\startup_stm32f10x_hd_vl.o
- .debug_abbrev  0x00000eff      0x15e ..\obj\thrusterSimple.o
- .debug_abbrev  0x0000105d       0xf1 ..\obj\system_tim.o
- .debug_abbrev  0x0000114e      0x154 ..\obj\misc.o
- .debug_abbrev  0x000012a2       0xf8 ..\obj\system_com.o
- .debug_abbrev  0x0000139a      0x164 ..\obj\stm32f10x_i2c.o
+ .debug_abbrev  0x00000eff      0x18d ..\obj\thrusterSimple.o
+ .debug_abbrev  0x0000108c       0xf1 ..\obj\system_tim.o
+ .debug_abbrev  0x0000117d      0x154 ..\obj\misc.o
+ .debug_abbrev  0x000012d1       0xf8 ..\obj\system_com.o
+ .debug_abbrev  0x000013c9      0x164 ..\obj\stm32f10x_i2c.o
 
 .debug_aranges  0x00000000      0x980
  .debug_aranges
@@ -1186,7 +1182,7 @@ OUTPUT(Perf.elf elf32-littlearm)
  .debug_ranges  0x00000730       0x20 ..\obj\system_com.o
  .debug_ranges  0x00000750      0x110 ..\obj\stm32f10x_i2c.o
 
-.debug_line     0x00000000     0x3199
+.debug_line     0x00000000     0x31ef
  .debug_line    0x00000000      0xa9f ..\obj\stm32f10x_tim.o
  .debug_line    0x00000a9f      0x1da ..\obj\system_stm32f10x.o
  .debug_line    0x00000c79      0x377 ..\obj\stm32f10x_gpio.o
@@ -1200,13 +1196,13 @@ OUTPUT(Perf.elf elf32-littlearm)
  .debug_line    0x00001a69      0x49b ..\obj\stm32f10x_rcc.o
  .debug_line    0x00001f04      0x45a ..\obj\stm32f10x_usart.o
  .debug_line    0x0000235e       0xa1 ..\obj\startup_stm32f10x_hd_vl.o
- .debug_line    0x000023ff      0x314 ..\obj\thrusterSimple.o
- .debug_line    0x00002713      0x1ef ..\obj\system_tim.o
- .debug_line    0x00002902      0x205 ..\obj\misc.o
- .debug_line    0x00002b07      0x1fb ..\obj\system_com.o
- .debug_line    0x00002d02      0x497 ..\obj\stm32f10x_i2c.o
+ .debug_line    0x000023ff      0x36a ..\obj\thrusterSimple.o
+ .debug_line    0x00002769      0x1ef ..\obj\system_tim.o
+ .debug_line    0x00002958      0x205 ..\obj\misc.o
+ .debug_line    0x00002b5d      0x1fb ..\obj\system_com.o
+ .debug_line    0x00002d58      0x497 ..\obj\stm32f10x_i2c.o
 
-.debug_str      0x00000000     0x2896
+.debug_str      0x00000000     0x28e8
  .debug_str     0x00000000      0xd14 ..\obj\stm32f10x_tim.o
                                 0xdcf (size before relaxing)
  .debug_str     0x00000d14      0x159 ..\obj\system_stm32f10x.o
@@ -1233,15 +1229,15 @@ OUTPUT(Perf.elf elf32-littlearm)
                                 0x682 (size before relaxing)
  .debug_str     0x000020f5       0xaf ..\obj\startup_stm32f10x_hd_vl.o
                                 0x146 (size before relaxing)
- .debug_str     0x000021a4      0x16c ..\obj\thrusterSimple.o
-                                0x3fa (size before relaxing)
- .debug_str     0x00002310       0x4f ..\obj\system_tim.o
+ .debug_str     0x000021a4      0x1be ..\obj\thrusterSimple.o
+                                0x455 (size before relaxing)
+ .debug_str     0x00002362       0x4f ..\obj\system_tim.o
                                 0x3c6 (size before relaxing)
- .debug_str     0x0000235f      0x107 ..\obj\misc.o
+ .debug_str     0x000023b1      0x107 ..\obj\misc.o
                                 0x3aa (size before relaxing)
- .debug_str     0x00002466       0xe8 ..\obj\system_com.o
+ .debug_str     0x000024b8       0xe8 ..\obj\system_com.o
                                 0x315 (size before relaxing)
- .debug_str     0x0000254e      0x348 ..\obj\stm32f10x_i2c.o
+ .debug_str     0x000025a0      0x348 ..\obj\stm32f10x_i2c.o
                                 0x658 (size before relaxing)
 
 .comment        0x00000000       0x70
@@ -1304,7 +1300,7 @@ OUTPUT(Perf.elf elf32-littlearm)
  .ARM.attributes
                 0x00000363       0x33 ..\obj\stm32f10x_i2c.o
 
-.debug_frame    0x00000000     0x272c
+.debug_frame    0x00000000     0x2730
  .debug_frame   0x00000000      0xe2c ..\obj\stm32f10x_tim.o
  .debug_frame   0x00000e2c       0x98 ..\obj\system_stm32f10x.o
  .debug_frame   0x00000ec4      0x2d0 ..\obj\stm32f10x_gpio.o
@@ -1318,8 +1314,8 @@ OUTPUT(Perf.elf elf32-littlearm)
  .debug_frame   0x00001534      0x51c ..\obj\stm32f10x_rcc.o
  .debug_frame   0x00001a50      0x490 ..\obj\stm32f10x_usart.o
  .debug_frame   0x00001ee0       0x4c ..\obj\startup_stm32f10x_hd_vl.o
- .debug_frame   0x00001f2c      0x150 ..\obj\thrusterSimple.o
- .debug_frame   0x0000207c       0x34 ..\obj\system_tim.o
- .debug_frame   0x000020b0       0xd8 ..\obj\misc.o
- .debug_frame   0x00002188       0x74 ..\obj\system_com.o
- .debug_frame   0x000021fc      0x530 ..\obj\stm32f10x_i2c.o
+ .debug_frame   0x00001f2c      0x154 ..\obj\thrusterSimple.o
+ .debug_frame   0x00002080       0x34 ..\obj\system_tim.o
+ .debug_frame   0x000020b4       0xd8 ..\obj\misc.o
+ .debug_frame   0x0000218c       0x74 ..\obj\system_com.o
+ .debug_frame   0x00002200      0x530 ..\obj\stm32f10x_i2c.o

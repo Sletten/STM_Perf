@@ -18,6 +18,10 @@
 
 
 void initThrusters(void);
+void initThrustersFromEEPROM(void);
+
+void enableThrusters(void);
+void disableThrusters(void);
 
 
 void setInput(uint8_t inX, uint8_t inY, uint8_t inZ, uint8_t inYaw, uint8_t inPitch, uint8_t inRoll);

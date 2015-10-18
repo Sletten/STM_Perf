@@ -40,23 +40,42 @@
 #define MIN_PWM				1800
 
 
-
 int8_t thrustCurve = QUADRATIC;
-
-
-
-// TODO(Sletten): Does not take min thrust limit into account
-int16_t thrustLimit[THRUSTER_COUNT];		// limitations set to thruster
 
 uint8_t inputValue[6];
 int16_t inputVector[6];
 
+/*
 int32_t thrustValue[THRUSTER_COUNT];
 int32_t thrustVector[THRUSTER_COUNT][6];	// thruster speed value
 
+// TODO(Sletten): Does not take min thrust limit into account
+int16_t thrustLimit[THRUSTER_COUNT];		// limitations set to thruster
+*/
+
+struct Thruster
+{
+	int16_t thrustMax;
+	int16_t thrustMid;
+	int16_t thrustMin;
+
+	int16_t pwmMax;		// Maximum pwm period for thruster foreward
+	int16_t pwmMidPos;	// pwm period where thruster start in positive direction
+	int16_t pwmMid;		// pwm period for mid posision, thruster not running
+	int16_t pwmMidNeg;	// pwm period where thruster start in negative direction
+	int16_t pwmMin;		// minimum pwm period for thruster backward
+
+	int16_t thrustLimit;
+	int32_t thrustValue;
+	int32_t thrustVector[6];	// thruster speed value [x y z yaw roll pitch]
+};
+
+struct Thruster thruster[THRUSTER_COUNT];
 
 
-void setThrusterValue(int thruster,short x, short y, short z, short yaw, short roll, short pitch);
+
+
+void setThrusterValue(int thrusterNr,short x, short y, short z, short yaw, short roll, short pitch);
 void setThrust(uint8_t inThruster, int16_t);
 
 
@@ -80,7 +99,29 @@ void initThrusters(void)
 	setThrusterValue(6,  0,  0, 1,  0, 0, 0);
 	setThrusterValue(7,  0,  0, 1,  0, 0, 0);
 
+	int i = 0;
+	for (i = 0; i < THRUSTER_COUNT; i++)
+	{
+		thruster[i].thrustMax = MAX_THRUST;
+		thruster[i].thrustMid = MID_THRUST;
+		thruster[i].thrustMin = MIN_THRUST;
 
+		thruster[i].pwmMax		= 5600;
+		thruster[i].pwmMidPos	= 3600;
+		thruster[i].pwmMid		= 3600;
+		thruster[i].pwmMidNeg	= 3600;
+		thruster[i].pwmMin		= 1800;
+
+		thruster[i].thrustLimit	= MAX_THRUST;
+		thruster[i].thrustValue	= 0;
+	}
+
+	for(i = 0; i < 6; i++)
+	{
+		inputValue[i] = 0;
+	}
+
+	/*	// old
 	thrustLimit[0] = MAX_THRUST;
 	thrustLimit[1] = MAX_THRUST;
 	thrustLimit[2] = MAX_THRUST;
@@ -89,16 +130,32 @@ void initThrusters(void)
 	thrustLimit[5] = MAX_THRUST;
 	thrustLimit[6] = MAX_THRUST;
 	thrustLimit[7] = MAX_THRUST;
+	*/
+}
+void initThrustersFromEEPROM(void)
+{
+
 }
 
-void setThrusterValue(int thruster,short x, short y, short z, short yaw, short roll, short pitch)
+/*	// old
+void setThrusterValue(int thrusterNr,short x, short y, short z, short yaw, short roll, short pitch)
 {
-	thrustVector[thruster][0] = x;
-	thrustVector[thruster][1] = y;
-	thrustVector[thruster][2] = z;
-	thrustVector[thruster][3] = yaw;
-	thrustVector[thruster][4] = roll;
-	thrustVector[thruster][5] = pitch;
+	thrustVector[thrusterNr][0] = x;
+	thrustVector[thrusterNr][1] = y;
+	thrustVector[thrusterNr][2] = z;
+	thrustVector[thrusterNr][3] = yaw;
+	thrustVector[thrusterNr][4] = roll;
+	thrustVector[thrusterNr][5] = pitch;
+}
+*/
+void setThrusterValue(int thrusterNr,short x, short y, short z, short yaw, short roll, short pitch)
+{
+	thruster[thrusterNr].thrustVector[0] = x;
+	thruster[thrusterNr].thrustVector[1] = y;
+	thruster[thrusterNr].thrustVector[2] = z;
+	thruster[thrusterNr].thrustVector[3] = yaw;
+	thruster[thrusterNr].thrustVector[4] = roll;
+	thruster[thrusterNr].thrustVector[5] = pitch;
 }
 
 void setThrust(uint8_t inThruster, int16_t inPeriod)
@@ -168,36 +225,42 @@ void updateThrusters()
 	// resetting the thrustValues to 0
 	for(i = 0; i < THRUSTER_COUNT; i++)
 	{
-		thrustValue[i] = 0;
+		thruster[i].thrustValue = 0;
 	}
 
 	for(i = 0; i < 6; i++)
 	{
-		// make input value into a signed value
-		//TODO(Sletten): should be implemented such that inputValue is signed in the first place.
-		int8_t temp = inputValue[i] - INPUT_MID_VALUE;
-
-		int16_t tempQuad = 0;
-
-		switch(thrustCurve)
+		if(inputValue[i] == 0) // input not set or error, don't set any thrust.
 		{
-		case QUADRATIC:
-			tempQuad = temp*temp;
+			inputVector[i] = 0;
+		}
+		else
+		{
+			// make input value into a signed value
+			//TODO(Sletten): should be implemented such that inputValue is signed in the first place.
+			int8_t temp = inputValue[i] - INPUT_MID_VALUE;
+
+			int16_t tempQuad = 0;
+
+			switch(thrustCurve)
+			{
+			case QUADRATIC:
+				tempQuad = temp*temp;
 
 
-			if(temp < 0)			// scale to fit variable
-											// number range
-				inputVector[i] = -tempQuad;
-			else
-				inputVector[i] = tempQuad;
-			break;
+				if(temp < 0)			// scale to fit variable
+												// number range
+					inputVector[i] = -tempQuad;
+				else
+					inputVector[i] = tempQuad;
+				break;
 
-		case LINEAR:
-			inputVector[i] = temp*LINEAR_MULTIPLIER;
-			break;
+			case LINEAR:
+				inputVector[i] = temp*LINEAR_MULTIPLIER;
+				break;
+			}
 		}
 	}
-
 
 	// Calculate thrust
 
@@ -206,11 +269,11 @@ void updateThrusters()
 
 	for (i = 0 ; i < THRUSTER_COUNT; i++)
 	{
-		thrustValue[i] = 0;
+		thruster[i].thrustValue = 0;
 
 		for(j = 0; j<6; j++ )
 		{
-			thrustValue[i] += thrustVector[i][j]*inputVector[j];
+			thruster[i].thrustValue += thruster[i].thrustVector[j]*inputVector[j];
 		}
 	}
 
@@ -224,14 +287,14 @@ void updateThrusters()
 	for(i = 0; i < THRUSTER_COUNT; i++)
 	{
 		// Horizontal thrusters
-		if(thrustVector[i][0] || thrustVector[i][1] || thrustVector[i][3]) // if horizontal thruster, x, y, yaw
+		if(thruster[i].thrustVector[0] || thruster[i].thrustVector[1] || thruster[i].thrustVector[3]) // if horizontal thruster, x, y, yaw
 		{
-			int32_t temp = abs(thrustValue[i]);
+			int32_t temp = abs(thruster[i].thrustValue);
 
 			q32_t q32_scale = q32One;
 			if (temp != 0) //avoid division by zero
 			{
-				q32_scale = qDiv(intToQ(thrustLimit[i]), intToQ(temp));
+				q32_scale = qDiv(intToQ(thruster[i].thrustLimit), intToQ(temp));
 			}
 
 			if (q32_scale < q32_maxScaleHorizontal) // the smaller scale counts
@@ -241,14 +304,14 @@ void updateThrusters()
 		}
 
 		// Vertical thrusters
-		if(thrustVector[i][2] || thrustVector[i][4] || thrustVector[i][5]) // if vertical thruster, z, roll, pitch
+		if(thruster[i].thrustVector[2] || thruster[i].thrustVector[4] || thruster[i].thrustVector[5]) // if vertical thruster, z, roll, pitch
 		{
-			int32_t temp = abs(thrustValue[i]);
+			int32_t temp = abs(thruster[i].thrustValue);
 
 			q32_t q32_scale = q32One;
 			if (temp != 0) //avoid division by zero
 			{
-				q32_scale = qDiv(intToQ(thrustLimit[i]), intToQ(temp));
+				q32_scale = qDiv(intToQ(thruster[i].thrustLimit), intToQ(temp));
 			}
 
 			if (q32_scale < q32_maxScaleVertical) // the smaller scale counts
@@ -261,13 +324,15 @@ void updateThrusters()
 	for(i = 0; i < THRUSTER_COUNT; i++)
 	{
 		// only scale if thrustLimit for any one thruster is exceeded
-		if((qToIntNoRound(q32_maxScaleHorizontal) < 1 )&& (thrustVector[i][0] || thrustVector[i][1] || thrustVector[i][3]))
+		if((qToIntNoRound(q32_maxScaleHorizontal) < 1 ) &&
+			(thruster[i].thrustVector[0] || thruster[i].thrustVector[1] || thruster[i].thrustVector[3]))
 		{
-			thrustValue[i] = qToInt(qMlt(intToQ(thrustValue[i]), q32_maxScaleHorizontal));
+			thruster[i].thrustValue = qToInt(qMlt(intToQ(thruster[i].thrustValue), q32_maxScaleHorizontal));
 		}
-		if((qToIntNoRound(q32_maxScaleVertical) < 1 ) && (thrustVector[i][2] || thrustVector[i][4] || thrustVector[i][5]))
+		if((qToIntNoRound(q32_maxScaleVertical) < 1 ) &&
+			(thruster[i].thrustVector[2] || thruster[i].thrustVector[4] || thruster[i].thrustVector[5]))
 		{
-			thrustValue[i] = qToInt(qMlt(intToQ(thrustValue[i]), q32_maxScaleVertical));
+			thruster[i].thrustValue = qToInt(qMlt(intToQ(thruster[i].thrustValue), q32_maxScaleVertical));
 		}
 	}
 
@@ -275,13 +340,13 @@ void updateThrusters()
 
 	for(i = 0; i < THRUSTER_COUNT; i++)
 	{
-		if(thrustValue[0] > 0)
+		if(thruster[i].thrustValue > 0)
 		{
-			setThrust(i, MID_PWM + qToInt(qMlt(qDiv(intToQ(thrustValue[i]),intToQ(MAX_THRUST)), intToQ(MAX_PWM - MID_PWM))));
+			setThrust(i, MID_PWM + qToInt(qMlt(qDiv(intToQ(thruster[i].thrustValue),intToQ(MAX_THRUST)), intToQ(MAX_PWM - MID_PWM))));
 		}
 		else
 		{
-			setThrust(i, MID_PWM - qToInt(qMlt(qDiv(intToQ(thrustValue[i]),intToQ(MIN_THRUST)), intToQ(MID_PWM - MIN_PWM))));
+			setThrust(i, MID_PWM - qToInt(qMlt(qDiv(intToQ(thruster[i].thrustValue),intToQ(MIN_THRUST)), intToQ(MID_PWM - MIN_PWM))));
 		}
 	}
 }
