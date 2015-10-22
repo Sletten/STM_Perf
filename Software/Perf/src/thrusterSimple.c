@@ -1,37 +1,64 @@
-// Simplified thruster control
-//
+/**
+ * @file		thrusterSimple.c
+ * @author		Sletten
+ * @version		v0.1.1
+ * @date		30.08.2015
+ * @brief
+ *
+ *	The simple thruster implementation uses six inputs to control thrusters
+ *	in the horizontal and vertical plane.
+ */
 
 
+/*
+ *
+ *	Standard setup for thruster
+ *	Front horizontal (0, and 1) is pointing forward, and aft horizontal, (2, and 3) is pointing backwards
+ *	All four vertical is pointing upwards.
+ *
+ *	Changes to this setup can be changed in the initThrusters() method.
+ *	Other setup can be us if desired, but the vectorization(values set insetThrusterValue() ) need to be recalculated.
+ *
+ * 		 /			   	   \
+ * 		/ 0 /			\ 1 \
+ * 		   / 			 \
+ * 			(4)	 	  (5)
+ *
+ *
+ *
+ *
+ * 			(6)		  (7)
+ *		   \			 /
+ * 		\ 2 \			/ 3 /
+ * 		 \			 	   /
+ *
+ */
 #include "thrusterSimple.h"
 
 #include "stm32f10x_tim.h"
 #include "stm32f10x_usart.h"
 
-#include "fixpointLib.h"
 
+#include "fixpointLib.h"
 
 
 
 #define FALSE			0
 #define TRUE			1
 
-
 #define QUADRATIC		1
 #define LINEAR			0
 
-
 #define THRUSTER_COUNT 	8
-
 
 #define INPUT_MIN_VALUE 1
 #define INPUT_MID_VALUE 128
 #define INPUT_MAX_VALUE 255
 
-#define LINEAR_MULTIPLIER 	INPUT_MID_VALUE
+#define LINEAR_MULTIPLIER 	INPUT_MID_VALUE - INPUT_MIN_VALUE
 
 
-//127*127 = 16129
-#define	MAX_THRUST			16129
+#define	MAX_THRUST			16129	//127*127 = 16129
 #define MID_THRUST			0
 #define MIN_THRUST			-16129
 
@@ -68,14 +95,15 @@ struct Thruster
 	int16_t thrustLimit;
 	int32_t thrustValue;
 	int32_t thrustVector[6];	// thruster speed value [x y z yaw roll pitch]
+
+	uint16_t *timerOutput;		// register for the timer output eg: TIM1->CCR1
 };
 
 struct Thruster thruster[THRUSTER_COUNT];
 
 
-
-
-void setThrusterValue(int thrusterNr,short x, short y, short z, short yaw, short roll, short pitch);
+void setThrusterValue(uint8_t inThruster,short x, short y, short z, short yaw, short roll, short pitch);
+void setThrusterTimer(uint8_t inThruster, uint16_t *inReg);
 void setThrust(uint8_t inThruster, int16_t);
 
 
@@ -90,16 +118,33 @@ int32_t abs(int32_t in)
 
 void initThrusters(void)
 {
+	int i = 0;
+	for(i = 0; i < 6; i++)
+	{
+		inputValue[i] = 0;
+	}
+
+	// set thruster direction in reference to the axes.
+	//					 x	 y	z  yaw roll pitch
 	setThrusterValue(0,  1,  1, 0,  1, 0, 0);
 	setThrusterValue(1,  1, -1, 0, -1, 0, 0);
 	setThrusterValue(2, -1,  1, 0, -1, 0, 0);
 	setThrusterValue(3, -1, -1, 0,  1, 0, 0);
-	setThrusterValue(4,  0,  0, 1,  0, 0, 0);
-	setThrusterValue(5,  0,  0, 1,  0, 0, 0);
-	setThrusterValue(6,  0,  0, 1,  0, 0, 0);
-	setThrusterValue(7,  0,  0, 1,  0, 0, 0);
+	setThrusterValue(4,  0,  0, 1,  0, 0, 0); //  1, -1 // roll and pitch, not implemented yet, need to be tested
+	setThrusterValue(5,  0,  0, 1,  0, 0, 0); // -1, -1
+	setThrusterValue(6,  0,  0, 1,  0, 0, 0); //  1,  1
+	setThrusterValue(7,  0,  0, 1,  0, 0, 0); // -1,  1
 
-	int i = 0;
+	// Set the registers for the timer outputs
+	setThrusterTimer(0, TIM4->CCR1);
+	setThrusterTimer(1, TIM4->CCR2);
+	setThrusterTimer(2, TIM4->CCR3);
+	setThrusterTimer(3, TIM4->CCR4);
+	setThrusterTimer(4, TIM3->CCR1);
+	setThrusterTimer(5, TIM3->CCR2);
+	setThrusterTimer(6, TIM3->CCR3);
+	setThrusterTimer(7, TIM3->CCR4);
+
 	for (i = 0; i < THRUSTER_COUNT; i++)
 	{
 		thruster[i].thrustMax = MAX_THRUST;
@@ -116,11 +161,6 @@ void initThrusters(void)
 		thruster[i].thrustValue	= 0;
 	}
 
-	for(i = 0; i < 6; i++)
-	{
-		inputValue[i] = 0;
-	}
-
 	/*	// old
 	thrustLimit[0] = MAX_THRUST;
 	thrustLimit[1] = MAX_THRUST;
@@ -132,6 +172,8 @@ void initThrusters(void)
 	thrustLimit[7] = MAX_THRUST;
 	*/
 }
+
+//TODO: implement this stuff
 void initThrustersFromEEPROM(void)
 {
 
@@ -148,18 +190,31 @@ void setThrusterValue(int thrusterNr,short x, short y, short z, short yaw, short
 	thrustVector[thrusterNr][5] = pitch;
 }
 */
-void setThrusterValue(int thrusterNr,short x, short y, short z, short yaw, short roll, short pitch)
+
+// set thruster direction in reference to the axes.
+void setThrusterValue(uint8_t inThruster,short x, short y, short z, short yaw, short roll, short pitch)
 {
-	thruster[thrusterNr].thrustVector[0] = x;
-	thruster[thrusterNr].thrustVector[1] = y;
-	thruster[thrusterNr].thrustVector[2] = z;
-	thruster[thrusterNr].thrustVector[3] = yaw;
-	thruster[thrusterNr].thrustVector[4] = roll;
-	thruster[thrusterNr].thrustVector[5] = pitch;
+	thruster[inThruster].thrustVector[0] = x;
+	thruster[inThruster].thrustVector[1] = y;
+	thruster[inThruster].thrustVector[2] = z;
+	thruster[inThruster].thrustVector[3] = yaw;
+	thruster[inThruster].thrustVector[4] = roll;
+	thruster[inThruster].thrustVector[5] = pitch;
 }
 
+// set the register addess for the desired timer output for a given thruster
+void setThrusterTimer(uint8_t inThruster, uint16_t *inReg)
+{
+	thruster[inThruster].timerOutput = inReg;
+}
+
+// sets the pwm period for a thrusters timer output
 void setThrust(uint8_t inThruster, int16_t inPeriod)
 {
+	// untested, but think it should work
+	*thruster[inThruster].timerOutput = inPeriod;
+
+	/*
 	switch(inThruster)
 	{
 	case 0:
@@ -187,10 +242,10 @@ void setThrust(uint8_t inThruster, int16_t inPeriod)
 		TIM3->CCR4 = inPeriod;
 		break;
 	}
+	*/
 }
 
-
-
+// set control input, does not gets calculated and set before updateThrusters is called.
 void setInput(uint8_t inX, uint8_t inY, uint8_t inZ, uint8_t inYaw, uint8_t inPitch, uint8_t inRoll)
 {
 	inputValue[0] = inX;
@@ -215,9 +270,9 @@ void setInputRot(uint8_t inYaw, uint8_t inPitch, uint8_t inRoll)
 	inputValue[5] = inRoll;
 }
 
+// calculates and updates the pwm outputs for the thrusters
 void updateThrusters()
 {
-	// vectorize input
 	int8_t i = 0;
 	int8_t j = 0;
 
@@ -228,6 +283,7 @@ void updateThrusters()
 		thruster[i].thrustValue = 0;
 	}
 
+	// vectorize input -ish, calculates the scaled input
 	for(i = 0; i < 6; i++)
 	{
 		if(inputValue[i] == 0) // input not set or error, don't set any thrust.
@@ -242,6 +298,7 @@ void updateThrusters()
 
 			int16_t tempQuad = 0;
 
+			// scales the input
 			switch(thrustCurve)
 			{
 			case QUADRATIC:
@@ -262,7 +319,7 @@ void updateThrusters()
 		}
 	}
 
-	// Calculate thrust
+	// Calculate thrust for each thrusters from the input
 
 	i = 0; 	// thruster
 	j = 0;	// axis
@@ -271,7 +328,7 @@ void updateThrusters()
 	{
 		thruster[i].thrustValue = 0;
 
-		for(j = 0; j<6; j++ )
+		for(j = 0; j < 6; j++ )
 		{
 			thruster[i].thrustValue += thruster[i].thrustVector[j]*inputVector[j];
 		}
@@ -336,8 +393,7 @@ void updateThrusters()
 		}
 	}
 
-
-
+	// set the pwm outputs
 	for(i = 0; i < THRUSTER_COUNT; i++)
 	{
 		if(thruster[i].thrustValue > 0)

@@ -39,7 +39,7 @@
       </source>
       <source file="..\..\..\cmsis_boot\startup\startup_stm32f10x_hd_vl.c" lastModified="14ca7c99778">
       </source>
-      <source file="..\..\..\src\thrusterSimple.h" lastModified="1507c55195e">
+      <source file="..\..\..\src\thrusterSimple.h" lastModified="15090ef0e69">
       </source>
       <source file="..\..\..\stm_lib\inc\stm32f10x_adc.h" lastModified="14cecf5c2a4">
          <include file="..\..\..\cmsis_boot\stm32f10x.h"/>

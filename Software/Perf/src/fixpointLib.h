@@ -1,7 +1,7 @@
 /**
  * @file		fixpointLig.h
  * @author		Sletten
- * @version		v0.0.1
+ * @version		v1.0
  * @date		30.08.2015
  * @brief
  *

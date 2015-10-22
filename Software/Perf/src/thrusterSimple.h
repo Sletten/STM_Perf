@@ -1,16 +1,12 @@
 /**
  * @file		thrusterSimple.h
  * @author		Sletten
- * @version		v0.0.1
- * @date		30.08.2015
+ * @version		v0.1.1
+ * @date		22.10.2015
  * @brief
  *
- *
- *
- *
- * @history
- * 		30.08.2015	- First implementation
- *
+ *	The simple thruster implementation uses six inputs to control thrusters
+ *	in the horizontal and vertical plane.
  */
 
 #pragma once
