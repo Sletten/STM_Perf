@@ -15,6 +15,9 @@
 
 #include "stdint.h"
 
+void writeToEEPROM();
+
+
 void writeByte(uint8_t inData, uint16_t inAddress);
 void writePage(uint8_t inData[], uint8_t inLength, uint16_t inAddress);
 uint8_t readByte(uint16_t inAddress);

@@ -223,6 +223,15 @@ void handleData()
 		switch (data[SUBDATATYPE])
 		{
 		case THRUSTER:
+			if(data[PAYLOADSTART] == 1)
+			{
+				startEscSetup();
+			}
+			if(data[PAYLOADSTART] == 1)
+			{
+				stopEscSetup();
+			}
+
 			break;
 		case MANIP:
 			break;

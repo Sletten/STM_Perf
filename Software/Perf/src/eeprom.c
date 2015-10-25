@@ -21,7 +21,10 @@
 #define READ_ADDRESS 	0xa1
 #define WRITE_ADDRESS 	0xa0
 
+void writeToEEPROM()
+{
 
+}
 
 void writeByte(uint8_t inData, uint16_t inAddress)
 {
