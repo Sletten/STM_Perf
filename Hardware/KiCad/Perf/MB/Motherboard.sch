@@ -11,7 +11,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -439,8 +438,6 @@ F 3 "" H 1900 2000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 3500 4400 2    47   Input ~ 0
-I2C 1 SMBA
-Text GLabel 3500 4500 2    47   Input ~ 0
 I2C 1 SCL
 $Comp
 L +3.3V #PWR04
@@ -2469,4 +2466,6 @@ Connection ~ 2000 7600
 Wire Wire Line
 	2100 7700 2000 7700
 Connection ~ 2000 7700
+Text GLabel 3500 4500 2    47   Input ~ 0
+I2C 1 SDA
 $EndSCHEMATC
